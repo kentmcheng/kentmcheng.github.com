@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, user-scalable=1">
+
+		<base href="../../">
+
+		<!-- PAGE TITLE -->
+		<title>Big Barn World App – Kent Cheng</title>
+		
+		<!-- PAGE ICONS -->
+		<link rel="shortcut icon" href="graphics/favicon.ico" type="image/x-icon">
+
+		<link rel="apple-touch-icon" sizes="120x120" href="graphics/touch-icon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="graphics/touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="graphics/touch-icon-180.png">
+		
+		<link rel="icon" sizes="128x128" href="graphics/touch-icon-128.png">
+		<link rel="icon" sizes="192x192" href="graphics/touch-icon-192.png">
+
+		<!-- PAGE STYLES -->
+		<link rel="stylesheet" href="css/work.css" type="text/css">
+		<link rel="stylesheet" href="css/phonewrap.css" type="text/css">
+		<link rel="stylesheet" href="css/slideshow.css" type="text/css">
+	</head>
+	<body>
+		<noscript>
+			<p>My site requires the use of JavaScript. Please enable it within your browser's settings.</p>
+		</noscript>
+
+		<!-- PAGE MARKUP -->
+		<div id="contents">
+			<div id="page">
+				<header id="page-header"></header>
+				<div id="page-body">
+
+					<!-- THE CONTENT -->
+					<div class="content">
+						<div class="wrap row">
+							<div>
+								<ul id="screenshots">
+									<li><img src="work/bbw/screenshot-1.jpg" alt="Splash screen"></li>
+									<li><img src="work/bbw/screenshot-2.jpg" alt="Farm Status"></li>
+									<li><img src="work/bbw/screenshot-3.jpg" alt="Game Feeds"></li>
+									<li><img src="work/bbw/screenshot-4.jpg" alt="Spin screen"></li>
+									<li><img src="work/bbw/screenshot-5.jpg" alt="Friends screen"></li>
+								</ul>
+								<div id="screenshot-controls"></div>
+							</div>
+							<div class="content-body">
+								<h2>Big Barn World App</h2>
+								<h4><a href="http://corp.airg.com">airG</a></h4>
+								<p>
+									Big Barn World isn't your typical farming game. Built for the web, it was one of the first online farming games for the mobile. It launched during a time when feature phones were still the norm and they had little to no apps. Now let's fast forward to the present—feature phones are dead, all phones are smart, and it's all about the apps.
+								</p>
+								<p>
+									The initial version of this app served more as a sidekick and companion to the game. The app provided access to key game info without needing to load the game. It served as the player's launchpad and starting point.
+								</p>
+								<p>
+									The app was designed for both Android and iOS, and can be downloaded on their respective app stores. The iOS version can be found <a href="https://itunes.apple.com/ca/app/big-barn-world/id606585901">here</a> and the Android version now comes in two flavors—<a href="https://play.google.com/store/apps/details?id=com.airgames.bbw">standard</a> and <a href="https://play.google.com/store/apps/details?id=com.airgames.bbwclassic">classic</a>.
+								</p>
+								<p class="note">The app store links reflect the latest version.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- QUICK NAV -->
+					<nav id="work-quick-nav"></nav>
+				</div>
+				<footer id="page-footer"></footer>
+			</div>
+		</div>
+
+		<!-- PAGE SCRIPTS -->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/core.js" type="text/javascript"></script>
+		<script src="js/work.js" type="text/javascript"></script>
+		<script src="js/phonewrap.js" type="text/javascript"></script>
+		<script src="js/slideshow.js" type="text/javascript"></script>
+		<script>
+			$(function() {
+				
+				page().init("work");
+				work().quickNav("work-quick-nav", "bbw");
+				
+				var phone = new Phonewrap("screenshots");
+				phone.model("five");
+				phone.color("white");
+
+				var slideshow = new Slideshow("screenshots", 1);
+				slideshow.controls("screenshot-controls");			
+			});
+		</script>
+	</body>
+</html>

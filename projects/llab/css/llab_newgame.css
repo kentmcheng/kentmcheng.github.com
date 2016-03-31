@@ -1,0 +1,21 @@
+/**********************/
+/*** NEWGAME STYLES	***/
+/**********************/
+
+/* BOTTOM PANEL */
+
+#panel_bot_contents.newgame {
+	padding: 0.625em 0 0;
+}
+
+#panel_bot_contents.newgame button.core {
+	width: 75%;
+	height: 100px;
+	margin: 0.25em auto;
+	
+	background-size: auto 75%;
+	color: #fff;
+	font-size: 1.125em;
+	line-height: 0.875em;
+	text-shadow: 1px 2px 0 #8f6b00;
+}

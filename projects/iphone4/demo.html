@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>iPhone 4 Wrapper</title>
+		<!-- META INFO -->
+		<meta charset="UTF-8">
+		<!-- STYLES -->
+		<link rel="stylesheet" href="phone.css">
+		<style>
+			body {
+				background: #87A599;
+
+				font-family: "Helvetica Neue", sans-serif;
+				font-size: 1em;
+				text-align: center;
+			}
+			
+			#screenshot {
+				width: 320px;
+				height: 568px;
+
+				background: #EFEFEF url(screenshot.png);
+				background-size: 100% auto;
+			}
+		</style>
+		<!-- SCRIPTS -->
+		<script src="phone.js"></script>
+	</head>
+	<body>
+		<div id="screenshot"></div>
+		<script>Phone.init("screenshot")</script>
+	</body>
+</html>

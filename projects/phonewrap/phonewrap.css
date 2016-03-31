@@ -1,0 +1,426 @@
+/* CORE IPHONE STYLES */
+
+.iphone {
+	display: inline-block;
+}
+
+.iphone * {
+	margin: 0;	
+	padding: 0;	
+	border: 0;
+
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.phone_components {
+	position: relative;
+
+	background: #1A1A1A;
+	border-color: #DEDEDE;
+	border-radius: 34px;
+	border-style: solid;
+}
+
+	.five .phone_components {
+		border-color: #3A3A3A;
+	}
+
+	.white .phone_components {
+		border-color: #CCC;
+		background-color: #F4F5F5;
+	}
+
+.phone_frame {
+	display: none;
+}
+
+.phone_frame button {
+	position: absolute;
+
+	border-radius: 2px;
+	background: #DEDEDE;
+
+	-webkit-appearance: none;
+}
+
+	.five .phone_frame button {
+		background-color: #3A3A3A;
+	}
+
+	.white .phone_frame button {
+		background-color: #CCC;
+	}
+
+.phone_screen {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: start;
+}
+
+.phone_bezel {
+	display: none;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+}
+
+.phone_bezel .camera {
+	width: 4px;
+	height: 4px;
+	border: 4px solid #333;
+	border-radius: 50%;
+	background: #1A1A42;
+}
+
+	.white .phone_bezel .camera {
+		border-color: #DEDEDE;
+		background-color: #4D9494;
+	}
+
+.phone_bezel .speaker {
+	border-radius: 4px;
+	background: #333;
+}
+
+	.white .phone_bezel .speaker {
+		border-color: #F4F5F5;
+		background-color: #DEDEDE;
+	}
+
+.phone_bezel .home {
+	padding: 18px;
+	border-radius: 50%;
+	background: #333;
+}
+
+	.white .phone_bezel .home {
+		background-color: #DEDEDE;
+	}
+
+.phone_bezel .icon {
+	width: 16px;
+	height: 16px;
+	border: 2px solid #666;
+	border-radius: 4px;
+}
+
+	.white .phone_bezel .icon {
+		border-color: #F4F5F5;
+	}
+
+.phone_display {
+	border-color: #000;
+	border-style: solid;
+	background: #000;
+	overflow: hidden;
+}
+
+	.white .phone_display {
+		border-color: #CCC;
+	}
+
+.phone_display_header {
+	position: relative;
+
+	height: 20px;
+	overflow: hidden;
+}
+
+	.fullscreen .phone_display_header {
+		display: none;
+	}
+
+.phone_display_header p {
+	padding: 0.1875em 0 0.25em;
+	
+	color: #EFEFEF;
+	font-size: 0.75em;
+	font-weight: 500;
+}
+
+.phone_display_header .signal {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+
+	width: 0;
+	height: 0;
+	text-indent: -9999px;
+	border-bottom: 10px solid #EFEFEF;
+	border-left: 18px solid transparent;
+}
+
+.phone_display_header .battery {
+	position: absolute;
+	top: 4px;
+	right: 8px;
+
+	width: 16px;
+	height: 8px;
+	padding: 1px;
+	border: 1px solid #EFEFEF;
+	border-radius: 2px;
+}
+
+.phone_display_header .battery:after {
+	content: "";
+
+	position: absolute;
+	top: 2px;
+	left: 100%;
+
+	width: 3px;
+	height: 6px;
+	border-top-right-radius: 1px;
+	border-bottom-right-radius: 1px;
+	background: #EFEFEF;
+}
+
+.phone_display_header .charge {
+	width: 60%;
+	height: 100%;
+	background: #EFEFEF;
+}
+
+.phone_glare {
+	display: none;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	background-image: -webkit-linear-gradient(20deg, transparent 0%, transparent 68%, rgba(255, 255, 255, 0.1) 68%, rgba(255, 255, 255, 0.1) 100%);
+}
+
+/* If the screen is too small don't apply the phone visuals */
+
+@media (min-width: 400px) {
+
+	.portrait .phone_components {
+		padding: 0 15px;
+		border-width: 2px;
+	}
+
+	/* Enable the frame & its component styles */
+	.portrait .phone_frame {
+		display: block;
+	}
+
+	.portrait .phone_frame .power {
+		bottom: 100%;
+		right: 45px;
+
+		width: 42px;
+		height: 5px;
+	}
+
+	.portrait .phone_frame .mute {
+		top: 45px;
+		right: 100%;
+
+		width: 5px;
+		height: 28px;
+	}
+
+		.five.portrait .phone_frame .mute {
+			top: 80px;
+		}
+
+	.portrait .phone_frame .volume {
+		right: 100%;
+
+		width: 5px;
+		height: 20px;
+	}
+
+	.portrait .phone_frame .up {
+		top: 100px;
+	}
+
+		.five.portrait .phone_frame .up {
+			top: 135px;
+		}
+
+	.portrait .phone_frame .down {
+		top: 145px;
+	}
+
+		.five.portrait .phone_frame .down {
+			top: 180px;
+		}
+
+	/* Enable the screen and its component styles */
+	.portrait .phone_screen {
+		-webkit-box-orient: vertical;
+	}
+
+	.portrait .phone_bezel {
+		display: -webkit-box;
+		-webkit-box-orient: horizontal;
+	}
+
+		.five.portrait .phone_bezel {
+			-webkit-box-orient: vertical;
+		}
+
+	.portrait header.phone_bezel {
+		padding: 38px 12px 38px 0;
+	}
+
+		.five.portrait header.phone_bezel {
+			padding: 20px 0;
+		}
+
+	.portrait footer.phone_bezel {
+		padding: 16px 0;
+	}
+
+		.five.portrait footer.phone_bezel {
+			padding: 12px 0;
+		}
+
+	.portrait .phone_bezel .speaker {
+		width: 60px;
+		height: 8px;
+		margin: 0 15px;
+	}
+
+		.five.portrait .phone_bezel .speaker {
+			margin: 12px 0 8px;
+		}
+
+	.portrait .phone_display {
+		width: 320px;
+		height: 480px;
+		border-radius: 4px;
+		border-width: 2px;
+	}
+
+		.five.portrait .phone_display {
+			height: 568px;
+		}
+
+	.portrait .phone_glare {
+		display: block;
+	}
+}
+
+/* LANDSCAPE SPECIFIC STYLES */
+
+@media (min-width: 768px) {
+
+	.landscape .phone_components {
+		padding: 15px 0;
+		border-width: 2px;
+	}
+
+	/* Enable the frame & its component styles */
+	.landscape .phone_frame {
+		display: block;
+	}
+
+	.landscape .phone_frame .power {
+		left: 100%;
+		bottom: 45px;
+
+		width: 5px;
+		height: 42px;
+	}
+
+	.landscape .phone_frame .mute {
+		top: -5px;
+		right: 45px;
+		
+		width: 28px;
+		height: 5px;
+	}
+
+		.five.landscape .phone_frame .mute {
+			right: 80px;
+		}
+
+	.landscape .phone_frame .volume {
+		top: -5px;
+
+		width: 20px;
+		height: 5px;
+	}
+
+	.landscape .phone_frame .up {
+		right: 100px;
+	}
+
+		.five.landscape .phone_frame .up {
+			right: 135px;
+		}
+
+	.landscape .phone_frame .down {
+		right: 145px;
+	}
+
+		.five.landscape .phone_frame .down {
+			right: 180px;
+		}
+
+	/* Enable the screen and its component styles */
+	.landscape .phone_screen {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+	}
+
+	.landscape .phone_bezel {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+	}
+
+		.five.landscape .phone_bezel {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: reverse;
+		}
+
+	.landscape header.phone_bezel {
+		padding: 0 38px 12px;
+	}
+
+		.five.landscape header.phone_bezel {
+			padding: 0 20px;
+		}
+
+	.landscape footer.phone_bezel {
+		padding: 0 16px;
+	}
+
+		.five.landscape footer.phone_bezel {
+			padding: 0 12px;
+		}
+
+	.landscape .phone_bezel .speaker {
+		width: 8px;
+		height: 60px;
+		margin: 15px 0;
+	}
+
+		.five.landscape .phone_bezel .speaker {
+			margin: 0 12px 0 8px;
+		}
+
+	.landscape .phone_display {
+		width: 480px;
+		height: 320px;
+		border-radius: 4px;
+		border-width: 2px;
+	}
+
+		.five.landscape .phone_display {
+			width: 568px;
+		}
+
+	.landscape .phone_glare {
+		display: block;
+	}
+}

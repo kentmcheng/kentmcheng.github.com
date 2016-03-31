@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, user-scalable=1">
+		
+		<base href="../../">
+
+		<!-- PAGE TITLE -->
+		<title>Harvest Frenzy – Kent Cheng</title>
+
+		<!-- PAGE ICONS -->
+		<link rel="shortcut icon" href="graphics/favicon.ico" type="image/x-icon">
+
+		<link rel="apple-touch-icon" sizes="120x120" href="graphics/touch-icon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="graphics/touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="graphics/touch-icon-180.png">
+		
+		<link rel="icon" sizes="128x128" href="graphics/touch-icon-128.png">
+		<link rel="icon" sizes="192x192" href="graphics/touch-icon-192.png">
+
+		<!-- PAGE STYLES -->
+		<link rel="stylesheet" href="css/work.css" type="text/css">
+		<link rel="stylesheet" href="css/phonewrap.css" type="text/css">
+		<link rel="stylesheet" href="css/slideshow.css" type="text/css">
+	</head>
+	<body>
+		<noscript>
+			<p>My site requires the use of JavaScript. Please enable it within your browser's settings.</p>
+		</noscript>
+		
+		<!-- PAGE MARKUP -->
+		<div id="contents">
+			<div id="page">
+				<header id="page-header"></header>
+				<div id="page-body">
+
+					<!-- THE CONTENT -->
+					<div class="content">
+						<div class="wrap row">
+							<div>
+								<ul id="screenshots">
+									<li><img src="work/harvest/screenshot-1.jpg" alt="Loading Screen"></li>
+									<li><img src="work/harvest/screenshot-2.jpg" alt="Title Screen"></li>
+									<li><img src="work/harvest/screenshot-3.jpg" alt="Gameplay"></li>
+									<li><img src="work/harvest/screenshot-4.jpg" alt="Match Results"></li>
+									<li><img src="work/harvest/screenshot-5.jpg" alt="Multi-player Lobby"></li>
+								</ul>
+								<div id="screenshot-controls"></div>
+							</div>
+							<div class="content-body">
+								<h2>Harvest Frenzy</h2>
+								<h4><a href="http://corp.airg.com">airG</a></h4>
+								<p>
+									Harvest Frenzy was another one of the experimental web apps. It is match three style game that borrows from Big Barn World, a sister game that lends itself perfectly to the matching genre.
+								</p>
+								<p>
+									Much like my work on <a href="work/llab">Letter Lab</a>, the design focus was primarily on the game's UI and UX. We utilized the theme right from start, as the player loads the game. Here's a <a href="projects/harvest/demo.html">demo</a> of the game's opening sequence, from the initial load screen to the main start screen.
+								</p>
+								<p class="note">
+									This demo also relies on the experimental WebKit tags and can only be viewed by browsers that support it.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- QUICK NAV -->			
+					<nav id="work-quick-nav"></nav>
+				</div>
+				<footer id="page-footer"></footer>
+			</div>
+		</div>
+
+		<!-- PAGE SCRIPTS -->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/core.js" type="text/javascript"></script>
+		<script src="js/work.js" type="text/javascript"></script>
+		<script src="js/phonewrap.js" type="text/javascript"></script>
+		<script src="js/slideshow.js" type="text/javascript"></script>
+		<script>
+			$(function() {
+				
+				page().init('work');
+				work().quickNav('work-quick-nav', 'harvest');
+
+				var phone = new Phonewrap("screenshots");
+
+				var slideshow = new Slideshow("screenshots");
+				slideshow.controls("screenshot-controls");
+			});
+		</script>
+	</body>
+</html>

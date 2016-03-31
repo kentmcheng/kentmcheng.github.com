@@ -1,0 +1,110 @@
+.slideshow { 
+	position: relative;
+	display: inline-block;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+	.slideshow > li {
+		display: -webkit-box-flex;
+		-webkit-box-align: center;
+
+		display: flex;
+		align-items: center;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		opacity: 0;
+		
+		-webkit-transition: all 0.75s ease-in-out;
+		transition: all 0.75s ease-in-out;
+	}
+
+	.slideshow > li.active { opacity: 1; }
+	.slideshow > li.front { z-index: 1; }
+
+	.slideshow > li > img {
+		display: block;
+		width: 100%;
+	}
+
+	.slideshow > div img {
+		display: block;
+		width: 100%;
+		visibility: hidden;
+	}
+
+.slideshow-controls {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: 1.5rem auto 0;
+	/*padding: 1rem 1rem 0;*/ 
+}
+
+	.slideshow-controls button.controls {
+		display: block;
+
+		width: 32px;
+		height: 32px;
+
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: 32px auto;
+	}
+
+		.slideshow-controls button.controls.left { background-image: url(../graphics/icon-controls-left.png); }
+		.slideshow-controls button.controls.right { background-image: url(../graphics/icon-controls-right.png); }
+
+		.no-touch .slideshow-controls button.controls:hover { background-position: 0 -32px; }
+		.no-touch .slideshow-controls button.controls:active { background-position: 0 -64px; }
+
+	.slideshow-controls ul {
+		display: -webkit-box;
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding: 0 4.8rem;
+	}
+
+	.slideshow-controls li {
+		margin: 0 0.2rem;
+	}
+
+		.slideshow-controls li button {
+			display: block;
+
+			width: 12px;
+			height: 12px;
+			border: 1px solid rgba(0, 0, 0, 0.5);
+			border-radius: 50%;
+
+			-webkit-transition: all 0.25s ease;
+			transition: all 0.25s ease;
+		}
+		.no-touch .slideshow-controls li button:hover {
+			border-color: rgba(0, 0, 0, 0);
+			background: rgba(0, 0, 0, 0.5); 
+		}
+		.no-touch .slideshow-controls li button:active { 
+			border-color: rgba(0, 0, 0, 0); 
+			background: rgba(0, 0, 0, 0.75); 
+		}
+
+		.slideshow-controls li.active button {
+			border: none;
+			background: rgba(0, 0, 0, 0.75) !important;
+		}

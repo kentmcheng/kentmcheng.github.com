@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Harvest Frenzy Animation Proto</title>
+		<!-- META INFO -->
+		<meta charset="UTF-8">
+		<META http-equiv="cache-control" content="no-cache">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+		<!-- STYLES -->
+		<link rel="stylesheet" href="css/base.css">
+		<!-- SCRIPTS -->
+		<script src="js/base.js"></script>
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script>
+			$(document).ready(function() {
+				initPage();
+			});
+		</script>
+	</head>
+	<body ontouchmove='preventMove(event), hideURLbar()'>
+		
+		<section id='game'>
+			<div class='components'>
+				
+				<!-- THE FRONT END -->
+				<section id='fe'>
+					<div class='components'>
+						<section id='fe_intro'>
+							<div class='components'>
+								<section id='fe_intro_moon'></section>
+								<section id='fe_intro_sky'></section>
+								<section id='fe_intro_stars'></section>
+								<section id='fe_intro_mountains'></section>
+								<section id='fe_intro_trees'></section>
+								<section id='fe_intro_logo'></section>
+							</div>
+						</section>
+						<section id='fe_controls'>
+							<ul class='controls'>
+								<li><button><p class='edge_l'></p><h1></h1><p class='edge_r'></p></button></li>
+								<li><button><p class='edge_l'></p><h1></h1><p class='edge_r'></p></button></li>
+								<li><button><p class='edge_l'></p><h1></h1><p class='edge_r'></p></button></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+				
+				<!-- THE GAMEPLAY -->
+				<section id='gp'>
+					<div class='components'>
+						<section id='gp_lobby'></section>
+						<section id='gp_invites'></section>
+						<section id='gp_solo'></section>
+						<section id='gp_multi'></section>
+						<section id='gp_results'></section>
+						<section id='gp_profile'></section>
+						<section id='gp_options'></section>
+						<section id='gp_highscores'></section>
+						<section id='gp_help'></section>	
+					</div>
+				</section>
+				
+			</div>
+		</section>
+		
+	</body>
+</html>

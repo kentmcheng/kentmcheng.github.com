@@ -1,0 +1,111 @@
+@import url(core.css);
+			
+#bg-photo img { 
+	width: 100%; 
+}
+
+#me {
+	/*max-width: 640px;*/
+	margin: 2rem 1rem 0;
+}
+
+#me img {
+	display: block;
+	width: 120px;
+}
+
+#me img.rounded {
+	border-radius: 50%;
+}
+
+#me li {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	-webkit-box-pack: start;
+
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: start;
+
+	width: 100%;
+}
+
+#me p {
+	-webkit-box-flex: 1;
+	flex: 1;
+
+	text-align: justify;
+}
+
+@media (min-width: 320px) and (max-width: 399px) {
+	
+	/*#me { 
+		margin: -50px auto 0; 
+	}*/
+	
+	#me img { 
+		width: 100px; 
+	}
+	
+	#me p { 
+		margin: 1.5rem 0; 
+	}
+}
+
+@media (min-width: 400px) and (max-width: 639px) {
+
+	/*#me { 
+		margin: -60px auto 0; 
+	}*/
+
+	/*#me img { 
+		width: 120px; 
+	}*/
+	
+	#me p { 
+		margin: 2rem 0; 
+	}
+}
+
+@media (min-width: 640px) {
+
+	/*#me { 
+		padding-bottom: 3rem; 
+	}*/
+
+	#me {
+		margin: 3rem 2rem 0;
+	}
+	
+	#me li {
+		-webkit-box-orient: horizontal; 
+		flex-flow: row;
+		margin-top: 3rem; 
+	}
+
+	#me li:nth-of-type(even) {
+		-webkit-box-direction: reverse;
+		flex-flow: row-reverse;
+	}
+
+	#me li:nth-of-type(even) p {
+		margin-right: 1rem;
+	}
+
+	#me p { 
+		margin-left: 1rem; 
+	}
+}
+
+@media (min-width: 800px) {
+
+	#bg-photo { 
+		margin: 4rem 0 0; 
+	}
+
+	#me {
+		margin: 3rem 0;
+	}
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>	
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, user-scalable=1">
+
+		<base href="../../">
+
+		<!-- PAGE TITLE -->
+		<title>Next Bus – Kent Cheng</title>
+		
+		<!-- PAGE ICONS -->
+		<link rel="shortcut icon" href="graphics/favicon.ico" type="image/x-icon">
+
+		<link rel="apple-touch-icon" sizes="120x120" href="graphics/touch-icon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="graphics/touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="graphics/touch-icon-180.png">
+		
+		<link rel="icon" sizes="128x128" href="graphics/touch-icon-128.png">
+		<link rel="icon" sizes="192x192" href="graphics/touch-icon-192.png">
+
+		<!-- PAGE STYLES -->
+		<link rel="stylesheet" href="css/work.css" type="text/css">
+		<link rel="stylesheet" href="css/phonewrap.css" type="text/css">
+		<link rel="stylesheet" href="css/slideshow.css" type="text/css">
+
+		<!-- PAGE SCRIPTS -->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/core.js" type="text/javascript"></script>
+		<script src="js/work.js" type="text/javascript"></script>
+		<script src="js/phonewrap.js" type="text/javascript"></script>
+		<script src="js/slideshow.js" type="text/javascript"></script>
+		
+		<style>
+			#demo { width: 100%; height: auto; }
+		</style>
+	</head>
+	<body>
+		
+		<!-- CORE MARKUP -->
+		<div id="contents">
+			<section id="page">
+				<header id="page-header"></header>
+				<div id="page-body">
+
+					<section class="content intro">
+						<div class="wrap">
+							<div class="content-body">
+								<h1>Next Bus</h1>
+								<h3><a href="http://nextbus.kentc.me/">nextbus.kentc.me</a></h3>
+								<p>
+									I was inspired to make this after trying the Next Bus service provided by TransLink, the local transit provider here in Vancouver. <a href="http://nb.translink.ca/">Their version</a> does the job but I thought I could do better so I made my own using their public API.
+								</p>
+								<p>
+									My focus for the app was to provide quick and easy access to arrival times. I also wanted to have some fun with the visual design and showcase that utilitarian doesn't have to be boring, and let's be honest, waiting for the bus is never fun.
+								</p>
+								<p>
+									The web app was designed for phones running WebKit and is limited to residents within Metro Vancouver. If you want to make your own, here's <a href="https://developer.translink.ca/">TransLink's Open API</a>.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<section class="content">
+						<div class="wrap row">
+							<div>
+								<ul id="screenshots">
+									<li><img src="work/nextbus/1-splash.png" alt="Loading screen"></li>
+									<li><img src="work/nextbus/2-stops.png" alt="Stops screen"></li>
+									<li><img src="work/nextbus/3-stop.png" alt="Next buses screen"></li>
+									<li><img src="work/nextbus/4-search.png" alt="Search screen"></li>
+								</ul>
+								<div id="screenshot-controls"></div>
+							</div>
+							<div class="content-body">
+								<h2>Version 2.0</h2>
+								<p>
+									I discovered a neat little web service called <a href="https://www.webscript.io/">Webscripts</a>. It's a service which allows you to write short Lua scripts to handle and respond to HTTP requests. This allows a person like me to have an API server without knowing how to set one up. 
+								</p>
+								<p>
+									My initial version was a bit hackish. Since I didn't have a server, I had use Yahoo Query Language (YQL) to make my cross domain requests. The result was sub-optimal to say the least.
+
+									By switching to webscripts, I could now make and control my requests to Translink. I now had access to the proper JSON data rather than the JSON data that was converted from the XML data that YQL returned. I also no longer have to expose my API key in the source files, which was bad.
+								</p>
+								<p>
+									I also decided to tweak my design. I switched to a more standard app UI and updated the transitions accordingly. A new model that allows for quicker screen transitions but still providing the navigational affordances. I also replaced all my images but one with scalable vector icons. The only image now is my bus icon graphic. I use two web font icon sets, <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> for my controls and indicators, and <a href="http://emojisymbols.com/">Emoji Symbols</a> for my error graphics. 
+								</p>
+								<p>
+									I'd still like to explore a favorites function. So when you start the app and a favorite is in your nearby stops, it goes straight to the bus info for that stop.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<section class="content">
+						<div class="wrap row reverse">
+							<div>
+								<ul id="screenshots-1">
+									<li><img src="work/nextbus/screenshot-1.png" alt="Splash screen"></li>
+									<li><img src="work/nextbus/screenshot-2.png" alt="Stops screen"></li>
+									<li><img src="work/nextbus/screenshot-3.png" alt="Buses screen"></li>
+									<li><img src="work/nextbus/screenshot-4.png" alt="Search screen"></li> 
+									<li>
+										<video id="demo" controls muted poster="work/nextbus/demo-poster.jpg">
+									  		<source src="work/nextbus/demo-video.mp4" type="video/mp4">
+											Sorry, your browser does not support the video.
+										</video>
+									</li>
+								</ul>
+								<div id="screenshot-1-controls"></div>
+							</div>
+							<div class="content-body">
+								<h2>Version 1.0</h2>
+								<p>
+									This was my original version of the web app. I wanted to build a web app that made it quick and easy to get bus upcoming info. 
+
+									My focus for the app was to provide quick and easy access to arrival times. I also wanted to have some fun with the visual design and showcase that utilitarian doesn't have to be boring, and let's be honest, waiting for the bus is never fun.
+								</p>
+								<!--
+									I still look back at this design and think it was a
+									My original version
+										- Heavier on the visuals
+
+								-->
+							</div>
+						</div>
+					</section>
+
+					<nav id="work-quick-nav"></nav>
+					
+				</div>
+				<footer id="page-footer"></footer>
+			</section>
+		</div>
+		
+		<!-- SCRIPT CALLS -->
+		<script>
+			$(function() {
+				
+				page().init("work");
+				work().quickNav("work-quick-nav", "nextbus");
+				
+				var phone = new Phonewrap("screenshots");
+				phone.model("five");
+
+				var slideshow = new Slideshow("screenshots", 1);
+				slideshow.controls("screenshot-controls");
+
+				var phone1 = new Phonewrap("screenshots-1", "phone-1");
+				phone1.model("five");
+
+				var slideshow1 = new Slideshow("screenshots-1", 1);
+				slideshow1.controls("screenshot-1-controls");				
+			});
+		</script>
+
+	</body>
+</html>

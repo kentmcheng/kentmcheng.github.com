@@ -1,0 +1,424 @@
+@import url(reset.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
+
+html {
+	font-size: 62.5%;
+
+	-ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+	color: #3a3a3a;
+	font-family: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+
+* { 
+	box-sizing: border-box; 
+}
+
+nav { 
+	font-family: "PT Serif", sans-serif; 
+}
+
+nav a { 
+	font-style: italic; 
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: "PT Serif", sans-serif; }
+
+p {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	line-height: 1.5em;
+	word-break: break-word;
+}
+	p a { color: #146fdf; }
+	p em { font-style: italic; }
+	p strong { font-weight: 600; }
+
+	.no-touch p a:hover {
+		border-bottom: 1px solid #146fdf;
+	}
+
+
+#contents {
+	position: relative;
+}
+
+/* 
+	CORE PAGE STYLES 
+*/
+
+#page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	background: #fff;
+
+	-webkit-transition: all ease 0.35s;
+	transition: all ease 0.35s;
+}
+
+#page-header {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	-webkit-box-pack: start;
+
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: flex-start;
+
+	width: 100%;
+	padding: 1.5rem 0 2rem;
+	background: #3e4147;
+
+	color: #efefef;
+}
+
+	#page-header h1 {
+		-webkit-box-flex: 1;
+		flex: 1;
+
+		margin-top: 0.4rem;
+		
+		font-size: 4rem;
+		font-weight: 700;
+	}
+
+#page-body {
+	padding: 0 1rem;
+}
+
+#page-footer {
+	padding: 0 1rem;
+}
+
+	#page-footer p {
+		padding: 1rem 0;
+		border-top: 1px dotted #dedede;
+		
+		color: #545454;
+		font-size: 1.4rem;
+	}
+
+/* 
+	SITE NAV STYLES 
+*/
+
+#main-nav-items {
+	display: none;
+}
+
+#secondary-nav {
+	background: #3e4147;
+}
+
+#secondary-nav-items {
+	padding: 1rem 0 0;
+	opacity: 0;
+
+	-webkit-transition: all ease-in-out 0.35s;
+	transition: all ease-in-out 0.35s;
+}
+
+	#secondary-nav-items li {
+		margin: 0.4rem 0;
+		padding: 0.6rem 0;
+
+		text-align: center;
+	}
+
+	#secondary-nav-items a {
+		padding: 0 1rem;
+
+		/*color: #a4a5a5;
+		font-size: 2.4rem;*/
+	}
+
+		/*#secondary-nav-items a.active { color: #efefef !important; }
+
+		.no-touch #secondary-nav-items a:hover { color: #c4c5c5; }
+		.no-touch #secondary-nav-items a:active { color: #efefef; }*/
+
+#secondary-nav-trigger {
+	width: 40px;
+	height: 40px;
+	background: url(../graphics/mobile-nav-btn.png) 0 0 no-repeat;
+	background-size: 100% auto;
+}
+
+	.no-touch #secondary-nav-trigger:hover { background-position: 0 -40px; }
+	.no-touch #secondary-nav-trigger:active { background-position: 0 0; }
+
+.site-nav a {
+	color: #a4a5a5;
+	font-size: 2.4rem;
+}
+
+	.site-nav a.active {
+		color: #efefef !important;
+	}
+
+	.no-touch .site-nav a:hover {
+		color: #c4c5c5;
+	}
+	.no-touch .site-nav a:active {
+		/*color: #efefef;*/
+	}
+
+/* 
+	SHOWCASE 
+*/
+
+.showcase {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	-webkit-box-pack: start;
+
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: flex-start;
+
+	padding: 2rem 0;
+
+	text-align: center;
+}
+
+.showcase-display {
+	width: 100%;
+}
+
+.showcase-desc {
+	width: 100%;
+	margin-top: 2rem;
+	padding: 0 0.5rem;
+}	
+	
+	.showcase-desc h2 {
+		font-size: 1.5em;
+		font-weight: 700;
+	}
+
+	.showcase-desc h6 {
+		margin: 0 0.1rem;
+
+		color: #878787;
+		font-size: 1.125em;
+		font-weight: 400;
+	}
+
+	.no-touch .showcase-desc h6 a:hover { color: #3a3a3a; }
+	/*.no-touch .showcase-desc h6 a:active { color: #787878; }*/
+
+	.showcase-desc p {
+		margin-top: 1em;
+
+		/*font-size: 1.125em;*/
+		text-align: justify;
+		/*text-indent: 1em;*/
+	}
+
+	.showcase-desc p:nth-child(2) {
+		margin-top: 1.5em;
+	}
+
+	.showcase-desc p.note {
+		color: #545454;
+		font-size: 0.875em;
+	}
+
+	.showcase-desc p.note:before {
+		content: "Note: ";
+		font-weight: 700;
+	}
+
+	.showcase-desc li {
+		display: inline-block;
+	}
+
+	.showcase-desc li:after {
+		content: ",";
+	}
+
+	.showcase-desc li:last-of-type:after {
+		content: none;
+	}
+
+.screens {
+	margin: 0 auto;
+}
+
+.screens img {
+	display: block;
+	width: 100%;
+}
+
+/* 
+	ADAPTIVE STYLING
+*/
+
+@media (min-width: 480px) {
+
+	.showcase-desc {
+		max-width: 480px;
+		padding: 0;
+	}
+
+	.showcase-desc h2 {
+		font-size: 2em;
+	}
+
+	.showcase-desc h6 {
+		font-size: 1.25em;
+	}
+}
+
+@media (min-width: 600px) {
+
+	#contents {
+		position: static;
+	}
+	
+	#secondary-nav {
+		display: none;
+	}
+
+	#secondary-nav-trigger {
+		display: none;
+	}
+
+	#page {
+		position: static;
+		top: auto;
+		left: auto;
+		right: auto;
+	}
+
+	#page-header {
+		-webkit-box-orient: horizontal;
+		flex-flow: row;
+
+		padding: 4rem 2rem 3rem;
+	}
+
+	#page-header h1 {
+		-webkit-box-flex: 1;
+		flex: 1;
+
+		margin: 0;
+	}
+
+	#page-body {
+		padding: 0 2rem;
+	}
+
+	#page-footer {
+		padding: 0 2rem;
+	}
+
+	#main-nav-items {
+		display: block;
+		
+		margin-top: 1.2rem;
+	}
+
+	#main-nav-items li {
+		display: inline-block;
+		
+		margin-left: 2.4rem;
+	}
+
+	#main-nav-items li:first-of-type { margin-left: 0; }
+
+	#main-nav-items a {
+		padding: 0 0.2rem;
+
+		/*color: #a4a5a5;
+		font-size: 2.4rem;*/
+	}
+
+	/*#main-nav-items a.active { color: #efefef !important; }
+
+	.no-touch #main-nav-items a:hover { color: #c4c5c5; }
+	.no-touch #main-nav-items a:active { color: #efefef; }*/
+
+	.showcase {
+		padding-top: 3rem;
+	}
+}
+
+@media (min-width: 800px) {
+
+	body {
+		background: url(../graphics/textures/squairy-light.png) top center repeat;
+		background-size: 200px;
+	}
+
+	#contents {
+		width: 90%;
+		max-width: 900px;
+		margin: 2.5rem auto 5rem;
+		border-radius: 8px;
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+		overflow: hidden;
+	}
+
+	/*#page-body {
+		padding: 0 2rem;
+	}
+
+	#page-footer {
+		padding: 0 2rem;
+	}*/
+
+	.showcase {
+		padding-top: 4rem;
+	}
+}
+
+@media (min-width: 800px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 800px) and (min-resolution: 1.5dppx) {
+
+	body {
+		background-image: url(../graphics/textures/squairy-light-2X.png);
+	}
+}
+
+@media (min-width: 1000px) {
+
+	.showcase.columns {
+		-webkit-box-orient: horizontal;
+		-webkit-box-align: start;
+
+		flex-flow: row;
+		align-items: flex-start;
+		
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.showcase.columns .showcase-display {
+		width: auto;
+	}
+
+	.showcase.columns .showcase-desc {
+		-webkit-box-flex: 1;
+		flex: 1;
+		
+		margin-top: 4rem;
+		padding-left: 3.5rem;
+
+		text-align: left;
+	}
+}

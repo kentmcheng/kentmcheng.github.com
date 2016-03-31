@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="no-touch">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, user-scalable=1">
+
+		<base href="../../">
+
+		<!-- PAGE TITLE -->
+		<title>Harvest Frenzy Start Demo – Kent Cheng</title>
+
+		<!-- PAGE ICONS -->
+		<link rel="shortcut icon" href="graphics/favicon.ico" type="image/x-icon">
+
+		<link rel="apple-touch-icon" sizes="120x120" href="graphics/touch-icon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="graphics/touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="graphics/touch-icon-180.png">
+		
+		<link rel="icon" sizes="128x128" href="graphics/touch-icon-128.png">
+		<link rel="icon" sizes="192x192" href="graphics/touch-icon-192.png">
+		
+		<!-- PAGE STYLES -->
+		<link rel="stylesheet" href="css/reset.css" type="text/css">
+		<link rel="stylesheet" href="css/phonewrap.css" type="text/css">
+		<style>
+			#wrapper { margin: 5vmin 0; text-align: center; }
+			#display { width: 320px; height: 480px; border: none; }
+			button { margin: 20px 0 0; padding: 0.75rem 2rem; border: 2px solid #482E16; border-radius: 0.625rem; box-shadow: inset 0 3px 0 #FBF43F, inset 0 -3px 0 #F6C902; background-color: #F5CF1C; background-image: -webkit-linear-gradient(#F5CF1C, #F8E230); background-image: linear-gradient(#F5CF1C, #F8E230); color: #482E16; font-family: "Marker Felt", "Impact", sans-serif; font-weight: 700; text-shadow: 0 1px 0 #FFF; text-transform: uppercase; }
+			button:hover { box-shadow: inset 0 3px 0 #FBF43F, inset 0 -3px 0 #F6C902, 0 2px 2px #CCC; }
+			button:active { box-shadow: inset 0 3px 0 #F6C902, inset 0 -3px 0 #FBF43F; background-image: -webkit-linear-gradient(#F8E230, #F5CF1C); background-image: linear-gradient(#F8E230, #F5CF1C); text-shadow: 0 -1px 0 #FFF; }
+		</style>
+	</head>
+	<body>
+		
+		<!-- PHONE, DISPLAY & CONTROLS -->
+		<div id="wrapper">
+			<div><iframe id="display" src="projects/harvest/index.html"></iframe></div>
+			<button id="restart" onclick="restart()">Restart Demo</button>
+		</div>
+
+		<!-- PAGE SCRIPTS -->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/phonewrap.js" type="text/javascript"></script>
+		<script>
+			var restart;
+
+			$(function() {
+
+				var iframeId = "display";
+				var iframe = document.getElementById(iframeId);
+
+				phone = new Phonewrap(iframeId);
+
+				restart = function() { iframe.src = iframe.src; }
+			});
+		</script>
+	</body>
+</html>

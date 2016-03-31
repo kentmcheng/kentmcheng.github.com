@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>iPhone Screen Wrapper</title>
+		<!-- META INFO -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=1.0, initial-scale=1.0">
+		<!-- STYLES -->
+		<link rel="stylesheet" href="phonewrap.css">
+		<style>
+			body {
+				background: #87A599;
+
+				font-family: "Helvetica Neue", sans-serif;
+				font-size: 1em;
+			}
+
+			section {
+				padding: 1em 0;
+				text-align: center;
+			}
+			
+			.portrait_1 {
+				width: 100%;
+				max-width: 320px;
+			}
+
+			.landscape_1 {
+				width: 100%;
+				max-width: 480px;
+			}
+
+			.landscape_2 {
+				width: 100%;
+				max-width: 568px;
+			}
+
+			img {
+				display: block;
+
+				width: 100%;
+			}
+		</style>
+		<!-- SCRIPTS -->
+		<script src="phonewrap.js"></script>
+	</head>
+	<body>
+		<section>
+			<div id="screen_1" class="portrait_1"><img src="screenshot_portrait_2.png" alt="Portrait screenshot"></div>
+		</section>
+		<section>
+			<div id="screen_2" class="landscape_2"><img src="screenshot_landscape_2.png" alt="Landscape screenshot"></div>
+		</section>
+		<!--
+		<section>
+			<div id="screen_3" class="landscape_2"><img src="screenshot_landscape_2.png" alt="Kingdom Rush"></div>
+		</section>
+		-->
+		<script>
+			var phone1 = new Phonewrap('screen_1', 'phone_1');
+				phone1.deviceColor("white");
+				phone1.deviceModel("five");
+			var phone2 = new Phonewrap('screen_2', 'phone_2');
+				phone2.deviceHeader(false);
+				phone2.deviceModel("five");
+				phone2.deviceOrientation("landscape");
+
+			/*
+			var Test = new Phonewrap('screen_1');
+			
+		 	var Test = new Phonewrap('screen_2');
+		 		Test.deviceOrientation("landscape");
+
+		 	var Test = new Phonewrap('screen_3');
+		 		Test.deviceModel("five");
+		 		Test.deviceOrientation("landscape");
+			*/
+		</script>
+	</body>
+</html>

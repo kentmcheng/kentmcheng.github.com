@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- META INFO -->
+		<meta charset="utf-8">
+		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="Next Bus">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="Next Bus">
+
+		<meta name="viewport" content="initial-scale=1, user-scalable=0">
+
+		<!-- PAGE TITLE -->
+		<title>Next Bus</title>
+
+		<!-- PAGE ICONS -->
+		<link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/touch-icon-180.png">
+		
+		<link rel="icon" sizes="128x128" href="images/touch-icon-128.png">
+		<link rel="icon" sizes="192x192" href="images/touch-icon-192.png">
+		
+		<!-- PAGE STYLES -->
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		
+		<!-- PAGE SCRIPTS -->
+		<script src="../../js/jquery.js"></script>
+		<script src="scripts.js"></script>
+
+	</head>
+	<body ontouchmove="">
+
+		<div id="bad-orientation">
+			<div class="es es-no"></div>
+			<p>Landscape<br>not supported</p>
+		</div>
+
+		<div id="nextbus">
+			<div id="nb-stops" class="panel"></div>
+			<div id="nb-info" class="panel"></div>
+			<div id="nb-search" class="panel"></div>
+			<div id="nb-buses" class="panel"></div>
+			<div id="nb-splash" class="panel">
+				<div class="bus-icon"></div>
+				<h1>Next Bus</h1>
+				<h2>An open API Experiment</h2>
+				<div class="fa fa-spinner fa-pulse"></div>
+				<div class="es es-dot"></div>
+			</div>
+		</div>
+
+		<script>$(function(){ init(); });</script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+

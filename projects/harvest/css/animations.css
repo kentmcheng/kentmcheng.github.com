@@ -1,0 +1,260 @@
+/********************/
+/*** GAME CLASSES ***/
+/********************/
+
+#game.flip {
+	-webkit-transform: rotateY(180deg);
+}
+
+
+/*************************/
+/*** FRONT END CLASSES ***/
+/*************************/
+
+#fe_intro.pan {
+	-webkit-transition: all 2.0s ease-out;
+	-webkit-transform: translate(0, -134%);
+}
+
+#fe_intro_stars ul.fade_in {
+	-webkit-animation: fadeIn 1s ease-in 1 forwards;
+}
+#fe_intro_stars li:nth-child(1).pulse {
+	-webkit-animation: pulseStrong 1.9s ease-in-out infinite alternate;
+}
+#fe_intro_stars li:nth-child(2).pulse {
+	-webkit-animation: pulseStrong 2.1s ease-in-out infinite alternate;
+}
+#fe_intro_stars li:nth-child(3).pulse {
+	-webkit-animation: pulseStrong 1.6s ease-in-out infinite alternate;
+}
+#fe_intro_stars li:nth-child(4).pulse {
+	-webkit-animation: pulseStrong 1.3s ease-in-out infinite alternate;
+}
+
+#fe_intro_trees.pan {
+	-webkit-transition: all 2s ease-in;
+	-webkit-transform: translate(0, -10%);
+}
+
+#fe_intro_logo.pan {
+	-webkit-transition: all 1.5s ease-in 0.5s;
+	-webkit-transform: translate(0, -20%);
+}
+
+#fe_controls.fade_in {
+	-webkit-animation: fadeIn 0.25s ease-in 1 forwards;
+}
+#fe_controls.fade_out {
+	-webkit-animation: fadeOut 0.25s ease-out 1 forwards
+}
+
+
+/************************/
+/*** GAMEPLAY CLASSES ***/
+/************************/
+
+#gp_lobby_players .ready.slide_in {
+	-webkit-transition: all 0.5s ease-in-out;
+	-webkit-transform: translate(0, -100%);
+}
+#gp_lobby_players .arrows.bounce {
+	-webkit-animation: bounce 1.5s 2s ease-in-out infinite forwards;
+}
+
+#gp_results_backing.fade_in {
+	-webkit-animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+#gp_results_alert.slide {
+	-webkit-transition: all 0.5s ease-in-out;
+	-webkit-transform: translate(0, -34%) scale(0.55);
+}
+#gp_results_alert img.shake {
+	-webkit-animation: shake 0.2s 5 forwards;
+}
+
+#gp_results_standings .place_1 {
+	-webkit-animation: popIn 0.35s 2.0s ease-in-out 1 forwards;
+}
+#gp_results_standings .place_2 {
+	-webkit-animation: placeIn 0.5s 1.2s ease-in 1 forwards;
+}
+#gp_results_standings .place_3 {
+	-webkit-animation: placeIn 0.5s 0.8s ease-in 1 forwards;
+}
+#gp_results_standings .place_4 {
+	-webkit-animation: placeIn 0.5s 0.4s ease-in 1 forwards;
+}
+#gp_results_standings li:nth-child(1) .blink {
+	-webkit-animation: blink 0.5s ease-in-out infinite alternate;
+}
+#gp_results_standings li:nth-child(1) .pulse {
+	-webkit-animation: pulseLight 0.75s ease-in-out infinite alternate;
+}
+#gp_results_standings li:nth-child(1) .stars li:nth-child(1).pulse,
+#gp_results_standings li:nth-child(1) .stars li:nth-child(3).pulse {
+	-webkit-animation: pulseStrong 0.75s ease-in-out infinite alternate;
+}
+#gp_results_standings li:nth-child(1) .stars li:nth-child(2).pulse,
+#gp_results_standings li:nth-child(1) .stars li:nth-child(5).pulse {
+	-webkit-animation: pulseStrong 0.90s ease-in-out infinite alternate;
+}
+#gp_results_standings li:nth-child(1) .stars li:nth-child(4).pulse,
+#gp_results_standings li:nth-child(1) .stars li:nth-child(6).pulse {
+	-webkit-animation: pulseStrong 0.80s ease-in-out infinite alternate;
+}
+
+/***********************/
+/*** GENERIC CLASSES ***/
+/***********************/
+
+.blink {
+	-webkit-animation: blink 0.35s ease-in-out infinite alternate;
+}
+.bulge {
+	-webkit-animation: bulge 0.35s 1 forwards;
+}
+.fade_in {
+	-webkit-animation: fadeIn 1.0s ease-in 1 forwards;
+}
+.fade_out {
+	-webkit-animation: fadeOut 1.0s ease-out 1 forwards
+}
+
+/******************************/
+/*** ANIMATION DECLARATIONS ***/
+/******************************/
+
+@-webkit-keyframes blink {
+	0% {
+		opacity: 0.65;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.65;
+	}
+}
+
+@-webkit-keyframes bounce {
+	0% {
+		-webkit-transform: translate(0, 0);
+	}
+	25% {
+		-webkit-transform: translate(0, 10px);
+	}
+	50% {
+		-webkit-transform: translate(0, 4px);
+	}
+	75% {
+		-webkit-transform: translate(0, 10px);
+	}
+	100% {
+		-webkit-transform: translate(0, 0);
+	}
+}
+
+@-webkit-keyframes bulge {
+	0% {
+		-webkit-transform: scale(1);
+	}
+	33% {
+		-webkit-transform: scale(1.1);
+	}
+	100% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes placeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		-webkit-transform: translate(0, -15px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes popIn {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0.7);
+	}
+	33% {
+		opacity: 1;
+		-webkit-transform: scale(1.2) translate(0, -15px);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1) translate(0, -15px);
+	}
+}
+
+@-webkit-keyframes pulseLight {
+	0% {
+		opacity: 0.7;
+		-webkit-transform: scale(1);
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1.05);
+	}
+	100% {
+		opacity: 0.6;
+		-webkit-transform: scale(1);
+	}
+}
+
+@-webkit-keyframes pulseStrong {
+	0% {
+		opacity: 0.3;
+		-webkit-transform: scale(0.5);
+	}
+	50% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+	}
+	100% {
+		opacity: 0.45;
+		-webkit-transform: scale(0.65);
+	}
+}
+
+@-webkit-keyframes shake {
+	0% {
+		-webkit-transform: rotate(0);
+	}
+	25% {
+		-webkit-transform: rotate(-5deg) translate(5px, -5px);
+	}
+	50% {
+		-webkit-transform: rotate(0) translate(-3px, 3px);
+	}
+	75% {
+		-webkit-transform: rotate(5deg) translate(4px, -6px);
+	}
+	100% {
+		-webkit-transform: rotate(0);
+	}
+}

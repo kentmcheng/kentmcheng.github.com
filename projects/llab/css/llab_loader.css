@@ -1,0 +1,55 @@
+/*********************/
+/*** LOADER STYLES ***/
+/*********************/
+
+#panel_top_contents.loader {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+}
+
+#panel_top_contents.loader .element {
+	width: 2em;
+	height: 2em;
+	
+	position: relative;
+	
+	border: 3px solid #fff;
+	border-radius: 4px;
+	
+	color: #fff;
+}
+
+#panel_top_contents.loader .element h1 {
+	position: absolute;
+	bottom: -2px;
+	left: 2px;
+	
+	font-size: 1.5em;
+}
+
+#panel_top_contents.loader .element h2 {
+	position: absolute;
+	top: 0;
+	right: 2px;
+	
+	font-family: "Droid Sans Mono", monospace;
+	font-size: 0.46875em;
+	font-weight: bold;
+}
+
+#panel_top_contents.loader p {
+	margin: 0.125em 0;
+	
+	color: #fff;
+	font-size: 0.75em;
+	text-transform: lowercase;
+}
+
+#panel_top_contents.loader img {
+	width: 120px;
+	height: auto;
+	
+	display: block;
+}

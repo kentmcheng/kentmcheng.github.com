@@ -1,0 +1,105 @@
+@import url(reset.css);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background: #646E6F;
+}
+
+h2 {
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+p {
+	margin: 0.5em 0 0;
+	font-size: 1.25em;
+	line-height: 1.25em;
+}
+
+a { color: rgb(16, 180, 180); }
+a:hover {  border-bottom: 1px solid; }
+
+.wrapper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	display: -webkit-flex;
+	-webkit-flex-direction: column;
+
+	display: flex;
+	flex-direction: column;
+}
+
+#error-message {
+	position: absolute;
+	bottom: 50%;
+	left: 0;
+	right: 0;
+
+	display: -webkit-flex;
+	-webkit-justify-content: center;
+
+	display: flex;
+	justify-content: center;
+}
+
+#error-message-box {
+	width: 80%;
+	max-width: 360px;
+	padding: 1em;
+	background: #000;
+	
+	color: #FFF;
+	font-family: "Inconsolata", sans-serif;
+	text-align: center;
+}
+
+#set-1 { height: 67%; }
+#set-2 { height: 8%; }
+#set-3 { height: 25%; }
+
+.color-bars {
+	display: -webkit-flex;
+	display: flex;
+	height: 100%;
+}
+
+.color-bars li {
+	-webkit-flex: 1;
+	flex: 1;
+	height: 100%;
+}
+
+.black-16 { background: rgb(16, 16, 16); }
+.grey { background: rgb(180, 180, 180); }
+.yellow { background: rgb(180, 180, 16); }
+.cyan { background: rgb(16, 180, 180); }
+.green { background: rgb(16, 180, 16); }
+.magenta { background: rgb(180, 16, 180); }
+.red { background: rgb(180, 16, 16); }
+.blue { background: rgb(16, 16, 180); }
+
+.i { background: rgb(0, 29, 66); }
+.white { background: rgb(235, 235, 235); }
+.q { background: rgb(44, 0, 92); }
+.black-7 {background: rgb(7, 7, 7); }
+.black-24 {background: rgb(24, 24, 24); }
+
+@media (orientation: portrait) {
+
+	.color-bars li:first-of-type,
+	.color-bars li:last-of-type {
+		display: none;
+	}
+}
+
+@media (max-device-width: 375px) {
+	
+	#error-message-box {
+		box-sizing: border-box;
+		font-size: 0.75em;
+	}
+}

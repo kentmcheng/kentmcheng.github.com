@@ -1,0 +1,79 @@
+/*	Based on Eric Meyer's css reset
+ *	http://meyerweb.com/eric/tools/css/reset/
+ */
+
+html, body, div, iframe, img, object, span, 
+a, h1, h2, h3, h4, h5, h6, p,
+b, em, i, small, strong, sub, sup, u, 
+blockquote, cite, code, pre, q,
+dd, dl, dt, li, ol, ul,
+button, fieldset, form, input, label, legend,
+caption, table, tbody, tfoot, thead, td, th, tr,
+article, aside, audio, canvas, details, embed,
+figure, figcaption, footer, header, mark, menu, 
+nav, output, ruby, section, summary, time, video {
+
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, main, menu, nav, section {	
+	
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	
+	line-height: normal;
+	text-rendering: geometricPrecision;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote::before, blockquote::after, 
+q::before, q::after {
+	content: "";
+	content: none;
+}
+
+button, input {
+
+	-moz-appearance: none;
+	-webkit-appearance: none;
+
+	background: none;
+	border-radius: 0;
+	color: inherit;
+	outline: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+dl, ol, ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: collapse;	
+	border-spacing: 0;
+}

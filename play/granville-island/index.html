@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, user-scalable=1">
+
+		<base href="../../">
+
+		<!-- PAGE TITLE -->
+		<title>Granville Island – Kent Cheng</title>
+
+		<!-- PAGE ICONS -->
+		<link rel="shortcut icon" href="graphics/favicon.ico" type="image/x-icon">
+
+		<link rel="apple-touch-icon" sizes="120x120" href="graphics/touch-icon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="graphics/touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="graphics/touch-icon-180.png">
+		
+		<link rel="icon" sizes="128x128" href="graphics/touch-icon-128.png">
+		<link rel="icon" sizes="192x192" href="graphics/touch-icon-192.png">
+		
+		<!-- PAGE STYLES -->
+		<link rel="stylesheet" href="css/core.css" type="text/css">
+		<link rel="stylesheet" href="css/slideshow.css" type="text/css">
+	</head>
+	<body>
+		<noscript>
+			<p>My site requires the use of JavaScript. Please enable it within your browser's settings.</p>
+		</noscript>
+
+		<!-- PAGE MARKUP -->
+		<div id="contents">
+			<div id="page">
+				<header id="page-header"></header>
+				<!-- THE CONTENT -->
+				<div id="page-body">
+					<div class="content">
+						<div class="wrap" style="max-width:1200px">
+							
+							<div class="content-body">
+								<h2>Granville Island</h2>
+								<h4>Exploring the Island</h4>
+							</div>
+
+							<div class="content-display">
+								<div class="content-image" style="max-width: 1024px;">
+									<a data-flickr-embed="true"  href="https://www.flickr.com/photos/totororo/16690067312/" title="Sunny Afternoon in Granville Island"><img src="https://farm9.staticflickr.com/8622/16690067312_e7a5f37852_b.jpg" alt="Sunny Afternoon in Granville Island"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+								</div>
+							</div>
+
+							<div class="content-body">
+								<!-- 
+								<p class="note">
+									The photo was taken Ann Hung, an amazing photographer — check out her work on <a href="https://www.flickr.com/photos/totororo/">flickr</a> or <a href="https://www.facebook.com/annhfhung/">Facebook</a>.
+								</p> 
+								-->
+								<p>
+									Granville Island is a great place for many reasons. It's one of those destinations that everyone should visit at least once. It's a unique gem that's not only beautiful, but also rich in history and culture. This tiny land mass attracts some 10 million people each year and during the peaks months of summer it can see upwards of 70,000 visitors a day.
+								</p>
+								<p>
+									The island has much to offer, it ranges from a variety of different shops, boutiques, galleries, and restaurants. That being said, it can be difficult to find these points of interest and to get more details about them. There is an information booth, but most will choose a more indirect and passive method — they either just walk and explore with no set plans or they might utilize a map or website. Speaking of websites, the current site actually does a poor job at showcasing what it has to offer. So that got me thinking, how would I change it?
+								</p>
+							</div>
+
+							<div class="content-display">
+								<ul id="screenshots">
+									<li><img src="play/granville-island/screenshot-1.png" alt="Granville Island 2.0 — The Homepage"></li>
+									<li><img src="play/granville-island/screenshot-2.png" alt="Granville Island 2.0 — Interactive Map 1"></li>
+									<li><img src="play/granville-island/screenshot-3.png" alt="Granville Island 2.0 — Interactive Map 2"></li>
+									<li><img src="play/granville-island/screenshot-4.png" alt="Granville Island 2.0 — Interactive Map 3"></li>
+								</ul>
+								<nav id="screenshots-controls"></nav>
+							</div>
+
+							<div class="content-body">
+								<p>
+									For me, my focus would revolve around this idea of easy exploration and information. At the heart of this redesign would be an interactive map. Allow your visitors to explore and discover all those different points of interest within a single widget or page. Let them to search and find different items just by using tags and keywords, or alternatively, they can simply browse and explore just by selecting different items and options. Let them pan, zoom, and navigate just like any other mapping services.
+								</p>
+								<p>
+									It doesn't stop there, when they've selected an item of interest you can show them details about that item. Move and centralize that directory information so that any page or widget can utilize that data. If a user were to click on the Public Market, a panel could appear and display a listing of all the different vendors found within the building. Conversely, if the user wanted to know where they could find some coffee, the map would highlight all those locations. Selecting one of those locations would bring up a panel with some details about that shop or vendor. It could even show you where it is located if it belongs to a larger building.
+								</p>
+								<p>
+									All of this information isn't meant to replace the need for each shop or vendor wanting their own website or space. Granville Island and its website is very much a portal and resource where many might start their journey.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div><!-- END OF CONTENT -->
+				<footer id="page-footer"></footer>
+			</div>
+		</div>
+
+		<!-- PAGE SCRIPTS -->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/core.js" type="text/javascript"></script>
+		<script src="js/slideshow.js" type="text/javascript"></script>
+		<script>
+			$(function() {
+				
+				page().init("play");
+
+				var slides = new Slideshow("screenshots");
+				slides.controls("screenshots-controls");
+			});
+		</script>
+	</body>
+</html>

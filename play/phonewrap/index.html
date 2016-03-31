@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, user-scalable=1">
+
+		<base href="../../">
+
+		<!-- PAGE TITLE -->
+		<title>Phone Wrapper – Kent Cheng</title>
+
+		<!-- PAGE ICONS -->
+		<link rel="shortcut icon" href="graphics/favicon.ico" type="image/x-icon">
+
+		<link rel="apple-touch-icon" sizes="120x120" href="graphics/touch-icon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="graphics/touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="graphics/touch-icon-180.png">
+		
+		<link rel="icon" sizes="128x128" href="graphics/touch-icon-128.png">
+		<link rel="icon" sizes="192x192" href="graphics/touch-icon-192.png">
+		
+		<!-- PAGE STYLES -->
+		<link rel="stylesheet" href="css/core.css" type="text/css">
+		<link rel="stylesheet" href="play/phonewrap/styles.css" type="text/css">
+		<link rel="stylesheet" href="play/phonewrap/demo.css" type="text/css">
+	</head>
+	<body>
+		<noscript>
+			<p>My site requires the use of JavaScript. Please enable it within your browser's settings.</p>
+		</noscript>
+		
+		<!-- PAGE MARKUP -->
+		<div id="contents">
+			<div id="page">
+				<header id="page-header"></header>
+				<!-- THE CONTENT -->
+				<div id="page-body">
+					<!-- Intro -->
+					<div class="content intro">
+						<div class="wrap">
+							<div class="content-body">
+								<h2>Phone Wrapper</h2>
+								<h4>A Visual Emulator</h4>
+							</div>
+							<div class="content-display">
+								<div class="content-image" style="max-width: 396px;">
+									<img src="play/phonewrap/intro.jpg" alt="Previous phone wrappers">
+								</div>
+							</div>
+							<div class="content-body">
+								<p>
+									The phone wrapper was originally a design aid I created while working at airG. It started as a wrapper to emulate the small screens found on yesteryear's feature phones. It helped me prototype and test out designs for the mobile web. As I moved into more modern projects, the wrapper also transformed. However, prototyping and testing tools have come a long way since then. Now, you can do so much just using the developer tools found within Google Chrome. 
+								</p>
+								<p>
+									So why create yet another wrapper? Well, this new version is going to be used on my site and primarily for its aesthetics. It will no longer rely on any graphics or images and its appearance can be generated all via CSS — this makes it easy to implement and customize.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- Phone Wrapper -->
+					<div class="content">
+						<div class="wrap">
+							<div class="content-display">
+								<div id="phone-wrapper">
+									<ul id="screenshots">
+										<li><img id="beat-sneak" src="play/phonewrap/screenshots/beat-sneak.jpg" alt="Beat Sneak Bandit"></li>
+										<li><img id="fragger" src="play/phonewrap/screenshots/fragger.jpg" alt="Fragger"></li>
+										<li><img id="frontiers" src="play/phonewrap/screenshots/frontiers.jpg" alt="Kingdom Rush Frontiers"></li>
+										<li><img id="threes" src="play/phonewrap/screenshots/threes.jpg" alt="Threes!"></li>
+									</ul>
+								</div>
+								<div id="phone-options">
+									<ul id="phone-options-color">
+										<li><button id="button-option-black">Black</button></li>
+										<li><button id="button-option-white">White</button></li>
+									</ul>
+									<ul id="phone-options-model">
+										<li><button id="button-option-four">iPhone 4</button></li>
+										<li><button id="button-option-five">iPhone 5</button></li>
+									</ul>
+									<ul id="phone-options-orientation">
+										<li><button id="button-option-portrait">Portrait</button></li>
+										<li><button id="button-option-landscape">Landscape</button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="content-body">
+								<p>
+									Use the picker to change the phone's appearance. Depending on the width on your screen or window, the landscape option may or may not be available. The phone's scale may also change depending on the available width.
+								</p>
+								<p>
+									If you want your own Phone Wrapper to use for whatever, here's a <a href="play/phonewrap/phonewrap.zip">zip</a> of the source files — it includes the JavaScript, LESS and CSS files. The source files do not contain any of the scaling logic — it was only needed for this demo.
+								</p>
+								<p class="note">
+									The screenshots used within this demo are the intellectual property of their rightful owners. The games on display are: <a href="https://itunes.apple.com/ca/app/beat-sneak-bandit/id473689550?mt=8">Beat Sneak Bandit</a>, <a href="https://itunes.apple.com/ca/app/fragger/id373046496?mt=8">Fragger</a>, <a href="https://itunes.apple.com/ca/app/kingdom-rush-frontiers/id598581396?mt=8">Kingdom Rush Frontiers</a>, and <a href="https://itunes.apple.com/ca/app/threes!/id779157948?mt=8">Threes</a>. I would encourage you to check them out — they are some of my favorites.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<footer id="page-footer"></footer>
+			</div>
+		</div>
+		
+		<!-- PAGE SCRIPTS -->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/core.js" type="text/javascript"></script>
+		<script src="js/phonewrap.js" type="text/javascript"></script>
+		<script src="play/phonewrap/scripts.js" type="text/javascript"></script>
+		<script>
+			var phone;
+
+			$(function() {
+				
+				page().init("play");
+				
+				phone = new Phonewrap("screenshots");
+				
+				initOptions();
+			});
+		</script>
+	</body>
+</html>

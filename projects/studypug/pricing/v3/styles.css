@@ -1,0 +1,179 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+#sp {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+#sp h4,
+#sp h5,
+#sp h6 {
+  font-weight: 700;
+}
+#sp h4 {
+  font-size: 24px;
+}
+#sp h5 {
+  font-size: 18px;
+}
+#sp p {
+  margin: 0.75em auto 0;
+  line-height: 1.4;
+}
+#sp p a {
+  color: #05a7cf;
+}
+#sp p a:hover {
+  color: #05a7cf;
+}
+#sp p b {
+  font-weight: 700;
+}
+#sp p.sp-ruled {
+  padding-top: 0.75em;
+  border-top: 1px solid #FFF;
+}
+#sp p.sp-empty::after {
+  content: "\00a0";
+}
+#sp button.btn-primary {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border-color: #5d3400;
+  background-color: #ffdb53;
+  background: linear-gradient(to bottom, #ffdb53 0, #ffc600 85%, #ffc600 100%);
+  color: #5d3400;
+  font-weight: 700;
+}
+#sp s,
+#sp strike {
+  position: relative;
+}
+#sp s::after,
+#sp strike::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 35%;
+  width: 100%;
+  border-bottom: 2px solid red;
+}
+#sp .sp-header {
+  padding-bottom: 24px;
+  text-align: center;
+}
+#sp .sp-header h6 {
+  margin: 0.25em;
+}
+#sp .sp-padded {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+#sp em {
+  color: #05a7cf;
+}
+#sp a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+#sp a:active {
+  text-decoration: none;
+}
+#sp #sp-plans .sp-plan-features {
+  padding-top: 24px;
+  text-align: center;
+}
+#sp #sp-plans .sp-plan-features header {
+  margin-bottom: 1em;
+}
+#sp #sp-plans .sp-plan-features li {
+  margin-bottom: 8px;
+}
+#sp #sp-plans .sp-plan-features li:last-of-type {
+  margin-bottom: 0;
+}
+#sp #sp-plans .sp-plan-features li h5 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+#sp #sp-plans .sp-plan-features li p {
+  margin: 0;
+}
+#sp #sp-plans .sp-plans-package {
+  position: relative;
+  max-width: 240px;
+  margin: 24px auto 0;
+  border: 1px solid #5d5d5d;
+  border-radius: 4px;
+  text-align: center;
+}
+#sp #sp-plans .sp-plans-package.most-popular {
+  border-color: #05a7cf;
+}
+#sp #sp-plans .sp-plans-package.most-popular header {
+  background-color: #05a7cf;
+}
+#sp #sp-plans .sp-plans-package > * {
+  padding: 0 15px;
+}
+#sp #sp-plans .sp-plans-package header {
+  padding-top: 28px;
+  padding-bottom: 32px;
+  background-color: #5d5d5d;
+  color: #FFF;
+}
+#sp #sp-plans .sp-plans-package header h6 {
+  margin-top: 0.375em;
+}
+#sp #sp-plans .sp-plans-package .sp-plans-ribbon {
+  position: absolute;
+  left: -12px;
+  margin-top: -18px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #e03667;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 700;
+}
+#sp #sp-plans .sp-plans-package .sp-plans-ribbon img,
+#sp #sp-plans .sp-plans-package .sp-plans-ribbon span {
+  vertical-align: middle;
+}
+#sp #sp-plans .sp-plans-package .sp-plans-ribbon::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 6px solid #c51e4e;
+  border-left: 12px solid transparent;
+}
+#sp #sp-plans .sp-plans-package .sp-plans-pricing {
+  padding-top: 36px;
+  padding-bottom: 24px;
+}
+#sp #sp-plans .sp-plans-package .sp-plans-pricing p {
+  margin: 0;
+}
+#sp #sp-plans .sp-plans-package .sp-plans-pricing p.regular-price {
+  font-weight: bold;
+}
+#sp #sp-plans .sp-plans-package .sp-plans-pricing p.deal-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  #sp #sp-plans .sp-plans-package {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  #sp #sp-plans .sp-plans-package.most-popular {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+#sp #sp-plans .sp-plans-signup {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}

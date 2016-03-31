@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>How It Works</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../reset.css">
+		<link rel="stylesheet" href="styles.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div id="sp">
+			
+			<!-- MAIN HEADER -->
+			<header id="sp-main-header">
+				
+				<!-- Top Bar -->
+				<div id="sp-top-bar">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-4">
+								<div class="row">
+									<div class="col-xs-8 col-sm-12">
+										<a href="#">
+											<img id="sp-logo" src="https://dcvp84mxptlac.cloudfront.net/img/logo-white.png">
+										</a>
+									</div>
+									<div class="nav col-xs-4 hidden visible-xs">
+										<button id="sp-menu-btn">Menu</button>
+									</div>
+								</div>
+							</div>
+							<div class="nav hidden-xs col-sm-8">
+								<ul id="sp-main-nav">
+									<li>
+										<form class="navbar-form navbar-left" role="search">
+											<div class="form-group">
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Search for...">
+													<span class="input-group-btn">
+														<button type="submit" class="btn btn-default">
+															<span class="glyphicon glyphicon-search"></span>
+														</button>
+													</span>
+											</div>
+										</form>
+									</li>
+									<li><a href="#">How It Works</a></li>
+									<li><a href="#">Log In</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Courses Bar -->
+				<div id="sp-course-bar">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								<ul id="sp-course-list" class="clearfix">
+									<li>Math 8</li>
+									<li>Math 9</li>
+									<li>Math 10</li>
+									<li>Math 11</li>
+									<li>Math 12</li>
+									<li>Pre-Algebra</li>
+									<li>College Algebra</li>
+									<li>Calculus</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<!-- CONTENT BODY -->
+			<div class="contents">
+
+				<!-- Why use video tutorials? -->
+				<div>
+					<div class="container sp-padded">
+						<div class="row">
+							<div class="col-xs-12 text-center">
+								<h3>Why learn using video tutorials?</h3>
+								<p>
+									Here at StudyPug, we understand learning from a textbook is tough. Most people are visual learners, so by combining visual examples with audio we create a better learning environment. Studies show that after 3 days, humans only retain 10-20% of information they read or hear, versus 50-65% when visuals are added. 
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- How StudyPug can help -->
+				<div id="sp-how-we-help">
+					
+					<div class="container sp-padded">
+
+						<!-- Our teaching style -->
+						<div id="sp-teaching-style" class="row">
+							
+							<div class="col-xs-12 col-sm-6 col-sm-push-6">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/illustration-dennis-2.png" alt="Illustration dennis 2" class="img-responsive">
+							</div>
+
+							<div class="col-xs-12 col-sm-6 col-sm-pull-6 sp-pad-top">
+								<h4>Our teaching style</h4>
+								<!-- <p>
+									Our tutors understand the challenges that students face when learning the traditional way.
+									This is why we created videos that are short and to the point! We focus on real examples and problems that will help you better prepare for your future exams.
+								</p> -->
+								<p>
+									Our help videos are short and to the point. We focus on real, in-depth examples and problems — the kind you see on your exams, or from the back of your textbook — you know, the ones your teacher never seems to get to. The concepts aren’t hard, but the questions can be tricky — we show you how to solve them.
+								</p>
+							</div>
+							
+						</div>
+
+						<!-- Use case 1 -->
+						<div id="sp-use-case-1" class="row">
+							<div class="col-xs-12 col-sm-6">
+								<img class="img-responsive" src="use-case-1.jpg">
+							</div>
+							<div class="col-xs-12 col-sm-6 sp-pad-top">
+								<h4>Watch, learn, and practice.</h4>
+								<p>
+									Follow along chapter-by-chapter or get help on specific topics and problems. You can watch our tutors walk you through each problem step-by-step or you can practice by solving them on your own.
+								</p>
+								<p><em onclick="toggle('sp-video-modal')"><span class="glyphicon glyphicon-play-circle"></span> Watch video</em></p>
+							</div>
+						</div>
+
+						<!-- Use case 2 -->
+						<div id="sp-use-case-2" class="row">
+							<div class="col-xs-12 col-sm-6 col-sm-push-6">
+								<img class="img-responsive" src="use-case-2.jpg">
+							</div>
+							<div class="col-xs-12 col-sm-6 col-sm-pull-6 sp-pad-top">
+								<h4>Can't find a topic? Just search!</h4>
+								<p>
+									If you need to find something quickly, you can always use our search. There you can easily find and play our videos right from the results page. If you need more help, you can jump directly to the lesson or topic.
+								</p>
+								<p><em onclick="toggle('sp-video-modal')"><span class="glyphicon glyphicon-play-circle"></span> Watch video</em></p>
+							</div>							
+						</div>
+					</div>
+				</div>
+
+				<!-- Pricing, plans & signup -->
+				<div>
+					<div class="container sp-padded">
+						
+						<div class="row text-center">
+							<div class="col-xs-12">
+								<h3>Get help for a fraction of the cost.</h3>
+								<p>
+									Personal tutors can cost $50 an hour and tutoring centres are not much cheaper at $3000 or more per year. For a low monthly price you can get unlimited help from StudyPug — all plans give you unlimited access. You can use StudyPug at home or on the go from any computer, tablet, or smartphone. Best of all it's free to try, so don't procrastinate any longer — it could be too late!
+								</p>
+							</div>
+						</div>
+						
+						<!-- Plans & signup -->
+						<div class="row">
+							<div class="col-xs-12">
+								<iframe src="../../pricing/v5/index.html" width="100%" height="400"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Questions? -->
+				<div>
+					<div class="container" style="padding-bottom: 32px;">
+						<div class="row text-center">
+							<div class="col-xs-12">
+								<h4>Any Questions?</h4>
+								<p>Send us a <em>message</em> or try our <em>live chat.</em></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- MAIN FOOTER -->
+			<footer id="sp-main-footer">
+				
+				<div class="container">
+					
+					<!-- Site Nav -->
+					<ul id="sp-foot-nav">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Pricing</a></li>
+					</ul>
+
+					<!-- Social Icons -->
+					<ul>
+						<li class="sp-social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-fb.png" alt="Facebook">
+							</a>
+						</li>
+						<li class="sp-social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-twitter.png" alt="Twitter">
+							</a>
+						</li>
+						<li class="sp-social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-youtube.png" alt="YouTube">
+							</a>
+						</li>
+						<li class="sp-social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-gplus.png" alt="Google Plus">
+							</a>
+						</li>
+					</ul>
+
+					<!-- Fine Print -->
+					<ul id="sp-fine-print">
+						<li>&copy; StudyPug 2016</li>
+						<li><a href="#">Terms of Service</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div><!-- // container -->
+			</footer>
+
+			<!-- Video -->
+			<div id="sp-video-modal" class="hide" onclick="toggle('sp-video-modal')">
+				<div class="sp-video-container">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/edGtZWf8uRc" allowfullscreen=""></iframe>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				function toggle(id) {
+					var ele = document.getElementById(id);
+					ele.classList.toggle("hide");
+				}
+			</script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Course Index</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../reset.css">
+		<link rel="stylesheet" href="styles.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="scripts.js"></script>
+	</head>
+	<body class="sp-algebra-2 sp-registered">
+
+		<div id="sp">
+			
+			<!-- PAGE HEADER -->
+			<header id="sp-page-header">
+				
+				<!-- PAGE NAV -->
+				<div id="sp-page-nav">
+					<div class="container">
+						
+						<div class="row">
+							<!-- LOGO + MENU FOR XS SCREENS -->
+							<div class="col-xs-12 col-sm-4">
+								<div class="row">
+									<div class="col-xs-8 col-sm-12">
+										<a href="index.html"><img id="sp-header-logo" src="https://dcvp84mxptlac.cloudfront.net/img/logo-white.png" alt="StudyPug Logo"></a>
+									</div>
+									<div class="col-xs-4 hidden visible-xs text-right">
+										<button id="sp-page-nav-menu-btn"><h5>Menu</h5></button>
+									</div>
+								</div>
+							</div>
+							<!-- NAV ITEMS FOR SM+ SCREENS -->
+							<div class="nav hidden-xs col-sm-8 text-right">
+								<ul id="sp-page-nav-items">
+									<li>
+										<form class="navbar-form navbar-left" role="search">
+											<div class="form-group">
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Search for...">
+													<span class="input-group-btn">
+														<button type="submit" class="btn btn-default">
+															<span class="glyphicon glyphicon-search"></span>
+														</button>
+													</span>
+											</div>
+										</form>
+									</li>
+									<li><a href="#"><h6>How It Works</h6></a></li>
+									<li><a href="#"><h6>Log In</h6></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</header>
+
+			<div class="contents">
+				
+				<!-- SECONDARY NAV -->
+				<div id="sp-secondary-nav">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								<ol id="sp-breadcrumbs" class="">
+									<li><a href="#">Home</a></li>
+									<li>
+										<span class="dropdown">
+											<a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Math 8<span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu" aria-labelledby="dLabel">
+												<li><a href="#" onclick="switchCourse('sp-math-8')">Math 8</a></li>
+												<li><a href="#" onclick="switchCourse('sp-pre-algebra')">Pre-Algebra</a></li>
+												<li><a href="#" onclick="switchCourse('sp-algebra-1')">Algebra 1</a></li>
+												<li><a href="#" onclick="switchCourse('sp-geometry')">Geometry</a></li>
+											</ul>
+										</span>
+									</li>
+									<li class="active">Chapter 1.1 – Understanding the number systems</li>
+								</ol>
+								<!-- REMOVE ME -->
+								<script>
+									function switchCourse(subject) {
+										document.body.className = subject;
+									}
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- HELP VIDEOS -->
+				<div id="sp-help-videos" class="sp-banded sp-banded-bottom">
+					<div class="container sp-pad-lg">
+						<div class="row sp-header sp-pad-bottom-md">
+							<div class="col-xs-12">
+								<h1>Help Videos</h1>
+							</div>
+						</div>
+						<div class="row">
+							<!-- Video player -->
+							<div class="col-xs-12 col-md-8">
+								<div class="embed-responsive embed-responsive-16by9">
+									<div style="position:absolute; width:100%; height:100%; background:#333;"></div>
+								</div>
+							</div>
+							<!-- Play List -->
+							<div class="col-xs-12 col-md-4 test-play-items-wrapper">
+								<ul class="test-play-items">
+									<li class="active">
+										<button>
+											<div class="test-play-item-icon">
+												<span class="glyphicon glyphicon-play-circle"></span>
+											</div>
+											<div class="test-play-item-name">
+												<h4>Learn how to improve your search results</h4>
+											</div>
+										</button>
+									</li>
+									<li>
+										<button>
+											<div class="test-play-item-icon">
+												<span class="glyphicon glyphicon-play-circle"></span>
+											</div>
+											<div class="test-play-item-name">
+												<h4>How to easily remember your times table</h4>
+											</div>
+										</button>
+									</li>
+									<li>
+										<button>
+											<div class="test-play-item-icon">
+												<span class="glyphicon glyphicon-play-circle"></span>
+											</div>
+											<div class="test-play-item-name">
+												<h4>How to give us all your monies</h4>
+											</div>
+										</button>
+									</li>
+									<li>
+										<a href="#">
+											<div class="test-play-item-icon"></div>
+											<div class="test-play-item-name">
+												<h4>View all our help videos</h4>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TOPICS LIST -->
+				<div id="sp-course-topics">
+					<div class="container sp-pad-lg">
+						<!-- Heading -->
+						<div class="row">
+							<div class="col-xs-12 sp-header sp-pad-bottom-md">
+								<h1>Math 8 Topics</h1>
+								<h5>There are plenty of <span style="color:#E03667;">free demo lessons</span> for you to try.</h5>
+							</div>
+						</div>
+						<!-- Topics -->
+						<div id="sp-course-topics-list" class="row"></div>
+						<script>
+							courseList("sp-course-topics-list");
+							addFakeCourses("sp-course-topics-list", 20, 6);
+						</script>
+						
+						<div id="sp-inline-course-search" class="row sp-ruled-top sp-pad-md">
+							<div class="col-xs-12 sp-header sp-pad-bottom-md">
+								<h2>Don't see what you need above?</h2>
+								<h6>Don't fret, try our search or give us a shout.</h6>
+							</div>
+							<div class="col-xs-10 col-xs-push-1 col-md-8 col-md-push-2 sp-boxed sp-boxed-rounded">
+								<div class="row sp-row-flex">
+									
+									<div class="col-xs-12 col-sm-6 sp-stacked-pad-bottom-sm">
+										<form class="input-group" action="/us/en/search.html"><input id="sp-results-search-input" name="search_term" type="text" class="form-control" placeholder="Search Topics" value=""><span class="input-group-btn"><button class="btn btn-default search" type="button"><span class="glyphicon glyphicon-search"></span></button></span></form>
+									</div>
+									
+									<div class="col-xs-12 col-sm-6">
+										<p class="sp-no-margin">Ask us via <a href="#">live chat</a> or send us a <a href="#">message</a></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TIPS AND TRICK -->
+				<div id="sp-tips-tricks" class="sp-banded">
+					<div class="container sp-pad-lg">
+						<div class="row sp-header sp-pad-bottom-lg">
+							<div class="col-xs-12">
+								<h1>Tips and Tricks</h1>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-2">
+								
+								<ul id="test" class="sp-questions-answers">
+									<li>
+										<div class="sp-question-block">
+											<h4>Know your fundamentals</h4>
+											<span class="glyphicon glyphicon-menu-up sp-show-hide-icon"></span>
+										</div>
+										<div class="sp-answer-block">
+											<p>If you're struggling with a specific topic, it can often help to take a step back and re-learn or review the fundamentals for that area. Math relies on building upon key ideas and principles. If you're fundamentals are weak then your fundation isn't as strong.</p>
+										</div>
+									</li>
+									<li>
+										<div class="sp-question-block">
+											<h4>Do your homework, practice makes perfect.</h4>
+											<span class="glyphicon glyphicon-menu-up sp-show-hide-icon"></span>
+										</div>
+										<div class="sp-answer-block">
+											<p>I know you don't want yet another person telling you to do your homework, but if there's one thing that most struggling students have in common, it's that they don't keep up with homework.  Students who do well in math class aren't all math whizzes; they just keep up with their work, doing homework before the next class period introduces new material so that they're not lost in lecture and have plenty of time to ask questions.  Unfortunately, it's becoming more and more common for teachers to either make homework optional, or make it all due the day of the test.</p>
+										</div>
+									</li>
+									<li>
+										<div class="sp-question-block">
+											<h4>Stay current and don't fall behind.</h4>
+											<span class="glyphicon glyphicon-menu-up sp-show-hide-icon"></span>
+										</div>
+										<div class="sp-answer-block">
+											<p>Even if you've been with us up to this point, you're probably laughing now.  Who's got time to work ahead of the teacher?  But you won't believe how much more you'll like lecture if you've seen the material already, and it will actually save you time by making lecture a learning experience rather than nap time.</p>
+										</div>
+									</li>
+									<li>
+										<div class="sp-more-questions">
+											<a href="#"><h4>See all our tips and tricks.</h4></a>
+											<span class="glyphicon glyphicon-menu-right sp-see-more-icon"></span>
+										</div>
+									</li>
+								</ul>
+								<script>
+									// Bind the show/hide behavior to the question blocks
+									$("#test .sp-question-block").click(function() {
+										this.parentNode.classList.toggle("sp-collapsed");
+									});
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- SOCIAL WIDGET -->
+				<!--
+				<div id="sp-like-studypug" class="sp-pad-lg">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-6">
+								<img class="img-responsive" src="https://dcvp84mxptlac.cloudfront.net/img/illustration-dennis-2.png" alt="Like StudyPug? Tell your friends!">
+							</div>
+							<div class="hidden-xs col-sm-5">
+								<
+								<h2>Like StudyPug?</h2>
+								<h6>Tell your friends and help them improve their maths skills as well.</h6>
+								<div class="row">
+									
+									<div class="col-xs-6">
+										<div class="fb-like" data-href="https://www.facebook.com/StudyPug/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+									</div>
+									
+									<div class="col-xs-6">
+										<div class="g-plusone" data-href="https://plus.google.com/+StudyPug"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+
+			</div>	
+		</div>
+
+		<script src="https://apis.google.com/js/platform.js" async defer></script>
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+	</body>
+</html>
+

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Testimonials</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../reset.css">
+		<link rel="stylesheet" href="styles.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="scripts.js"></script>
+	</head>
+	<body class="">
+
+		<div id="sp">
+			
+			<!-- PAGE HEADER -->
+			<header id="sp-page-header">
+				
+				<!-- PAGE NAV -->
+				<div id="sp-page-nav">
+					<div class="container">
+						
+						<div class="row">
+							<!-- LOGO + MENU FOR XS SCREENS -->
+							<div class="col-xs-12 col-sm-4">
+								<div class="row">
+									<div class="col-xs-8 col-sm-12">
+										<a href="index.html"><img id="sp-header-logo" src="https://dcvp84mxptlac.cloudfront.net/img/logo-white.png" alt="StudyPug Logo"></a>
+									</div>
+									<div class="col-xs-4 hidden visible-xs text-right">
+										<button id="sp-page-nav-menu-btn"><h5>Menu</h5></button>
+									</div>
+								</div>
+							</div>
+							<!-- NAV ITEMS FOR SM+ SCREENS -->
+							<div class="nav hidden-xs col-sm-8 text-right">
+								<ul id="sp-page-nav-items">
+									<li>
+										<form class="navbar-form navbar-left" role="search">
+											<div class="form-group">
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Search for...">
+													<span class="input-group-btn">
+														<button type="submit" class="btn btn-default">
+															<span class="glyphicon glyphicon-search"></span>
+														</button>
+													</span>
+											</div>
+										</form>
+									</li>
+									<li><a href="#"><h6>How It Works</h6></a></li>
+									<li><a href="#"><h6>Log In</h6></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</header>
+
+			<div class="contents">
+				
+				<!-- SECONDARY NAV -->
+				<div id="sp-secondary-nav">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								<ol id="sp-breadcrumbs" class="">
+									<li><a href="#">Home</a></li>
+									<li class="active">Testimonials</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TESTIMONIALS -->
+				<div class="sp-banded sp-banded-bottom">
+					<div class="container sp-pad-lg">
+						<div class="row sp-header sp-pad-bottom-md">
+							<div class="col-xs-12">
+								<h1>Testimonials</h1>
+							</div>
+						</div>
+						
+						<div id="sp-testimonials" class="row"></div>
+
+						<script>
+
+							var data = {
+								
+								testimonials: [
+									{
+										photoURL: "https://dcvp84mxptlac.cloudfront.net/diagrams/ca_10_s1_3.png",
+										name: "Benjamin Escott",
+										profession: "Grade 10 Student",
+										quote: "StudyPug was my LIFE SAVER!! I almost failed my math provincials but StudyPug helped me pass. Math is getting a lot easier now and I like how a lot of the examples show up on homework."
+									},
+									{
+										photoURL: "https://dcvp84mxptlac.cloudfront.net/diagrams/ca_10_p1_2.png",
+										name: "John MacPherson",
+										profession: "Parent of a Grade 8 & Grade 10 Student",
+										quote: "It’s frustrating to spend so much money on tutoring and not seeing your kid’s marks improve. It is exactly opposite with you guys. Your price is very reasonable and my kid’s marks have improved!"
+									},
+									{
+										photoURL: "https://dcvp84mxptlac.cloudfront.net/diagrams2/ca_10_t.png",
+										name: "Marian Cote",
+										profession: "High School Math Teacher",
+										quote: "StudyPug is a great supplementary resource for students to reinforce the math they learn in class at home. The video lessons allow an easy review on previous topics."
+									},
+									{
+										photoURL: "https://www.studypug.com/img/testimonial/user-meghanw.jpg",
+										name: "Meghan W",
+										profession: "College Student",
+										quote: "I had trouble when I went from high school to university level math courses. A guy in my dorm told me about Study Pug. I like it because it's affordable, and Dennis, the main tutor, makes it simple."
+									},
+									{
+										photoURL: "https://www.studypug.com/img/testimonial/user-carsone.jpg",
+										name: "Carson E",
+										profession: "Parent",
+										quote: "When we saw our son's grades we looked online for a convenient, affordable and effective solution. StudyPug has been a great investment."
+									},
+									{
+										photoURL: "https://www.studypug.com/img/testimonial/user-jasong.jpg",
+										name: "Jason G",
+										profession: "High School Senior",
+										quote: "This website saved my butt last semester. I am using it againthis semester. Dennis is the best online tutor... I also like that I can watch videos over and over until I really understand the concept. If you want to save time, sign up...it's only ten bucks and it saved me hours of study time. Thanks, Dennis!"
+									},
+									{
+										photoURL: "https://www.studypug.com/img/testimonial/user-ivans.jpg",
+										name: "Ivan S",
+										profession: "Private Math Tutor",
+										quote: "I tell my students to use Study Pug as a study companion when I’m not there to help."
+									},
+									{
+										photoURL: "https://www.studypug.com/img/testimonial/user-edwardb.jpg",
+										name: "Edward B",
+										profession: "Physics Major",
+										quote: "A guy on my floor had Study Pug and when I saw it I signed up that night... it's saved me hours and hours of time."
+									},
+									{
+										photoURL: "https://www.studypug.com/img/testimonial/user-jonl.jpg",
+										name: "Jon L",
+										profession: "High School Student",
+										quote: "I use it [Study Pug] every day."
+									}
+								]
+							}
+
+							function addTestimonials(targetId, count) {
+
+								var container = document.getElementById(targetId);
+
+								for (var i = 0; i < count; i++) {
+
+									var node = document.createElement("div"); // column cell node
+									node.classList.add("col-xs-12", "col-sm-10", "col-sm-push-1", "col-md-4", "col-md-push-0");
+
+									var tNode = document.createElement("div"); // testimonial node
+									tNode.classList.add("sp-testimonial");
+
+									tNode.innerHTML = (
+										"<div class='sp-testimonial-user-photo'>" +
+											//"<img class='img-responsive' src='" + data.testimonials[i].photoURL + "'>" +
+											"<img src='../g9/sprite.gif' style='background-image: url(" + data.testimonials[i].photoURL + ");'>" +
+										"</div>" +
+										"<div class='sp-testimonial-user-text'>" +
+											"<q>" + data.testimonials[i].quote + "</q>" +
+											"<span class='sp-testimonial-user-info'>" + 
+												"<b>" + data.testimonials[i].name + "</b>" + ", " + data.testimonials[i].profession + 
+											"</span>" +
+										"</div>"
+									);
+
+									node.appendChild(tNode);
+									container.appendChild(node);
+								}
+							}
+
+							addTestimonials("sp-testimonials", 3);
+						</script>
+					</div>
+				</div>
+
+			</div>	
+		</div>
+	</body>
+</html>
+

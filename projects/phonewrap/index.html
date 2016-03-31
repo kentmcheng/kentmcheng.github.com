@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>iPhone Screen Wrapper</title>
+		<!-- META INFO -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=1.0, initial-scale=1.0">
+		<!-- STYLES -->
+		<link rel="stylesheet" href="phone.css">
+		<style>
+			body {
+				background: #87A599;
+
+				font-family: "Helvetica Neue", sans-serif;
+				font-size: 1em;
+				text-align: center;
+			}
+			
+			.portrait {
+				width: 320px;
+			}
+
+			.landscape_1 {
+				width: 480px;
+			}
+
+			.landscape_2 {
+				width: 568px;
+			}
+
+			img {
+				display: block;
+
+				width: 100%;
+			}
+		</style>
+		<!-- SCRIPTS -->
+		<script src="phone.js"></script>
+		<script src="phonewrap.js"></script>
+	</head>
+	<body>
+		<div id="screen_1" class="portrait"><img src="screenshot_portrait_1.png" alt="Beat Sneak Bandit"></div>
+		<div id="screen_2" class="portrait"><img src="screenshot_portrait_1.png" alt="Beat Sneak Bandit"></div>
+		<div id="screen_3" class="portrait"><img src="screenshot_portrait_4.png" alt="Mailbox"></div>
+		<div id="screen_4" class="portrait"><img src="screenshot_portrait_4.png" alt="Mailbox"></div>
+		<div id="screen_5" class="landscape_1"><img src="screenshot_landscape_1.png" alt="Fragger"></div>
+		<div id="screen_6" class="landscape_1"><img src="screenshot_landscape_1.png" alt="Fragger"></div>
+		<div id="screen_7" class="landscape_2"><img src="screenshot_landscape_2.png" alt="Kingdom Rush"></div>
+		<div id="screen_8" class="landscape_2"><img src="screenshot_landscape_2.png" alt="Kingdom Rush"></div>
+		<script>
+			/*
+			// Wrap screen 1
+			Phone.wrap("screen_1", "phone_1");
+			// Wrap screen 2
+			Phone.wrap("screen_2", "phone_2");
+			Phone.setColor("phone_2", "white");
+			// Wrap screen 3
+			Phone.wrap("screen_3", "phone_3");
+			Phone.setVersion("phone_3", "five");
+			// Wrap screen 4
+			Phone.wrap("screen_4", "phone_4");
+			Phone.setVersion("phone_4", "five");
+			Phone.setColor("phone_4", "white");
+			// Wrap screen 5
+			Phone.wrap("screen_5", "phone_5");
+			Phone.setOrientation("phone_5", "landscape");
+			// Wrap screen 6
+			Phone.wrap("screen_6", "phone_6");
+			Phone.setColor("phone_6", "white");
+			Phone.setOrientation("phone_6", "landscape");
+			// Wrap screen 7
+			Phone.wrap("screen_7", "phone_7");
+			Phone.setVersion("phone_7", "five");
+			Phone.setOrientation("phone_7", "landscape");
+			// Wrap screen 8
+			Phone.wrap("screen_8", "phone_8");
+			Phone.setVersion("phone_8", "five");
+			Phone.setColor("phone_8", "white");
+			Phone.setOrientation("phone_8", "landscape");
+			*/
+
+			var BeatSneak1 = new Phonewrap('screen_1', "device_1"),
+		 		BeatSneak2 = new Phonewrap('screen_2', "device_2"),
+		 		Mailbox1 = new Phonewrap('screen_3', "device_3"),
+		 		Mailbox2 = new Phonewrap('screen_4', "device_4"),
+		 		Fragger1 = new Phonewrap('screen_5', "device_5"),
+		 		Fragger2 = new Phonewrap('screen_6', "device_6"),
+		 		KingdomRush1 = new Phonewrap('screen_7', "device_7"),
+		 		KingdomRush2 = new Phonewrap('screen_8', "device_8");
+
+		 	BeatSneak2.deviceColor("white");
+		 	
+		 	Mailbox1.deviceModel("five");
+		 	Mailbox2.deviceModel("five");
+		 	Mailbox2.deviceColor("white");
+
+		 	Fragger1.deviceOrientation("landscape");
+		 	Fragger2.deviceOrientation("landscape");
+		 	Fragger2.deviceColor("white");
+
+		 	KingdomRush1.deviceOrientation("landscape");
+		 	KingdomRush1.deviceModel("five");
+		 	KingdomRush2.deviceOrientation("landscape");
+		 	KingdomRush2.deviceModel("five");
+		 	KingdomRush2.deviceColor("white");
+
+		</script>
+	</body>
+</html>

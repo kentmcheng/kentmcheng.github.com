@@ -1,0 +1,273 @@
+@import url(reset.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic);
+@import url(http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic);
+
+html {
+	font-size: 62.5%;
+
+	-ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+	color: #3a3a3a;
+	font-family: "Open Sans", "Helvetica Neue", "Arial", sans-serif;
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+
+* { 
+	box-sizing: border-box; 
+}
+
+nav { 
+	font-family: "PT Serif", sans-serif; 
+}
+
+nav a { 
+	font-style: italic; 
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: "PT Serif", sans-serif; }
+
+p {
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	hyphens: auto;
+	line-height: 1.5em;
+	word-break: break-word;
+}
+	p a { color: #146fdf; }
+	p em { font-style: italic; }
+	p strong { font-weight: 600; }
+
+	.no-touch p a:hover {
+		border-bottom: 1px solid #146fdf;
+		cursor: pointer;
+	}
+
+#contents {
+	position: relative;
+}
+
+/* 
+	----------------
+	CORE PAGE STYLES
+	================ 
+*/
+
+#page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	background: #fff;
+
+	-webkit-transition: all ease 0.35s;
+	transition: all ease 0.35s;
+}
+
+#page-header {
+	padding: 2rem 0;
+	background: #3e4147;
+	color: #efefef;
+}
+
+	#page-header h1 {
+		-webkit-box-flex: 1;
+		flex: 1;
+
+		margin-top: 0.4rem;
+		
+		font-size: 4rem;
+		font-weight: 700;
+	}
+
+	#page-header h1 a:hover { 
+		color: #dedede; 
+	}
+
+	#page-header .wrapper {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-box-align: center;
+		-webkit-box-pack: start;
+
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+#page-footer {
+	padding: 1rem;
+}
+
+	#page-footer p {	
+		/*color: #545454;*/
+		color: #878787;
+		font-size: 1.4rem;
+		font-style: italic;
+		text-align: center;
+	}
+
+/* 
+	---------------
+	SITE NAV STYLES
+	=============== 
+*/
+
+#main-nav-items {
+	display: none;
+}
+
+#mobile-nav {
+	background: #3e4147;
+}
+
+#mobile-nav-items {
+	padding: 1rem 0 0;
+	opacity: 0;
+
+	-webkit-transition: all ease-in-out 0.35s;
+	transition: all ease-in-out 0.35s;
+}
+
+	#mobile-nav-items li {
+		margin: 0.6rem 0;
+		padding: 0.6rem 0;
+
+		text-align: center;
+	}
+
+	#mobile-nav-items a {
+		padding: 0 1rem;
+	}
+
+#mobile-nav-trigger {
+	width: 40px;
+	height: 40px;
+	background: url(../graphics/mobile-nav-btn.png) 0 0 no-repeat;
+	background-size: 100% auto;
+}
+
+	.no-touch #mobile-nav-trigger:hover { background-position: 0 -40px; }
+	.no-touch #mobile-nav-trigger:active { background-position: 0 0; }
+
+.site-nav a {
+	color: #a4a5a5;
+	font-size: 2.4rem;
+}
+
+	.site-nav a.active {
+		color: #efefef !important;
+	}
+
+	.no-touch .site-nav a:hover {
+		color: #c4c5c5;
+	}
+
+/* 
+	----------------------
+	RESPONSIVE ADJUSTMENTS
+	----------------------
+*/
+
+@media (min-width: 640px) {
+
+	#contents {
+		position: static;
+	}
+	
+	#mobile-nav {
+		display: none;
+	}
+
+	#mobile-nav-trigger {
+		display: none;
+	}
+
+	#page {
+		position: static;
+		top: auto;
+		left: auto;
+		right: auto;
+
+		-webkit-transition: all ease 0s !important;
+		-webkit-transform: translateY(0) !important;
+		
+		transition: all ease 0s !important;
+		transform: translateY(0) !important;
+	}
+
+	#page-header {
+		padding: 3rem 2rem;
+	}
+
+		#page-header h1 {
+			-webkit-box-flex: 1;
+			flex: 1;
+
+			margin: 0;
+		}
+
+		#page-header .wrapper {
+			-webkit-box-orient: horizontal;
+			flex-flow: row;
+		}
+
+	#page-footer {
+		padding: 2rem;
+	}
+
+	#main-nav-items {
+		display: block;
+		
+		margin-top: 1.2rem;
+	}
+
+		#main-nav-items a {
+			padding: 0 0.2rem;
+		}
+
+		#main-nav-items li {
+			display: inline-block;
+			
+			margin-left: 2.2rem;
+		}
+
+		#main-nav-items li:first-of-type { 
+			margin-left: 0; 
+		}
+
+	.site-nav a {
+		font-size: 2.2rem;
+	}
+}
+
+@media (min-width: 800px) {
+
+	#page-header {
+		padding: 3rem 0;
+	}
+
+	#page-footer {
+		padding: 2em 0;
+	}
+
+	#main-nav-items li {
+		margin-left: 2.4rem;
+	}
+
+	.site-nav a {
+		font-size: 2.4rem;
+	}
+
+	.wrapper {
+		width: 90%;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Slide Show Demo</title>
+		<!-- META INFO -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=1.0, initial-scale=1.0">
+		<!-- STYLES -->
+		<link rel="stylesheet" href="../../libs/phonewrap.css">
+		<link rel="stylesheet" href="../../libs/slideshow.css">
+		<!-- SCRIPTS -->
+		<script src="../../libs/phonewrap.js"></script>
+		<script src="../../libs/slideshow.js"></script>
+		<style>
+			
+			body {
+				background: #87a599;
+
+				font-family: sans-serif;
+				font-size: 1em;
+				text-align: center;
+			}
+
+			.demo {
+				padding: 2em 0 0;
+			}
+
+			#screens {
+				width: 320px;
+				height: 480px;
+				margin: 0 auto;
+			}
+
+			#screens_nav {
+				width: 280px;
+				margin: 0 auto;
+				padding: 1em 0 0;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="demo">
+			<ul id="screens">
+				<!-- 
+				<li><img src="llab1.jpg"></li>
+				<li><img src="llab2.jpg"></li>
+				<li><img src="llab3.jpg"></li>
+				<li><img src="llab4.jpg"></li> 
+				-->
+				<li><img src="slide1.png"></li>
+				<li><img src="slide2.png"></li>
+				<li><img src="slide3.png"></li>
+				<li><img src="slide4.png"></li>
+				<li><img src="slide5.png"></li>
+				<li><img src="slide6.png"></li>
+			</ul>
+		</div>
+		<div id="screens_nav"></div>
+		<script>
+			var phone = new Phonewrap("screens");
+			phone.deviceHeader(false);
+			phone.deviceColor("white");
+			var slides = new Slideshow("screens", true);
+			slides.controls("screens_nav");
+		</script>
+	</body>
+</html>

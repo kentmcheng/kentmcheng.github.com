@@ -1,0 +1,224 @@
+/***********************/
+/*** GAMEPLAY STYLES ***/
+/***********************/
+
+/* COLORS */
+/*
+	RACK BG #fb5d2e;
+	RACK TILE BG #fcda19;
+	RACK TILE COLOR #513c1f;
+*/
+
+/* TOP PANEL */
+
+#panel_top_contents > nav.gp .left {
+	width: 70%;
+	height: 100%;
+	padding: 0 6px;
+	
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.player {
+	margin: 0 4px;
+	
+	border-radius: 6px;
+	
+	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.player > .components {
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+}
+
+.player > .components .photo img {
+	width: 40px;
+	height: 40px;
+	
+	display: block;
+	
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+.player > .components .score {
+	height: 40px;
+	padding: 0 5px;
+	
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	
+	background: #FBD918 url(../img/texture_score_mustard.png) right bottom no-repeat;
+	background-size: auto 100%;
+}
+
+.player > .components .score p {
+	margin-top: 0.125em;
+	
+	color: #513c1f;
+	text-shadow: 0 1px 0 #fff445;
+}
+.player > .components .score p:first-letter {
+	color: #be7e1c;
+}
+
+
+.player.active {
+	border: 2px solid #fff;
+}
+
+.player.active > .components .score {
+	background: #fff url(../img/texture_score_white.png) right bottom no-repeat;
+	background-size: auto 100%;
+}
+
+.player.active > .components .score p {
+	color: #4c4c4c;
+	text-shadow: 0 1px 0 #fff;
+}
+.player.active > .components .score p:first-letter {
+	color: #959595;
+}
+
+
+#panel_top_contents > nav.gp .right {
+	width: 30%;
+	height: 100%;
+	padding: 0 10px;
+	
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#panel_top_contents > nav.gp .right button {
+	font-size: 0.75em;
+}
+
+/* BOTTOM PANEL */
+
+#panel_bot_contents > .components {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	-webkit-box-pack: bottom;
+	-webkit-box-flex: 1;
+}
+
+#panel_bot_contents > .components .board {
+	width: 100%;
+	height: 100%;
+	
+	-webkit-box-flex: 1;
+	
+	background: url(../img/game_board.jpg) center center no-repeat;
+	background-size: contain;
+}
+#panel_bot_contents > .components .board.existing {
+	background-image: url(../img/game_board_existing.jpg);
+}
+#panel_bot_contents > .components .board.play {
+	background-image: url(../img/game_board_play_full.jpg);
+	background-size: 100% auto;
+}
+#panel_bot_contents > .components .board.played {
+	background-image: url(../img/game_board_played.jpg);
+}
+
+#panel_bot_contents > .components .rack {
+	width: 100%;
+	
+	background: #fb5d2e url(../img/texture_footer_tangerine.gif) center bottom no-repeat;
+	background-size: 100% auto;
+}
+
+#panel_bot_contents .rack .tiles {
+	width: 100%;
+		
+	position: absolute;
+	top: -5px;
+	left: 0;
+}
+
+#panel_bot_contents .rack .tiles ul {
+	width: 100%;
+	
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+}
+
+#panel_bot_contents .rack .tiles ul li {
+	width: 40px;
+	height: 40px;
+	margin: 0 2px;
+	
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	
+	border: 3px solid #7A5229;
+	border-radius: 4px;
+	box-shadow: 0 3px 0 #513c1f;
+	background: #FBD918 url(../img/texture_score_mustard.png) right bottom no-repeat;
+	background-size: auto 100%;
+	color: #513c1f;
+	font-size: 1.0635em;
+	text-shadow: 0 2px 0 #A37547;
+}
+
+#panel_bot_contents .rack .actions {
+	width: 100%;
+	padding: 40px 0 0;
+}
+
+#panel_bot_contents .rack .actions ul {
+	width: 100%;
+	height: 100%;
+	padding: 0 10px;
+	
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+}
+
+#panel_bot_contents .rack .actions ul li:first-child {
+	width: 50%;
+}
+#panel_bot_contents .rack .actions ul li:first-child button {
+	font-size: 1em;
+}
+#panel_bot_contents .rack .actions ul li {
+	width: 25%;
+	height: auto;
+	padding: 5px;
+	
+	display: -webkit-box;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+}
+#panel_bot_contents .rack .actions ul li button {
+	font-size: 0.75em;
+}

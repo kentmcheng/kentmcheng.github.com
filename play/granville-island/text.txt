@@ -1,0 +1,61 @@
+<p></p>
+
+Granville Island is a great place for many reasons. It's one of those destinations that everyone should visit at least once. It's a unique gem that is not only beautiful, but rich in history and culture. There are many ways to enjoy your time.
+
+Living by the island, it's my go to destination to not only relax but to also shop for my daily groceries. I consider myself very lucky to have such convenient access to the foodstuffs available by the Public Market. 
+
+Having such regular access, has opened my eyes to just how many new visitors explore the island. H
+
+
+A DIFFERENT DEFAULT EXPERIENCE
+
+The island attracts some 10 million people each year and during the peak months of summer the island can see upwards of 60,000 to 70,000 visitors per day, that's a lot of traffic for this small gem.
+
+Despite its relatively small size, there's a lot that goes on. There's an information booth in which you can talk to someone but otherwise it's a very self explorative experience. You can also grab yourself a paper map and directory. The website which now feels a bit outdated, also reflects this. The information about its many points of interest is hard to discover or is often buried.
+
+If I were to redesign the Granville Island homepage and site, it would be centralized on the notion of exploration and information. At the heart of the redesign would be the interactive map. 
+
+
+- Design for your audience
+- A large volume of people visit the island (10+ million)
+	- During the peak season of summer you can expect 60-70,000 people/day
+- I would expect the GI homepage to reflect a more visitor friendly design.
+	- The current design is a bit dated
+	- Not the easiest to really explore and learn what's going on at the island
+		- Easily see and find all the shops within a specific building
+		- Locate shops within a specific building
+	- If you were to redesign the website, what could that look like
+		- A truly interactive map, to explore, learn, navigate
+		- More data and info, centralized data
+		- 
+
+
+THE INTERACTIVE MAP
+
+At the center of the redesign would be the interactive map. Discover and explore all the different points of interest within this single widget.
+
+Search and find points of interest by tag or keyword, or simply just browse and explore by selecting a point of interest. Pan and zoom your way around this map.
+
+Show your information about the various points of interest within the widget itself. Move and centralize your directory information so any page, app, or widget can utilize this information. For example, if a user were to select the Public Market, a panel would slide in and display a listing of all the different vendors within that point of interest. If the user wanted to find coffee shops, they could search for coffee and the map would highlight all the various coffee shops within Granville Island. Selecting a point of interest would show more information.
+
+- Discover, search, find, browse, locate
+- A directory that's data driven
+- Shift the design to a system that's data driven
+	- You can now have a map that you can pan, zoom and interact with
+		- Discover places by x,y,z
+		- Display some basic information about each place
+			- Name, address, phone number, website, details, etc.
+		- Show the location of specific shops within the context
+			- JJ Bean within the Farmer's Market
+- Instead of diving and navigating to many levels of pages the information is readily available without switching pages.
+
+- Search and find by tag or keywords
+- Browse and explore by selecting the various points of interests
+- Bring up a complete directory (if it's data driven)
+
+
+Living by the island, it's my go to destination to not only relax but to also shop for my daily groceries. I consider myself very lucky to have such convenient access to the foodstuffs available by the Public Market.
+
+The island attracts some 10 million people each year and during the peak months of summer the island can see upwards of 60,000 to 70,000 visitors per day, that's a lot of traffic for this small gem.
+
+

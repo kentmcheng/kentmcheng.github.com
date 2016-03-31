@@ -1,0 +1,513 @@
+/* 
+	Phone Wrapper
+ 	http://kentc.me/play/phonewrap/
+ 	Version 2.0 - 2013.08.24
+*/
+
+// GLOBALS VARIABLES
+
+	@iphone-black-1: #1A1A1A;
+	@iphone-black-2: #333;
+	@iphone-black-3: #3A3A3A;
+	@iphone-grey-1: #666;
+	@iphone-grey-2: #CCC;
+	@iphone-grey-3: #D6D6D6;
+	@iphone-grey-4: #DEDEDE;
+	@iphone-grey-5: #F4F5F5;
+
+	@min-phone-width: 400px;
+	@min-portrait-width: @min-phone-width;
+	@min-landscape-width: 900px;
+
+.iphone {
+
+	display: inline-block;
+
+	* {
+		
+		box-sizing: content-box;
+
+		margin: 0;
+		padding: 0;
+
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+}
+
+.iphone-components {
+
+	@padding-size: 15px;
+	@border-radius: 34px;
+	@border-width: 2px;
+	
+	position: relative;
+
+	@media (min-width: @min-portrait-width) {
+
+		.portrait & { 
+			
+			padding: 0 @padding-size;
+			border: 0 solid @iphone-grey-3;
+			border-radius: @border-radius;
+			border-width: @border-width;
+			background: @iphone-black-1;
+
+			.five& { border-color: @iphone-black-3; }
+
+			.white& {
+				
+				border-color: @iphone-grey-2;
+				background-color: @iphone-grey-5;
+			}
+		}
+	}
+
+	@media (min-width: @min-landscape-width) {
+
+		.landscape & {
+			
+			padding: @padding-size 0;
+			border: 0 solid @iphone-grey-3;
+			border-radius: @border-radius;
+			border-width: @border-width;
+			background: @iphone-black-1;
+
+			.five& { border-color: @iphone-black-3; }
+
+			.white& {
+				
+				border-color: @iphone-grey-2;
+				background-color: @iphone-grey-5;
+			}
+		}
+	}
+}
+	
+.iphone-frame {
+	
+	display: none;
+
+	@media (min-width: @min-phone-width) {
+		
+		.portrait &,
+		.landscape & { display: block; }
+	}
+}
+
+.iphone-frame-button {
+
+	@button-depth: 5px;
+	@power-button-position: 45px;
+	@power-button-size: 42px;
+	@mute-button-position: 45px;
+	@mute-five-button-position: 82px;
+	@mute-button-size: 28px;
+	@volume-button-size: 20px;
+	@volume-five-offset: 35;
+	@volume-up-position: 100px;
+	@volume-up-five-position: @volume-up-position + @volume-five-offset;
+	@volume-down-position: 145px;
+	@volume-down-five-position: @volume-down-position + @volume-five-offset;
+	
+	position: absolute;
+
+	border-radius: 2px;
+	background: @iphone-grey-3;
+
+	.five & { background: @iphone-black-3; }
+	
+	.white & { background: @iphone-grey-2; }
+
+	@media (min-width: @min-portrait-width) {
+
+		.portrait & {
+
+			&.power {
+				
+				bottom: 100%;
+				right: @power-button-position;
+				
+				width: @power-button-size;
+				height: @button-depth;
+			}
+
+			&.mute {
+				
+				top: @mute-button-position;
+				right: 100%;
+				
+				width: @button-depth;
+				height: @mute-button-size;
+
+				.five& { top: @mute-five-button-position; }
+			}
+
+			&.volume {
+
+				right: 100%;
+
+				width: @button-depth;
+				height: @volume-button-size;
+			}
+
+			&.up {
+
+				top: @volume-up-position;
+
+				.five& { top: @volume-up-five-position; }
+			}
+
+			&.down {
+
+				top: @volume-down-position;
+				
+				.five& { top: @volume-down-five-position; }
+			}
+		}
+	}
+
+	@media (min-width: @min-landscape-width) {
+
+		.landscape & {
+
+			&.power {
+
+				left: 100%;
+				bottom: @power-button-position;
+
+				width: @button-depth;
+				height: @power-button-size;
+			}
+
+			&.mute {
+		
+				right: @mute-button-position;
+				top: -5px;
+				
+				width: @mute-button-size;
+				height: @button-depth;
+
+				.five& { right: @mute-five-button-position; }
+			}
+
+			&.volume {
+				
+				top: -5px;
+
+				width: @volume-button-size;
+				height: @button-depth;
+			}
+
+			&.up {
+
+				right: @volume-up-position;
+
+				.five& { right: @volume-up-five-position; }
+			}
+
+			&.down {
+
+				right: @volume-down-position;
+
+				.five& { right: @volume-down-five-position; }
+			}
+		}
+	}
+}
+
+.iphone-screen {
+
+	display: -webkit-flex;
+	-webkit-align-items: center;
+	-webkit-justify-content: flex-start;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	.portrait & {
+
+		-webkit-flex-direction: column;
+		flex-direction: column;
+	}
+
+	@media (min-width: @min-landscape-width) {
+
+		.landscape & {
+
+			-webkit-flex-direction: row-reverse;
+			flex-direction: row-reverse;
+		}
+	}
+}
+
+.iphone-bezel {
+	
+	display: none;
+
+	@media (min-width: @min-portrait-width) {
+
+		.portrait & {
+
+			display: -webkit-flex;
+			-webkit-flex-direction: row;
+			-webkit-align-items: center;
+			-webkit-justify-content: center;
+
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+
+			.five& {
+
+				-webkit-flex-direction: column;
+				flex-direction: column;
+			}
+
+			&.top {
+				
+				padding: 38px 12px 38px 0;
+
+				.five& { padding: 20px 0; }
+			}
+
+			&.bottom {
+
+				padding: 16px 0;
+
+				.five& { padding: 12px 0; }
+			}
+		}
+	}
+
+	@media (min-width: @min-landscape-width) {
+
+		.landscape & {
+
+			display: -webkit-flex;
+			-webkit-flex-direction: column;
+			-webkit-align-items: center;
+			-webkit-justify-content: center;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.five& {
+
+				-webkit-flex-direction: row-reverse;
+				flex-direction: row-reverse;
+			}
+
+			&.top {
+				
+				padding: 0 38px 12px;
+
+				.five& { padding: 0 20px; }
+			}
+
+			&.bottom {
+
+				padding: 0 16px;
+
+				.five& { padding: 0 12px; }
+			}
+		}
+	}
+}
+
+.iphone-camera {
+	
+	border: 0 solid @iphone-black-2;
+	border-radius: 50%;
+	background: #1a1a42;
+
+	.white & {
+		
+		border-color: @iphone-grey-4;
+		background: #4d9494;
+	}
+
+	@media (min-width: @min-phone-width) {
+		
+		@camera-size: 4px;
+
+		.portrait &,
+		.landscape & {
+
+			width: @camera-size;
+			height: @camera-size;
+			border-width: @camera-size;
+		}
+	}
+}
+
+.iphone-speaker {
+
+	@speaker-width: 60px;
+	@speaker-height: 8px;
+	@speaker-margin: 15px;
+	@margin-five-major: 12px;
+	@margin-five-minor: 8px;
+	
+	border-radius: 4px;
+	background: @iphone-black-2;
+
+	.white & {
+		
+		border-color: @iphone-grey-5;
+		background: @iphone-grey-4;
+	}
+
+	@media (min-width: @min-portrait-width) {
+
+		.portrait & {
+
+			width: @speaker-width; 
+			height: @speaker-height;
+			margin: 0 @speaker-margin;
+
+			.five& { margin: @margin-five-major 0 @margin-five-minor; }
+		}
+	}
+
+	@media (min-width: @min-landscape-width) {
+
+		.landscape & {
+
+			width: @speaker-height; 
+			height: @speaker-width;
+			margin: @speaker-margin 0;
+
+			.five& { margin: 0 @margin-five-major 0 @margin-five-minor; }
+		}
+	}
+}
+
+.iphone-button-home {
+	
+	border-radius: 50%;
+	background: @iphone-black-2;
+
+	.white & { background: @iphone-grey-4; }
+
+	@media (min-width: @min-phone-width) {
+
+		@button-padding: 18px;
+
+		.portrait &,
+		.landscape & { padding: @button-padding; }
+	}
+}
+
+.iphone-home-icon {
+	
+	border: 2px solid @iphone-grey-1;
+	border-radius: 4px;
+
+	.white & { border-color: @iphone-grey-5; }
+
+	@media (min-width: @min-phone-width) {
+
+		@icon-size: 16px;
+
+		.portrait &,
+		.landscape & {
+
+			width: @icon-size;
+			height: @icon-size;
+		}
+	}
+}
+
+.iphone-display {
+
+	@display-width: 320px;
+	@display-height: 480px;
+	@display-height-five: 568px;
+	@border-radius: 4px;
+	@border-width: 2px;
+	
+	border: 0 solid black;
+	overflow: hidden;
+
+	.white & { border-color: @iphone-grey-2; }
+
+	@media (min-width: @min-portrait-width) {
+
+		.portrait & {
+
+			width: @display-width;
+			height: @display-height;
+			border-radius: @border-radius;
+			border-width: @border-width;
+
+			.five& { height: @display-height-five; }
+		}
+	}
+
+	@media (min-width: @min-landscape-width) {
+
+		.landscape & {
+
+			width: @display-height;
+			height: @display-width;
+			border-radius: @border-radius;
+			border-width: @border-width;
+
+			.five& { width: @display-height-five; }
+		}
+	}
+}
+
+.iphone-viewport {
+	
+	width: 100%;
+	height: 100%;
+}
+
+.iphone-glare {
+
+	@gradient-start: transparent 68%;
+	@gradient-end: rgba(255, 255, 255, 0.1) 68%;
+	@animation: fadeIn 0.5s ease alternate forwards;
+	
+	display: none;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+
+	background-image: -webkit-linear-gradient(20deg, @gradient-start, @gradient-end);
+	background-image: linear-gradient(70deg, @gradient-start, @gradient-end);
+	
+	-webkit-animation: @animation;
+	animation: @animation;
+
+	.interactive & { display: none !important; }
+
+	@media (min-width: @min-phone-width) {
+
+		.portrait &,
+		.landscape & { display: block; }
+	}
+}
+
+@-webkit-keyframes fadeIn {
+  from  { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from  { opacity: 0; }
+  to { opacity: 1; }
+}

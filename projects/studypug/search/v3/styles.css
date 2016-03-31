@@ -1,0 +1,188 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+#sp {
+  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+#sp h4,
+#sp h5,
+#sp h6 {
+  font-weight: 700;
+}
+#sp h4 {
+  font-size: 24px;
+}
+#sp h5 {
+  font-size: 18px;
+}
+#sp p {
+  max-width: 736px;
+  margin: 0.75em 0 0;
+}
+#sp em {
+  color: #05a7cf;
+}
+#sp a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+#sp a:active {
+  text-decoration: none;
+}
+#sp #sp-main-header {
+  background-color: #22afca;
+  color: #FFF;
+}
+#sp #sp-main-header #sp-top-bar {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+#sp #sp-main-header #sp-top-bar #sp-logo {
+  width: 150px;
+}
+#sp #sp-main-header #sp-top-bar .nav {
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+}
+#sp #sp-main-header #sp-top-bar #sp-main-nav {
+  margin: 18px 0;
+}
+#sp #sp-main-header #sp-top-bar #sp-main-nav li {
+  display: inline-block;
+  margin: 0 8px;
+}
+#sp #sp-main-header #sp-top-bar #sp-menu-btn {
+  margin: 18px 0;
+  text-transform: uppercase;
+}
+#sp #sp-main-header #sp-top-bar #sp-menu-btn:hover {
+  text-decoration: underline;
+}
+#sp #sp-main-header #sp-top-bar #sp-menu-btn:active {
+  text-decoration: none;
+}
+#sp #sp-results > .row {
+  padding-bottom: 24px;
+}
+@media (min-width: 768px) {
+  #sp #sp-results > .row {
+    padding-top: 24px;
+  }
+}
+#sp #sp-results #sp-results-sidebar {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background: #EFEFEF;
+}
+@media (min-width: 768px) {
+  #sp #sp-results #sp-results-sidebar {
+    border-radius: 4px;
+  }
+}
+@media (max-width: 767px) {
+  #sp #sp-results #sp-results-search {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #CCC;
+    background: #EFEFEF;
+  }
+}
+#sp #sp-results #sp-results-search-input {
+  margin: 12px 0;
+}
+#sp #sp-results #sp-results-filters .sp-clear {
+  text-align: right;
+}
+#sp #sp-results #sp-results-filters .sp-clear button {
+  margin-top: 4px;
+  color: #05a7cf;
+}
+#sp #sp-results #sp-results-filters .sp-clear button:hover {
+  border-bottom: 1px dotted;
+}
+#sp #sp-results #sp-results-filters .sp-clear button:active {
+  border-bottom: none;
+}
+#sp #sp-results #sp-results-filters .checkbox {
+  font-size: 16px;
+}
+#sp #sp-results #sp-results-filters .checkbox .sp-label {
+  position: relative;
+  top: 2px;
+}
+#sp #sp-results #sp-results-filters .checkbox .sp-label:hover {
+  border-bottom: 1px dotted;
+}
+#sp #sp-results #sp-results-filters .checkbox .sp-label:active {
+  border-bottom: none;
+}
+@media (max-width: 767px) {
+  #sp #sp-results #sp-results-filters .checkbox {
+    display: inline-block;
+    margin-right: 12px;
+  }
+}
+#sp #sp-results #sp-results-list ul h4 {
+  margin: 1em 0;
+  text-transform: uppercase;
+}
+#sp #sp-results #sp-results-list ul a {
+  color: #05a7cf;
+}
+#sp #sp-results #sp-results-list ul li {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #CCC;
+}
+#sp #sp-results #sp-results-list ul li .sp-details > div {
+  padding-top: 18px;
+}
+#sp #sp-results #sp-results-list ul li .sp-details .sp-video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+#sp #sp-results #sp-results-list ul:last-of-type li:last-of-type {
+  margin-bottom: 0 !important;
+  border-bottom: none !important;
+}
+#sp #sp-results #sp-results-list ul.hide-items li {
+  display: none !important;
+}
+#sp #sp-main-footer {
+  padding: 0 0 48px;
+  background: #333;
+  color: #FFF;
+}
+#sp #sp-main-footer #sp-fine-print {
+  color: #787878;
+}
+#sp #sp-main-footer #sp-foot-nav {
+  font-weight: 700;
+}
+#sp #sp-main-footer ul {
+  margin: 16px auto;
+  text-align: center;
+}
+#sp #sp-main-footer li {
+  display: inline-block;
+  margin: 4px 6px;
+}
+#sp #sp-main-footer li.sp-social-icon {
+  margin: 4px;
+}
+#sp #sp-main-footer li.sp-social-icon img {
+  display: block;
+  width: 48px;
+  height: 48px;
+  transition: all 0.25s ease;
+}
+#sp #sp-main-footer li.sp-social-icon a:hover img {
+  transform: translateY(-5px);
+}
+#sp #sp-main-footer li:first-of-type {
+  margin-left: 0;
+}
+#sp #sp-main-footer li:last-of-type {
+  margin-right: 0;
+}

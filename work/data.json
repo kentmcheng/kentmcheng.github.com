@@ -1,0 +1,67 @@
+{
+	"items" : [
+		{
+			"id" : "ttp",
+			"image" : "work-thumb-ttp.png",
+			"title" : "Tag Team Poker",
+			"desc" : "Tag Team Poker – It's Texas Hold'em with a twist!",
+			"url" : "ttp"
+		},
+		{
+			"id" : "nextbus",
+			"image" : "work-thumb-nextbus.png",
+			"title" : "Next Bus",
+			"desc" : "Next Bus – Where is that darn bus?", 
+			"url" : "nextbus"
+		},
+		{
+			"id" : "canucks",
+			"image" : "work-thumb-nextgame.png",
+			"title" : "Canucks Next Game",
+			"desc" : "Canucks Next Game – When are they playing again?",
+			"url" : "canucks"
+		},
+		{
+			"id" : "bbw",
+			"image" : "work-thumb-bbw.png",
+			"title" : "Big Barn World",
+			"desc" : "Big Barn World – A companion app for the mobile web game.",
+			"url" : "bbw"
+		},
+		{
+			"id" : "microsites",
+			"image" : "work-thumb-microsites.png",
+			"title" : "airG Microsites",
+			"desc" : "airG Microsites – Micro in nature but big on style!",
+			"url" : "microsites"
+		},
+		{
+			"id" : "emails",
+			"image" : "work-thumb-emails.png",
+			"title" : "airG Email Templates",
+			"desc" : "airG Email Templates – Plain text is so 2001.",
+			"url" : "emails"
+		},
+		{
+			"id" : "airgames",
+			"image" : "work-thumb-airgames.jpg",
+			"title" : "Airgames",
+			"desc" : "Airgames – A mobile web games community and platform.",
+			"url" : "airgames"
+		},
+		{
+			"id" : "harvest",
+			"image" : "work-thumb-harvest.jpg",
+			"title" : "Harvest Frenzy",
+			"desc" : "Harvest Frenzy – It's harvest time!",
+			"url" : "harvest"
+		},
+		{
+			"id" : "llab",
+			"image" : "work-thumb-llab.jpg",
+			"title" : "Letter Lab",
+			"desc" : "Letter Lab – Are you a master word chemist?",
+			"url" : "llab"
+		}
+	]
+}

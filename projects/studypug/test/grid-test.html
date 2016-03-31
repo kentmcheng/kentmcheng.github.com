@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Bootstrap Grid Wrapping test</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../reset.css">
+		<style>
+			.boxed { border: 1px solid #CCC; background: #EFEFEF; }
+		</style>
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 boxed">Box 1</div>
+				<div class="col-xs-12 col-sm-4 boxed">Box 2<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+				<div class="col-xs-12 col-sm-4 boxed">Box 3<br>Subsequent columns continue along the new line.</div>
+
+				<!-- Add the extra clearfix for only the required viewport -->
+				<div class="clearfix hidden-xs-block"></div>
+
+				<div class="col-xs-12 col-sm-4 boxed">Box 4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+				<div class="col-xs-12 col-sm-4 boxed">Box 5<br>Subsequent columns continue along the new line.</div>
+				<div class="col-xs-12 col-sm-4 boxed">Box 6</div>
+
+				<!-- Add the extra clearfix for only the required viewport -->
+				<div class="clearfix hidden-xs-block"></div>
+
+				<div class="col-xs-12 col-sm-4 boxed">Box 7<br>Subsequent columns continue along the new line.</div>
+				<div class="col-xs-12 col-sm-4 boxed">Box 8</div>
+				<div class="col-xs-12 col-sm-4 boxed">Box 9<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+			</div>
+		</div>
+	</body>
+</html>

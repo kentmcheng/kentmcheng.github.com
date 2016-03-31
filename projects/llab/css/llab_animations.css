@@ -1,0 +1,65 @@
+/*** ANIMATIONS ***/
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.fadeIn {
+	-webkit-animation: fadeIn 0.35s ease;
+}
+
+@-webkit-keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.fadeOut {
+	-webkit-animation: fadeOut 0.35s ease;
+}
+
+@-webkit-keyframes float {
+	0% {
+		-webkit-transform: translateY(0);
+	}
+	50% {
+		-webkit-transform: translateY(-2%);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes pointUp {
+	0% {
+		-webkit-transform: translateY(0);
+	}
+	50% {
+		-webkit-transform: translateY(-5%);
+	}
+	100% {
+		-webkit-transform: translateY(0);
+	}
+}
+
+
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-transform: scale(1);
+	}
+	10% {
+		-webkit-transform: scale(1.1);
+	}
+	20% {
+		-webkit-transform: scale(1);
+	}
+	100% {
+		-webkit-transform: scale(1);
+	}
+}

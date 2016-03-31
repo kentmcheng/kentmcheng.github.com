@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Header Template</title>
+
+		<!-- Latest compiled and minified Bootstrap CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<!-- Latest compiled and minified Font Awesome CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" href="../reset.css">
+		<link rel="stylesheet" href="../core.css">
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled Bootstrap JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<style>
+
+			.sp-textbook-covers {
+
+				width: 100%;
+				max-width: 640px;
+				margin: 150px auto 0;
+			}
+
+			.sp-cover-title {
+				
+				position: absolute;
+				top: 10%;
+				left: 5px;
+				right: 5px;
+
+				font-size: 18px;
+				font-weight: 900;
+				line-height: 1;
+				text-align: center;
+			}
+
+			.sp-textbook {
+
+				float: left;
+
+				position: relative;
+
+				width: 125px;
+				margin: 0 6px 6px 0;
+
+				perspective: 1000px;
+			}
+
+			.sp-textbook-sizer {
+				padding-bottom: 125%; 
+			}
+
+			.sp-textbook-content {
+				
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				width: 100%;
+				height: 100%;
+
+				border-style: none solid solid none;
+				border-width: 2px;
+
+				border-radius: 2px;
+				border-top-right-radius: 6px;
+				border-bottom-right-radius: 6px;
+				background: #f7f8f8;
+			}
+
+			.sp-math-8 .sp-textbook-content {
+				border-color: #DEBB4E;
+			}
+			.sp-math-9 .sp-textbook-content {
+				border-color: #A875C9;
+			}
+			.sp-math-10 .sp-textbook-content {
+				border-color: #80BB38;
+			}
+
+			.sp-textbook-content div {
+				
+				height: 100%;
+				padding: 5px;
+				
+				background-color: transparent;
+				background-image: linear-gradient(0deg, transparent 24%, rgba(146, 199, 245, .5) 25%, rgba(146, 199, 245, .5) 26%, transparent 27%, transparent 74%, rgba(146, 199, 245, .5) 75%, rgba(146, 199, 245, .5) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(146, 199, 245, .5) 25%, rgba(146, 199, 245, .5) 26%, transparent 27%, transparent 74%, rgba(146, 199, 245, .5) 75%, rgba(146, 199, 245, .5) 76%, transparent 77%, transparent);
+				background-size: 50px 50px;
+				background-size: 24px;
+			}
+
+			.sp-textbook-cover {
+				
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				width: 100%;
+				height: 100%;
+			}
+
+			.sp-textbook:hover .sp-textbook-cover > div {
+				transform: rotateY(-180deg);
+			}
+
+			.sp-textbook-frontside,
+			.sp-textbook-backside {
+
+				position: absolute;
+				top: 0;
+				left: 0;
+				
+				width: 100%;
+				height: 100%;
+
+				border-radius: 2px;				
+				backface-visibility: hidden;
+			}
+
+			.sp-textbook-backside {
+
+				border-top-left-radius: 6px;
+				border-bottom-left-radius: 6px;
+
+				transform: rotateY(180deg);
+			}
+
+			.sp-textbook-frontside {
+
+				z-index: 2;
+				
+				border-top-right-radius: 6px;
+				border-bottom-right-radius: 6px;
+				background-position: center 75%;
+				background-repeat: no-repeat;
+				background-size: contain;
+
+				transform: rotateY(0deg);
+			}
+
+			.sp-math-8 .sp-textbook-frontside,
+			.sp-math-8 .sp-textbook-backside {
+
+				background-color: #DEBB4E;
+				color: #664010;
+			}
+
+			.sp-math-8 .sp-textbook-frontside {
+				background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-math8.png);
+			}
+
+			.sp-math-9 .sp-textbook-frontside,
+			.sp-math-9 .sp-textbook-backside {
+
+				background-color: #A875C9;
+				color: #491B66;
+			}
+
+			.sp-math-9 .sp-textbook-frontside {
+				background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-math9.png);
+			}
+
+			.sp-math-10 .sp-textbook-frontside,
+			.sp-math-10 .sp-textbook-backside {
+
+				background-color: #80BB38;
+				color: #1B4C04;
+			}
+
+			.sp-math-10 .sp-textbook-frontside {
+				background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-math10.png);
+			}
+
+		</style>
+	</head>
+	<body>
+		
+		<div id="sp">
+			
+			<!-- Subject Covers -->
+			<ul class="sp-textbook-covers">
+				
+				<li class="sp-textbook sp-math-8">
+					<div class="sp-textbook-sizer"></div>
+					<div class="sp-textbook-content">
+						<div>
+							<p>46 Topics</p>
+							<p>728 Helped Yesterday</p>
+						</div>
+					</div>
+					<div class="sp-textbook-cover">
+						<div style="position: relative; width: 100%; height: 100%; transition: transform 0.5s ease; transform-origin: left; transform-style: preserve-3d;">
+							<div class="sp-textbook-frontside">
+								<div class="sp-cover-title">Grade 8<br>Math</div>
+							</div>
+							<div class="sp-textbook-backside"></div>
+						</div>
+					</div>
+				</li>
+				<li class="sp-textbook sp-math-9">
+					<div class="sp-textbook-sizer"></div>
+					<div class="sp-textbook-content">
+						<div>
+							<p>37 Topics</p>
+							<p>846 Helped Yesterday</p>
+						</div>
+					</div>
+					<div class="sp-textbook-cover">
+						<div style="position: relative; width: 100%; height: 100%; transition: transform 0.5s ease; transform-origin: left; transform-style: preserve-3d;">
+							<div class="sp-textbook-frontside">
+								<div class="sp-cover-title">Grade 9<br>Math</div>
+							</div>
+							<div class="sp-textbook-backside"></div>
+						</div>
+					</div>
+				</li>
+				<li class="sp-textbook sp-math-10">
+					<div class="sp-textbook-sizer"></div>
+					<div class="sp-textbook-content">
+						<div>
+							<p>117 Topics</p>
+							<p>643 Helped Yesterday</p>
+						</div>
+					</div>
+					<div class="sp-textbook-cover">
+						<div style="position: relative; width: 100%; height: 100%; transition: transform 0.5s ease; transform-origin: left; transform-style: preserve-3d;">
+							<div class="sp-textbook-frontside">
+								<div class="sp-cover-title">Grade 10<br>Math</div>
+							</div>
+							<div class="sp-textbook-backside"></div>
+						</div>
+					</div>
+				</li>
+
+				<li class="sp-textbook sp-math-8">
+					<div class="sp-textbook-sizer"></div>
+					<div class="sp-textbook-content">
+						<div>
+							<p>46 Topics</p>
+							<p>728 Helped Yesterday</p>
+						</div>
+					</div>
+					<div class="sp-textbook-cover">
+						<div style="position: relative; width: 100%; height: 100%; transition: transform 0.5s ease; transform-origin: left; transform-style: preserve-3d;">
+							<div class="sp-textbook-frontside">
+								<div class="sp-cover-title">Grade 8<br>Math</div>
+							</div>
+							<div class="sp-textbook-backside"></div>
+						</div>
+					</div>
+				</li>
+				<li class="sp-textbook sp-math-9">
+					<div class="sp-textbook-sizer"></div>
+					<div class="sp-textbook-content">
+						<div>
+							<p>37 Topics</p>
+							<p>846 Helped Yesterday</p>
+						</div>
+					</div>
+					<div class="sp-textbook-cover">
+						<div style="position: relative; width: 100%; height: 100%; transition: transform 0.5s ease; transform-origin: left; transform-style: preserve-3d;">
+							<div class="sp-textbook-frontside">
+								<div class="sp-cover-title">Grade 9<br>Math</div>
+							</div>
+							<div class="sp-textbook-backside"></div>
+						</div>
+					</div>
+				</li>
+				<li class="sp-textbook sp-math-10">
+					<div class="sp-textbook-sizer"></div>
+					<div class="sp-textbook-content">
+						<div>
+							<p>117 Topics</p>
+							<p>643 Helped Yesterday</p>
+						</div>
+					</div>
+					<div class="sp-textbook-cover">
+						<div style="position: relative; width: 100%; height: 100%; transition: transform 0.5s ease; transform-origin: left; transform-style: preserve-3d;">
+							<div class="sp-textbook-frontside">
+								<div class="sp-cover-title">Grade 10<br>Math</div>
+							</div>
+							<div class="sp-textbook-backside"></div>
+						</div>
+					</div>
+				</li>
+				
+				<div style="clear:both;"></div>
+			</ul>
+
+			<!-- <div class="sp-textbook sp-math-9">
+				<div class="sp-textbook-sizer"></div>
+				<div class="sp-textbook-content"><div></div></div>
+				<div class="sp-textbook-cover">
+					<div style="position: relative; width: 100%; height: 100%; transition: transform 0.5s ease; transform-origin: left; transform-style: preserve-3d;">
+						<div class="sp-textbook-frontside">
+							<div class="sp-cover-title">Grade 9<br>Math</div>
+						</div>
+						<div class="sp-textbook-backside"></div>
+					</div>
+				</div>	
+			</div> -->
+
+		</div>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

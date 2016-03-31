@@ -1,0 +1,897 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+
+// STUDYPUG COLOR PALETTE
+
+	@primary-black: #333333;
+	@primary-blue: #00AFDB;
+	@primary-pink: #E03667;
+	@primary-accent: #05A7CF;
+
+	@textbook-color-math-8: #DEBB4E; // yellow
+	@textbook-color-math-9: #A875C9; // purple
+	@textbook-color-math-10: #80BB38; // off green
+	@textbook-color-math-11: #00C9B8; // teal
+	@textbook-color-math-12: #E76473; // rose
+	@textbook-color-pre-algebra: #B288F2; // purple
+	@textbook-color-algebra-1: #ED6A6A; // rose
+	@textbook-color-geometry: #8187D8; // indigo
+	@textbook-color-algebra-2: #5EBDEA; // light blue
+	@textbook-color-pre-calculus: #EF8748; // peach
+	@textbook-color-college-algebra: #ED8092; // light pink
+	@textbook-color-trigonometry: #E54646; // red
+	@textbook-color-basic-algebra: #31B2DC; // blue
+	@textbook-color-calculus: #0ECDA2; // milk green
+
+// BOOTSTRAP SCREEN BREAK PTS
+
+	@bootstrap-size-sm: 768px;
+	@bootstrap-size-md: 992px;
+	@bootstrap-size-lg: 1200px;
+
+// BOOTSTRAP OVERRIDES
+
+	.btn-primary {
+
+		background: #ffdb53;
+		background: -moz-linear-gradient(top,#ffdb53 0,#ffc600 85%,#ffc600 100%);
+		background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#ffdb53),color-stop(85%,#ffc600),color-stop(100%,#ffc600));
+		background: -webkit-linear-gradient(top,#ffdb53 0,#ffc600 85%,#ffc600 100%);
+		background: -o-linear-gradient(top,#ffdb53 0,#ffc600 85%,#ffc600 100%);
+		background: -ms-linear-gradient(top,#ffdb53 0,#ffc600 85%,#ffc600 100%);
+		background: linear-gradient(to bottom,#ffdb53 0,#ffc600 85%,#ffc600 100%);
+		border: 1px solid #66460a;
+		box-shadow: 0 1px 3px rgba(0,0,0,.3);
+
+		color: #5d3400;
+		font-size: 20px;
+		font-weight: 700;
+
+		&:hover,
+		&:active,
+		&:focus {
+
+			background: #ffdb53;
+			background: -moz-linear-gradient(top,#ffdb53 0,#cc9e00 85%,#cc9e00 100%);
+			background: -webkit-gradient(linear,left top,left bottom,color-stop(0,#ffdb53),color-stop(85%,#cc9e00),color-stop(100%,#cc9e00));
+			background: -webkit-linear-gradient(top,#ffdb53 0,#cc9e00 85%,#cc9e00 100%);
+			background: -o-linear-gradient(top,#ffdb53 0,#cc9e00 85%,#cc9e00 100%);
+			background: -ms-linear-gradient(top,#ffdb53 0,#cc9e00 85%,#cc9e00 100%);
+			background: linear-gradient(to bottom,#ffdb53 0,#cc9e00 85%,#cc9e00 100%);
+
+			color: #5d3400;
+		}
+	}
+
+	.glyphicon { top: 0.125em; }
+
+	.img-responsive { width: 100%; margin: auto; }
+
+	.modal-body {
+
+		@media (min-width: @bootstrap-size-md) {
+			padding: 24px;
+		}
+	}
+
+// GENERAL PADDING
+
+	@pad-size-xs: 8px;
+	@pad-size-sm: 15px;
+	@pad-size-md: 24px;
+	@pad-size-lg: 36px;
+	@pad-size-xl: 48px;
+
+	.padTop(@padding) { padding-top: @padding; }
+	
+	.padBottom(@padding) { padding-bottom: @padding; }
+
+	.sp-pad-xs,
+	.sp-pad-top-xs { .padTop(@pad-size-xs); }
+
+	.sp-pad-sm,
+	.sp-pad-top-sm { .padTop(@pad-size-sm); }
+
+	.sp-pad-md,
+	.sp-pad-top-md { .padTop(@pad-size-md); }
+
+	.sp-pad-lg,
+	.sp-pad-top-lg { .padTop(@pad-size-lg); }
+
+	.sp-pad-xl,
+	.sp-pad-top-xl { .padTop(@pad-size-xl); }
+
+	.sp-pad-xs,
+	.sp-pad-bottom-xs { .padBottom(@pad-size-xs); }
+
+	.sp-pad-sm,
+	.sp-pad-bottom-sm { .padBottom(@pad-size-sm); }
+
+	.sp-pad-md,
+	.sp-pad-bottom-md { .padBottom(@pad-size-md); }
+
+	.sp-pad-lg,
+	.sp-pad-bottom-lg { .padBottom(@pad-size-lg); }
+
+	.sp-pad-xl,
+	.sp-pad-bottom-xl { .padBottom(@pad-size-xl); }
+
+	@media ( max-width: (@bootstrap-size-sm - 1)) {
+
+		.sp-stacked-pad-bottom-xs { .padBottom(@pad-size-xs); }
+		.sp-stacked-pad-bottom-sm { .padBottom(@pad-size-sm); }
+		.sp-stacked-pad-bottom-md { .padBottom(@pad-size-md); }
+		.sp-stacked-pad-bottom-lg { .padBottom(@pad-size-lg); }
+		.sp-stacked-pad-bottom-xl { .padBottom(@pad-size-xl); }
+	}
+
+// UTILITY STYLES
+
+	.sp-close-button {
+
+		position: absolute;
+		top: 8px;
+		right: 15px;
+
+		color: #CCC;
+		font-size: 24px;
+
+		&:hover, 
+		&:active { color: #999; }
+
+		@media (min-width: @bootstrap-size-md) {
+
+			top: 15px;
+			font-size: 32px;
+		}
+	}
+
+	.sp-text-button {
+
+		&:hover { color: inherit; text-decoration: underline; }
+		&:active { text-decoration: none; }
+	}
+
+	.sp-banded {
+
+		background: #EFEFEF;
+		border-color: #CCC;
+		border-style: solid none;
+		border-width: 1px;
+
+		&.sp-banded-top { border-bottom-style: none; }
+		&.sp-banded-bottom { border-top-style: none; }
+	}
+
+	.sp-boxed {
+
+		padding: 15px;
+		border: 1px solid #CCC;
+		background: #EFEFEF;
+		
+		&.sp-boxed-rounded { border-radius: 6px; }
+	}
+
+	.sp-ruled-top { border-top: 1px solid #CCC; }
+	.sp-ruled-bottom { border-bottom: 1px solid #CCC; }
+
+	.sp-header {
+
+		text-align: center;
+
+		h4, h5, h6, p { margin-top: 0.375em; }
+	}
+
+	.sp-play-items {
+
+		margin: 8px 0;
+
+		> li {
+			
+			display: table;
+
+			width: 100%;
+			padding: 15px 0;
+			border-bottom: 1px dotted #CCC;
+
+			&.active { color: @primary-accent; }
+			&.disabled { color: #545454; }
+			&:last-of-type { border-bottom: none; }
+		}
+
+		a, button {
+
+			text-align: left;
+
+			&:hover { color: @primary-accent; }
+			&:active { color: @primary-black; }
+		}
+
+		@media (min-width: @bootstrap-size-md) {
+
+			margin: 0;
+			padding: 8px 0;
+		}
+	}
+
+	.sp-play-item-icon {
+
+		display: table-cell;
+
+		position: relative;
+		min-width: 32px;
+
+		font-size: 24px;
+
+		.glyphicon { // override bootstrap properties
+
+			position: absolute;
+			top: 1px;
+		}
+	}
+
+	.sp-play-item-name {
+
+		display: table-cell;
+		width: 100%;
+	}
+
+	.sp-cover-art {
+
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		.sp-math-8 & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-math8.png); }
+		.sp-math-9 & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-math9.png); }
+		.sp-math-10 & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-math10.png); }
+		.sp-math-11 & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-math11.png); }
+		.sp-math-12 & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-math12.png); }
+		.sp-pre-algebra & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-prealgebra.png); }
+		.sp-algebra-1 & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-algebra1.png); }
+		.sp-geometry & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-geometry.png); }
+		.sp-algebra-2 & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-algebra2.png); }
+		.sp-pre-calculus & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-precalc.png); }
+		.sp-college-algebra & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-college-algebra.png); }
+		.sp-trigonometry & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-trigonometry.png); }
+		.sp-basic-algebra & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-basic-algebra.png); }
+		.sp-calculus & { background-image: url(https://dcvp84mxptlac.cloudfront.net/img/header-pug-calculus.png); }
+	}
+
+	.sp-row-flex {
+
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+
+		@media (min-width: @bootstrap-size-sm) {
+
+			flex-flow: row;
+		}
+	}
+
+	.sp-numbered-steps {
+
+		padding: 8px;
+		padding-bottom: 0;
+		list-style: decimal inside;
+
+		> li {
+			
+			margin-bottom: 8px;
+
+			&:last-of-type { margin-bottom: 0; }
+		}
+	}
+
+	.sp-questions-answers {
+
+		> li { margin-bottom: 15px; }
+	}
+
+	.sp-question-block,
+	.sp-more-questions {
+
+		position: relative;
+		padding-right: 32px;
+
+		&:hover { cursor: pointer; color: @primary-blue; }
+		&:active { cursor: pointer; color: @primary-black; }
+	}
+
+	.sp-more-questions {
+
+		a:hover { text-decoration: none; }
+	}
+
+	.sp-see-more-icon {
+
+		position: absolute;
+		top: 0.375em;
+		right: 0;
+
+		transition: all 0.25s ease;	
+	}
+
+	.sp-show-hide-icon {
+		
+		position: absolute;
+		top: 0.375em;
+		right: 0;
+
+		color: #CCC;
+
+		transition: all 0.25s ease;
+
+		.sp-question-block:hover & { color: inherit; }
+
+		.sp-hide & {
+
+			color: @primary-black;
+			transform: rotate(180deg);
+		}
+
+		.sp-hide .sp-question-block:hover & { color: inherit; }
+	}
+
+	.sp-answer-block {
+		
+		padding-bottom: 15px;
+		border-bottom: 1px dotted #CCC;
+		overflow: hidden;
+
+		.sp-hide & { height: 0; }
+	}
+
+	.sp-no-margin { // removes all margins from an element
+
+		margin: 0 !important;
+	}
+
+	.sp-truncate { // forces text to a single line
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+	
+// STUDYPUG CORE STYLES
+
+	body {
+		
+		font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		
+		font-weight: 700;
+
+		&.lite { font-weight: 400; }
+		&.loud { text-transform: uppercase; }
+		&.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+	}
+
+	h1 { font-size: 28px; }
+
+	h2 { font-size: 24px; }
+
+	h3 { font-size: 20px; }
+
+	h4 { font-size: 18px; }
+
+	h5 { font-size: 16px; }
+
+	h6 { font-size: 14px; }
+
+	p {
+
+		margin-top: 0.75em;
+
+		line-height: 1.4;
+		
+		a { 
+
+			color: @primary-accent; 
+
+			&:hover { color: @primary-accent; }
+		}
+
+		@media (max-width: (@bootstrap-size-sm - 1)) {
+
+			// max-width: 480px; // limit single column when stacked?
+		}
+
+		@media (min-width: @bootstrap-size-sm) {
+
+			// max-width: 720px;
+		}
+	}
+
+	a {
+
+		&:hover { color: inherit; text-decoration: underline; }
+		&:active { text-decoration: none; }
+
+		&.sp-primary-link {
+			
+			padding: 8px 24px;
+			border-radius: 4px;
+			background: #F6D620;
+			
+			color: #5D3400; 
+
+			&:hover { background: darken(#F6D620, 10%); text-decoration: none;}
+		}
+	}
+
+	b { font-weight: 700; }
+
+	em { color: @primary-accent; }
+
+	q {
+		
+		line-height: 1.4;
+
+		quotes: "“" "”" "‘" "’";
+
+		&::before { margin-left: -6px; content: open-quote; }
+		&::after { content: close-quote; }
+	}
+
+	@media (min-width: @bootstrap-size-sm) {
+
+		body { font-size: 16px; }
+
+		h1 { font-size: 36px; }
+
+		h2 { font-size: 30px; }
+
+		h3 { font-size: 26px; }
+
+		h4 { font-size: 20px; }
+
+		h5 { font-size: 18px; }
+
+		h6 { font-size: 16px; }
+	}
+
+	button {
+
+		&.btn-primary-cta {
+
+			box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+			border-color: #5d3400;
+			background-color: #ffdb53;
+			background: linear-gradient(to bottom,#ffdb53 0,#ffc600 85%,#ffc600 100%);
+
+			color: #5d3400;
+			font-weight: 700;
+		}
+	}
+
+// STUDYPUG COMMON COMPONENTS
+
+	// SUBJECT COVERS
+
+		.sp-course-textbooks {
+
+			margin: auto;
+			max-width: 540px;
+
+			&::before,
+			&::after {
+				display: table;
+				content: "";
+			}
+
+			&::after {
+				clear: both;
+			}
+
+			img {
+				
+				display: block;
+
+				width: 100%;
+				height: auto;
+			}
+
+			li {
+				
+				float: left;
+
+				width: 25%;
+				padding: 2px;
+			}
+
+			@media (min-width: @bootstrap-size-md) {
+
+				max-width: none;
+
+				li { width: 12.5%; }
+			}
+
+			&.sp-textbooks-us {
+
+				max-width: 640px;
+
+				li { width: 20%; }
+
+				@media (min-width: @bootstrap-size-md) {
+
+					max-width: none;
+
+					li { width: 10%; }
+				}
+			}
+		}
+
+// STUDYPUG RECENT VIDEO LESSONS
+	
+	.sp-recent-videos {
+
+		h6 
+
+		a { color: @primary-accent; }
+
+		@media (min-width: @bootstrap-size-md) {
+
+			li:nth-of-type(n+4) { display: none; }
+		}
+	}
+
+// STUDYPUG PAGE HEADER
+
+	#sp-page-header {
+
+		position: relative;
+
+		background-color: @primary-blue;
+		color: #FFF;
+
+		.sp-math-8 & { background-color: @textbook-color-math-8; }
+		.sp-math-9 & { background-color: @textbook-color-math-9; }
+		.sp-math-10 & { background-color: @textbook-color-math-10; }
+		.sp-math-11 & { background-color: @textbook-color-math-11; }
+		.sp-math-12 & { background-color: @textbook-color-math-12; }
+		.sp-pre-algebra & { background-color: @textbook-color-pre-algebra; }
+		.sp-algebra-1 & { background-color: @textbook-color-algebra-1; }
+		.sp-geometry & { background-color: @textbook-color-geometry; }
+		.sp-algebra-2 & { background-color: @textbook-color-algebra-2; }
+		.sp-pre-calculus & { background-color: @textbook-color-pre-calculus; }
+		.sp-college-algebra & { background-color: @textbook-color-college-algebra; }
+		.sp-trigonometry & { background-color: @textbook-color-trigonometry; }
+		.sp-basic-algebra & { background-color: @textbook-color-basic-algebra; }
+		.sp-calculus & { background-color: @textbook-color-calculus; }
+	}
+
+	#sp-header-logo {
+
+		width: 150px;
+		height: auto;
+	}
+
+	#sp-page-nav {
+		
+		.sp-math-8 &,
+		.sp-math-9 &,
+		.sp-math-10 &,
+		.sp-math-11 &,
+		.sp-math-12 &,
+		.sp-pre-algebra &,
+		.sp-algebra-1 &,
+		.sp-geometry &,
+		.sp-algebra-2 &,
+		.sp-pre-calculus &,
+		.sp-college-algebra &,
+		.sp-trigonometry &,
+		.sp-basic-algebra &,
+		.sp-calculus & { background-color: rgba(0, 0, 0, 0.25); }
+	}
+
+	#sp-page-nav-items {
+
+		display: inline-table;
+
+		li {
+
+			display: table-cell;
+			padding-left: 15px;
+			vertical-align: middle;
+		}
+	}
+
+// STUDYPUG SECONDARY NAV (BREADCRUMBS)
+
+	#sp-secondary-nav {
+
+		padding: 16px 0;
+		background: #000;
+		
+		color: #FFF;
+	}
+
+	#sp-breadcrumbs {
+
+		font-size: 16px;
+		font-weight: 700;
+
+		> li {
+			
+			display: inline-block;
+			line-height: 1.4;
+
+			&::after {
+
+				padding-left: 5px;
+				content: "/\00a0";
+				color: #CCC;
+			}
+
+			&:last-of-type::after {
+
+				padding-left: 0;
+				content: "";
+			}
+		}
+
+		// Override bootstrap styling
+		.dropdown-menu > li > a:focus, 
+		.dropdown-menu > li > a:hover { 
+
+			background-color: #333; 
+			color: #FFF;
+		}
+
+		@media (min-width: @bootstrap-size-sm) {
+
+			font-size: 18px;
+		}
+	}
+
+// STUDYPUG COURSE INTRO
+
+	#sp-course-intro {
+
+		text-align: center;
+		overflow: hidden;
+
+		.sp-math-8 & { background-color: @textbook-color-math-8; }
+		.sp-math-9 & { background-color: @textbook-color-math-9; }
+		.sp-math-10 & { background-color: @textbook-color-math-10; }
+		.sp-math-11 & { background-color: @textbook-color-math-11; }
+		.sp-math-12 & { background-color: @textbook-color-math-12; }
+		.sp-pre-algebra & { background-color: @textbook-color-pre-algebra; }
+		.sp-algebra-1 & { background-color: @textbook-color-algebra-1; }
+		.sp-geometry & { background-color: @textbook-color-geometry; }
+		.sp-algebra-2 & { background-color: @textbook-color-algebra-2; }
+		.sp-pre-calculus & { background-color: @textbook-color-pre-calculus; }
+		.sp-college-algebra & { background-color: @textbook-color-college-algebra; }
+		.sp-trigonometry & { background-color: @textbook-color-trigonometry; }
+		.sp-basic-algebra & { background-color: @textbook-color-basic-algebra; }
+		.sp-calculus & { background-color: @textbook-color-calculus; }
+
+		@media (min-width: @bootstrap-size-md) {
+			text-align: left;
+		}
+	}
+
+	#sp-course-intro-text {
+		position: relative;
+	}
+
+	#sp-course-intro-cover-art {
+
+		position: absolute;
+		top: -15%;
+		left: 100%;
+		width: 100%;
+		height: 180px;
+
+		&.sp-cover-art {
+			background-position: left top;
+		}
+	}
+
+// STUDYPUG COURSE VIDEO SELL
+
+	#sp-course-video-sell {
+
+		text-align: center;
+
+		h2 {
+			margin-top: 1em;
+		}
+
+		@media (min-width: @bootstrap-size-md) {
+
+			text-align: left;
+		}
+	}
+
+// STUDYPUG COURSE TOPICS LIST
+
+	#sp-course-topics-list {
+
+		li { 
+			
+			display: table;
+			margin-top: 0.5em;
+			line-height: normal; 
+
+			color: @primary-accent;
+
+			&.free { color: @primary-pink; }
+		}
+
+		.sp-course-topic-number {
+
+			display: table-cell;
+			white-space: nowrap;
+
+			// &::after {
+			// 	content: "\2003";
+			// 	margin: 0 0.125em;
+			// }
+		}
+
+		.sp-course-topic-name {
+			display: table-cell;
+		}
+	}
+
+// STUDYPUG TESTIMONIALS
+	
+	.sp-testimonial {
+
+		position: relative;
+		
+		min-height: ~"calc(72px + (12px * 2))";
+		margin-bottom: 15px;
+		padding: 12px;
+		border-radius: 8px;
+		box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		background: #FFF;
+
+		@media (min-width: @bootstrap-size-sm) {
+
+			min-height: ~"calc(80px + (12px * 2))";
+			margin-bottom: 24px;
+		}
+
+		@media (min-width: @bootstrap-size-md) {
+
+			margin-bottom: 60px;
+			border-radius: 16px;
+		}
+	}
+
+	.sp-testimonial-user-photo {
+
+		float: left;
+		
+		width: 72px;
+		margin-right: 12px;
+		border-radius: 50%;
+		overflow: hidden;
+
+		> img {
+			
+			display: block;
+
+			width: 100%;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		@media (min-width: @bootstrap-size-sm) {
+
+			width: 80px;
+		}
+
+		@media (min-width: @bootstrap-size-md) {
+			
+			width: 120px;
+			margin-right: 0;
+			box-shadow: 0 1px 1px rgba(0,0,0,0.5);
+
+			position: absolute;
+			bottom: -56px;
+			left: ~"calc(50% - 60px)";
+		}
+	}
+
+	.sp-testimonial-user-text {
+
+		@media (min-width: @bootstrap-size-md) {
+			
+			padding-left: 12px;
+			padding-right: 12px;
+			padding-bottom: 60px;
+		}
+	}
+
+	.sp-testimonial-user-info {
+
+		color: @primary-accent;
+		color: @primary-pink;
+		font-style: italic;
+		line-height: 1.4;
+
+		&::before {
+			content: "\2014";
+		}
+	}
+
+// STUDYPUG HOW IT WORKS
+	
+	#sp-how-it-works {
+
+		max-height: 0;
+		overflow: hidden;
+
+		transition: max-height 0.35s ease;
+
+		h3 {
+			margin-top: 0.5em;
+		}
+	}
+
+// STUDYPUG PAGE FOOTER
+	
+	#sp-main-footer {
+		
+		padding: 0 0 48px;
+		background: #333;
+		color: #FFF;
+
+		#sp-fine-print { color: #787878; }
+		
+		#sp-foot-nav { font-weight: 700; }
+
+		ul {
+
+			margin: 16px auto;
+			text-align: center;
+		}
+
+		li { 
+			
+			display: inline-block;
+			
+			margin: 4px 6px;
+
+			&.sp-social-icon {
+
+				margin: 4px;
+
+				img {
+
+					display: block;
+					
+					width: 48px; 
+					height: 48px;
+
+					transition: all 0.25s ease;
+				}
+
+				a {
+					
+					&:hover img { transform: translateY(-5px); }
+				}
+			}
+
+			&:first-of-type { margin-left: 0; }
+			&:last-of-type { margin-right: 0; }
+		}
+	}
+
+// https://dcvp84mxptlac.cloudfront.net/img/header-pug-math8.png
+// -webkit-column-count: 3;
+// -webkit-column-break-inside: avoid;
+// page-break-inside: avoid;
+// break-inside: avoid;
+// -o-column-break-inside: avoid;
+// -ms-column-break-inside: avoid;

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, user-scalable=1">
+
+		<base href="../../">
+
+		<!-- PAGE TITLE -->
+		<title>Canucks Next Game – Kent Cheng</title>
+		
+		<!-- PAGE ICONS -->
+		<link rel="shortcut icon" href="graphics/favicon.ico" type="image/x-icon">
+
+		<link rel="apple-touch-icon" sizes="120x120" href="graphics/touch-icon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="graphics/touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="graphics/touch-icon-180.png">
+		
+		<link rel="icon" sizes="128x128" href="graphics/touch-icon-128.png">
+		<link rel="icon" sizes="192x192" href="graphics/touch-icon-192.png">
+
+		<!-- PAGE STYLES -->
+		<link rel="stylesheet" href="css/work.css" type="text/css">
+		<link rel="stylesheet" href="css/phonewrap.css" type="text/css">
+		<link rel="stylesheet" href="css/slideshow.css" type="text/css">
+	</head>
+	<body>
+		<noscript>
+			<p>My site requires the use of JavaScript. Please enable it within your browser's settings.</p>
+		</noscript>
+
+		<!-- PAGE MARKUP -->
+		<div id="contents">
+			<div id="page">
+				<header id="page-header"></header>
+				<!-- THE CONTENT -->
+				<div id="page-body">
+					<div class="content">
+						<div class="wrap row">
+							<div>
+								<ul id="screenshots">
+									<li><img src="work/canucks/screenshot-1.png" alt="Splash screen"></li>
+									<li><img src="work/canucks/screenshot-2.png" alt="Games List 2014"></li>
+									<li><img src="work/canucks/screenshot-3.jpg" alt="Featured Next Game"></li>
+									<li><img src="work/canucks/screenshot-4.png" alt="Games List 2015"></li>
+								</ul>
+								<div id="screenshot-controls"></div>
+							</div>
+							<div class="content-body">
+								<h2>Canucks Next Game</h2>
+								<h4><a href="http://canucks.kentc.me">canucks.kentc.me</a></h4>
+								<p class="note">
+									In addition to updating the games schedule for the new season, I also refreshed the app's visuals. The new design takes inspiration from the <a href="http://canucks.nhl.com/club/page.htm?id=39736">official Canucks app</a>.
+								</p>
+								<p>
+									October is a special month for us Canadians. Not only is it the month we celebrate Thanksgiving but it also marks the start of the new NHL season. 
+								</p>
+								<p>
+									For my dad, each new season begins with the same old request to his son, to print him a copy of the Canucks game schedule. But now that he has a smartphone, I decided to make him a simple web app instead.
+								</p>
+								<p>
+									Just launch it and it automagically finds and scrolls to the next upcoming game in the list. This foolproof experience is perfect for my dad who isn't very adept with technology. It's nothing fancy, but he loves it and that's all that matters.
+								</p>
+							</div>
+						</div>
+					</div>
+					<!-- Quick Jump -->
+					<nav id="work-quick-nav"></nav>
+				</div>
+				<footer id="page-footer"></footer>
+			</div>
+		</div>
+
+		<!-- PAGE SCRIPTS -->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/core.js" type="text/javascript"></script>
+		<script src="js/work.js" type="text/javascript"></script>
+		<script src="js/phonewrap.js" type="text/javascript"></script>
+		<script src="js/slideshow.js" type="text/javascript"></script>
+		<script>
+			$(function() {
+				
+				page().init("work");
+				work().quickNav("work-quick-nav", "canucks");
+
+				var phone = new Phonewrap("screenshots");
+				phone.model("five");
+
+				var slideshow = new Slideshow("screenshots", 2);
+				slideshow.controls("screenshot-controls");				
+			});
+		</script>
+	</body>
+</html>

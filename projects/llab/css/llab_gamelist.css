@@ -1,0 +1,200 @@
+/***********************/
+/*** GAMELIST STYLES ***/
+/***********************/
+
+/* BOTTOM PANEL */
+#panel_bot_contents.gamelist {
+	padding: 0.625em 0 0;
+}
+
+#panel_bot_contents.gamelist > div {
+	padding: 0 0 0.5em;
+}
+
+#panel_bot_contents.gamelist ul {
+	width: 82%;
+	margin: 0.375em auto 1em;
+	
+	position: relative;
+	
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	
+	border-color: #6c5438;
+	border-style: solid solid none;
+	border-width: 1px;
+	border-radius: 2px;
+	box-shadow: 0 0 2px #6c5438;
+}
+
+@media only screen and (min-width: 400px) {
+	#panel_bot_contents.gamelist ul {
+		width: 70%;
+	}
+}
+
+#panel_bot_contents.gamelist ul > header {
+	width: 100%;
+	
+	position: relative;
+	
+	border-top-left-radius: 1px;
+	border-top-right-radius: 1px;
+	
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+}
+
+#panel_bot_contents.gamelist ul.yours > header {
+	background-color: #f8ba03;
+	background-image: url(../img/texture_header_mustard.gif);
+}
+#panel_bot_contents.gamelist ul.theirs > header {
+	background-color: #fb5d2e;
+	background-image: url(../img/texture_header_tangerine.gif);
+}
+#panel_bot_contents.gamelist ul.completed > header {
+	background-color: #80f3e3;
+	background-image: url(../img/texture_header_cyan.gif);
+}
+
+#panel_bot_contents.gamelist ul > header h1 {
+	padding: 0.25em 0 0.125em;
+	
+	color: #fff;
+	text-align: center;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+#panel_bot_contents.gamelist ul > header .icon {
+	width: 60px;
+	height: 60px;
+	
+	position: absolute;
+	top: -15px;
+	left: -16px;
+	
+	background: url(../img/icon_caution.png) center center no-repeat;
+	background-size: auto 100%;
+	/*
+	-webkit-animation: pulse 2s ease 2s infinite;
+	*/
+}
+
+#panel_bot_contents.gamelist ul > header .wave {
+	width: 100%;
+	height: 4px;
+	
+	position: absolute;
+	top: 100%;
+	left: 0;
+	
+	background-position: center top;
+	background-repeat: repeat-x;
+	background-size: auto 100%;
+}
+#panel_bot_contents.gamelist ul.yours > header .wave {
+	background-image: url(../img/wave_mustard.gif);
+}
+#panel_bot_contents.gamelist ul.theirs > header .wave {
+	background-image: url(../img/wave_tangerine.gif);
+}
+#panel_bot_contents.gamelist ul.completed > header .wave {
+	background-image: url(../img/wave_cyan.gif);
+}
+
+#panel_bot_contents.gamelist ul li {
+	width: 100%;
+	height: 80px;
+
+	background: #fff url(../img/texture_btn_white.gif) center bottom repeat-x;
+}
+
+#panel_bot_contents.gamelist ul li > .components {
+	display: -webkit-box;
+	-webkit-box-orient: horiztonal;
+	-webkit-box-align: center;
+	-webkit-box-pack: start;
+}
+
+#panel_bot_contents.gamelist ul li .photo {
+	padding: 10px 8px 10px 10px;
+}
+#panel_bot_contents.gamelist ul li .photo img{
+	width: 60px;
+	height: 60px;
+	
+	display: block;
+}
+
+#panel_bot_contents.gamelist ul li .details {
+	width: 100%;
+	height: 100%;
+	padding: 10px 0 0;
+	
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: start;
+	-webkit-box-pack: start;
+	-webkit-box-flex: 1;
+}
+
+#panel_bot_contents.gamelist ul li .details h1 {
+	color: #6e5f34;
+	font-size: 0.875em;
+}
+
+#panel_bot_contents.gamelist ul li .details .word,
+#panel_bot_contents.gamelist ul li .details .result {
+	width: 100%;
+	margin: -0.0625em 0 0;
+	
+	overflow: hidden;
+}
+
+#panel_bot_contents.gamelist ul li .details .word span,
+#panel_bot_contents.gamelist ul li .details .result span {
+	margin: 0 1px;
+	padding: 0 0.3125em;
+	
+	display: inline;
+	
+	border-radius: 2px;
+	
+	background: #FFDB4D;
+	color: #5E5019;
+	font-family: "Droid Sans Mono", monospace;
+	font-size: 0.625em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#panel_bot_contents.gamelist ul li .details .result span {	
+	background: #5E5019;
+	color: #fff;
+}
+
+#panel_bot_contents.gamelist ul li .fadeout {
+	width: 15px;
+	height: 100%;
+	
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	
+	background: url(../img/test_fade.png) right bottom no-repeat;
+}
+
+#panel_bot_contents.gamelist ul > footer {
+	width: 100%;
+	height: 8px;
+	
+	position: absolute;
+	top: 100%;
+	left: 0;
+	
+	background: url(../img/wave_white_end.png) center top repeat-x;
+	background-size: auto 100%;
+}

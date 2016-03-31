@@ -1,0 +1,70 @@
+@import url(core.css);
+.thumbnails {
+  padding: 0.5rem;
+}
+.thumbnails li {
+  padding: 0.5rem;
+}
+.thumbnails li a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: #ccc;
+}
+.thumbnails li a img {
+  display: block;
+  width: 100%;
+}
+.thumbnails li a footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1rem 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.thumbnails li a footer h5 {
+  padding: 0.5rem;
+  font-size: 1.8rem;
+}
+.no-touch .thumbnails li a footer {
+  top: 100%;
+  bottom: auto;
+  background: rgba(0, 0, 0, 0.25);
+}
+.no-touch .thumbnails li a footer h5 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease-in-out;
+}
+.no-touch .thumbnails li a:hover footer {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.no-touch .thumbnails li a:hover footer h5 {
+  background: rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 600px) {
+  .thumbnails {
+    padding: 1.5rem;
+  }
+  .thumbnails li {
+    display: inline-block;
+    width: 50%;
+  }
+}
+@media (min-width: 800px) {
+  .thumbnails {
+    margin: 0 -0.5rem;
+    padding: 2rem 0;
+  }
+}

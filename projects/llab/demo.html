@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" class="no-touch">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, user-scalable=1">
+
+		<base href="../../">
+
+		<!-- PAGE TITLE -->
+		<title>Letter Lab UI Demo – Kent Cheng</title>
+
+		<!-- PAGE ICONS -->
+		<link rel="shortcut icon" href="graphics/favicon.ico" type="image/x-icon">
+
+		<link rel="apple-touch-icon" sizes="120x120" href="graphics/touch-icon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="graphics/touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="graphics/touch-icon-180.png">
+		
+		<link rel="icon" sizes="128x128" href="graphics/touch-icon-128.png">
+		<link rel="icon" sizes="192x192" href="graphics/touch-icon-192.png">
+		
+		<!-- PAGE STYLES -->
+		<link rel="stylesheet" href="css/reset.css" type="text/css">
+		<link rel="stylesheet" href="css/phonewrap.css" type="text/css">
+		<style>
+			#wrapper { margin: 5vmin 0; text-align: center; }
+			#display { width: 320px; height: 480px; border: none; }
+		</style>
+	</head>
+	<body>
+		<!-- PHONE & DISPLAY -->
+		<div id="wrapper">
+			<iframe id="display" src="projects/llab/index.html"></iframe>
+		</div>
+
+		<!-- PAGE SCRIPTS -->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/phonewrap.js" type="text/javascript"></script>
+		<script>
+			$(function() {
+				var phone = new Phonewrap("display");
+				phone.color("white");
+				phone.glare(false);
+			});
+		</script>
+	</body>
+</html>

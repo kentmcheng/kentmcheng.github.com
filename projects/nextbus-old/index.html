@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- PAGE TITLE -->
+		<title>Next Bus</title>
+		
+		<!-- META INFO -->
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="user-scalable=0, initial-scale=1.0">
+
+		<!-- APPLE WEB APP -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Next Bus">
+
+		<link rel="apple-touch-icon-precomposed" href="images/apple_touch_icon_precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple_touch_icon_114x114_precomposed.png">
+
+		<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="images/apple_touch_startup_image_320x460.png">
+		<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="images/apple_touch_startup_image_640x920.png">
+		<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="images/apple_touch_startup_image_640x1096.png">
+		
+		<!-- PAGE STYLES -->
+		<link href="nextbus.css" rel="stylesheet" type="text/css">
+		
+		<!-- PAGE SCRIPTS -->
+		<!--
+			<script src="../../js/libs/jquery.js"></script>
+			<script src="http://code.jquery.com" type="text/javascript"></script>
+		-->
+		<script src="../../js/libs/jquery.js"></script>
+		<script src="../../js/libs/jquery.xml2json.js"></script>
+		<script src="../../js/libs/fastclick.js"></script>
+		<script src="nextbus.js"></script>
+		<script>
+			$(document).ready(function() {
+				Nextbus.init();
+			});
+		</script>
+	</head>
+	<body ontouchmove="event.preventDefault()">
+		<div id="nextbus"></div>
+	</body>
+</html>

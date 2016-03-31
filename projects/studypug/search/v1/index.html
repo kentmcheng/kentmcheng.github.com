@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../reset.css">
+		<link rel="stylesheet" href="styles.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<script src="scripts.js"></script>
+	</head>
+	<body>
+		<div id="sp">
+			<header>
+				<!-- The Top Bar -->
+				<div id="top-bar" style="min-height:48px;">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12 col-sm-4">
+								<div class="row">
+									<div class="col-xs-8 col-sm-12">
+										<a href="#">
+											<img id="sp-logo" src="https://dcvp84mxptlac.cloudfront.net/img/logo-white.png">
+										</a>
+									</div>
+									<div class="nav col-xs-4 hidden visible-xs">
+										<button id="menu-btn">Menu</button>
+									</div>
+								</div>
+							</div>
+							<div class="nav hidden-xs col-sm-8">
+								<ul id="main-nav">
+									<li><a href="#">Why Us</a></li>
+									<li><a href="#">Contact Us</a></li>
+									<li><a href="#">My Account</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Hero Banner -->
+				<div id="hero-banner" class="container">
+					<div class="row">
+						<div class="col-xs-12" style="min-height:200px;"></div>
+					</div>
+				</div>
+			</header>
+			<div class="contents">
+				
+				<!-- SEARCH RESULTS -->
+				<div id="sp-results" class="container">
+					
+					<div class="row">
+
+						<!-- Sidebar -->
+						<div id="sp-results-sidebar" class="cols-xs-12 col-sm-4 sidebar">
+							
+							<!-- Search -->
+							<div id="sp-results-search" class="row">
+								<div class="col-xs-12 form-group">
+									<label for="sp-results-search-input">
+										<h5><em>10</em> results found for:</h5>
+									</label>
+									<input id="sp-results-search-input" type="text" class="form-control" value="Prism">
+								</div>
+							</div>
+							
+							<!-- Filters -->
+							<div id="sp-results-filters" class="row">
+								<div class="col-xs-12">
+									<div class="row">
+										<div class="col-xs-8"><h5>Filter Results By:</h5></div>
+										<div class="col-xs-4 sp-clear">
+											<button onclick="clearFilters()">Clear</button>
+										</div>
+									</div>
+									<ul id="sp-results-filters-checkboxes">
+										<li class="checkbox">
+											<label>
+												<input type="checkbox" onclick="showCourse('math-8')">
+												<span class="sp-label">Grade 8 Math</span>
+												<span class="badge">4</span>
+											</label>
+										</li>
+										<li class="checkbox">
+											<label>
+												<input type="checkbox" onclick="showCourse('math-10')">
+												<span class="sp-label">Grade 10 Math</span>
+												<span class="badge">1</span>
+											</label>
+										</li>
+										<li class="checkbox">
+											<label>
+												<input type="checkbox" onclick="showCourse('us-pre-algebra')">
+												<span class="sp-label">US Pre-Algebra</span>
+												<span class="badge">4</span>
+											</label>
+										</li>
+										<li class="checkbox">
+											<label>
+												<input type="checkbox" onclick="showCourse('college-algebra')">
+												<span class="sp-label">College Algebra</span>
+												<span class="badge">1</span>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<!-- Equation Editor -->
+							<!--
+							<div id="sp-results-more" class="row">
+								<div class="col-xs-12">
+									<h6>Can't find what you're looking for?</h6>
+									<p>Try our equation editor</p>
+								</div>
+								<div class="col-xs-12">
+									<div id="sp-equation-editor"></div>
+								</div>
+							</div>
+							-->
+						</div>
+
+						<!-- Items -->
+						<div id="sp-results-list" class="col-xs-12 col-sm-8">
+
+							<ul id="math-8" class="course"></ul>
+							<ul id="math-10" class="course"></ul>
+							<ul id="us-pre-algebra" class="course"></ul>
+							<ul id="college-algebra" class="course"></ul>
+							<script>
+								addCourseResults('math-8', 'Grade 8 Math', 4);
+								addCourseResults('math-10', 'Grade 10 Math', 1);
+								addCourseResults('us-pre-algebra', 'US Pre-Algebra', 4);
+								addCourseResults('college-algebra', 'College Algebra', 1);
+							</script>
+						</div>
+
+					<!-- END ROW -->
+					</div>
+				</div>
+			</div>
+			<footer>
+				<div class="container">
+					<!-- Site Nav -->
+					<ul id="foot-nav">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Pricing</a></li>
+					</ul>
+					<!-- Social Icons -->
+					<ul>
+						<li class="social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-fb.png" alt="Facebook">
+							</a>
+						</li>
+						<li class="social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-twitter.png" alt="Twitter">
+							</a>
+						</li>
+						<li class="social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-youtube.png" alt="YouTube">
+							</a>
+						</li>
+						<li class="social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-gplus.png" alt="Google Plus">
+							</a>
+						</li>
+					</ul>
+					<!-- Fine Print -->
+					<ul id="fine-print">
+						<li>&copy; StudyPug 2016</li>
+						<li><a href="#">Terms of Service</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

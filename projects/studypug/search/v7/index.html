@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Search - Has Results</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../reset.css">
+		<link rel="stylesheet" href="../../core.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<script src="scripts.js"></script>
+	</head>
+	<body>
+		<div id="sp">
+			
+			<!-- PAGE HEADER -->
+			<!-- IMPORTANT: Do not use, placeholder only -->
+			<header id="sp-page-header">
+				
+				<!-- Page Nav -->
+				<div id="sp-page-nav">
+					<div class="container">
+						<div class="row">
+							<!-- Logo + Menu for xs screens -->
+							<div class="col-xs-12 col-sm-4">
+								<div class="row">
+									<div class="col-xs-8 col-sm-12">
+										<a href="index.html"><img id="sp-header-logo" src="https://dcvp84mxptlac.cloudfront.net/img/logo-white.png" alt="StudyPug Logo"></a>
+									</div>
+									<div class="col-xs-4 hidden visible-xs text-right">
+										<button id="sp-page-nav-menu-btn"><h5>Menu</h5></button>
+									</div>
+								</div>
+							</div><!-- / Logo + Menu for xs screens -->
+							<!-- Nav items for sm+ screens -->
+							<div class="nav hidden-xs col-sm-8 text-right">
+								<ul id="sp-page-nav-items">
+									<li>
+										<form class="navbar-form navbar-left" role="search">
+											<div class="form-group">
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Search for...">
+													<span class="input-group-btn">
+														<button type="submit" class="btn btn-default">
+															<span class="glyphicon glyphicon-search"></span>
+														</button>
+													</span>
+											</div>
+										</form>
+									</li>
+									<li><a href="#"><h6>How It Works</h6></a></li>
+									<li><a href="#"><h6>Log In</h6></a></li>
+								</ul>
+							</div><!-- / Nav items for sm+ screens -->
+						</div>
+					</div>
+				</div><!-- Page Nav -->		
+			</header><!-- / PAGE HEADER -->
+
+			<!-- CONTENT BODY -->
+			<div class="contents">
+				
+				<!-- SEARCH RESULTS -->
+				<div id="sp-results" class="container">
+					
+					<!-- Search Contents -->
+					<div class="row">
+
+						<!-- Search Bar -->
+						<div id="sp-results-search" class="col-xs-12 col-sm-8 col-md-9">
+							
+							<div class="input-group">
+								<input id="sp-results-search-input" type="text" class="form-control" placeholder="Search for..." value="Prism">
+								<span class="input-group-btn">
+									<button class="btn btn-default" type="button">
+										<span class="glyphicon glyphicon-search"></span>
+									</button>
+								</span>
+							</div>
+						</div>
+
+						<!-- Results -->
+						<div id="sp-results-list" class="col-xs-12 col-sm-8 col-md-9">
+
+							<h5 style="margin-bottom: 24px;"><em>10</em> Results found for <em>Prism</em></h5>
+
+							<!-- <ul id="math-8" class="course"></ul>
+							<ul id="math-10" class="course"></ul>
+							<ul id="us-pre-algebra" class="course"></ul>
+							<ul id="college-algebra" class="course"></ul>
+							<script>
+								addCourseResults('math-8', 'Grade 8 Math', 4);
+								addCourseResults('math-10', 'Grade 10 Math', 1);
+								addCourseResults('us-pre-algebra', 'US Pre-Algebra', 4);
+								addCourseResults('college-algebra', 'College Algebra', 1);
+							</script> -->
+
+							<ul id="new-list"></ul>
+							<script>addData("new-list");</script>
+
+							<!-- Video Help -->
+							<div class="row">
+								<div class="col-xs-12">
+									<h5>Having trouble? Watch this video to get better search results.</h5>
+									<div id="sp-learn-search" class="embed-responsive embed-responsive-16by9">
+										<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/edGtZWf8uRc" allowfullscreen=""></iframe>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Sidebar -->
+						<div class="hidden-xs col-sm-4 col-md-3" style="position:relative;">
+							<div id="sp-results-sidebar" data-spy="affix" data-offset-top="310">
+								
+								<!-- Filters -->
+								<div id="sp-results-filters" class="row">
+									<div class="col-xs-12">
+										<div class="row">
+											<div class="col-xs-9"><h5>Filter Results By:</h5></div>
+											<div class="col-xs-3 sp-clear">
+												<button onclick="clearFilters()">Clear</button>
+											</div>
+										</div>
+										<ul id="sp-results-filters-checkboxes">
+											<li class="checkbox">
+												<label>
+													<input type="checkbox" onclick="showCourse('math-8')">
+													<span class="sp-label">Grade 8 Math</span>
+													<span class="badge">4</span>
+												</label>
+											</li>
+											<li class="checkbox">
+												<label>
+													<input type="checkbox" onclick="showCourse('math-10')">
+													<span class="sp-label">Grade 10 Math</span>
+													<span class="badge">1</span>
+												</label>
+											</li>
+											<li class="checkbox">
+												<label>
+													<input type="checkbox" onclick="showCourse('us-pre-algebra')">
+													<span class="sp-label">US Pre-Algebra</span>
+													<span class="badge">4</span>
+												</label>
+											</li>
+											<li class="checkbox">
+												<label>
+													<input type="checkbox" onclick="showCourse('college-algebra')">
+													<span class="sp-label">College Algebra</span>
+													<span class="badge">1</span>
+												</label>
+											</li>
+										</ul>
+									</div>
+								</div><!-- / Filters -->
+
+								<!-- Need Help -->
+								<div id="" class="row">
+									<div class="col-xs-12">
+										<p class="sp-ruled"><b>Having trouble?</b> Watch this <a href="#sp-learn-search">video</a> to get better search results.</p>
+									</div>
+								</div><!-- / Need Help -->
+							</div>
+						</div><!-- / Sidebar -->
+					</div>
+				</div>
+			</div>
+
+			<!-- MAIN FOOTER -->
+			<footer id="sp-main-footer">
+				
+				<div class="container">
+					
+					<!-- Site Nav -->
+					<ul id="sp-foot-nav">
+						<li><a href="#">About Us</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Pricing</a></li>
+					</ul>
+
+					<!-- Social Icons -->
+					<ul>
+						<li class="sp-social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-fb.png" alt="Facebook">
+							</a>
+						</li>
+						<li class="sp-social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-twitter.png" alt="Twitter">
+							</a>
+						</li>
+						<li class="sp-social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-youtube.png" alt="YouTube">
+							</a>
+						</li>
+						<li class="sp-social-icon">
+							<a href="#">
+								<img src="https://dcvp84mxptlac.cloudfront.net/img/footer-social-gplus.png" alt="Google Plus">
+							</a>
+						</li>
+					</ul>
+
+					<!-- Fine Print -->
+					<ul id="sp-fine-print">
+						<li>&copy; StudyPug 2016</li>
+						<li><a href="#">Terms of Service</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Course Index</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../reset.css">
+		<link rel="stylesheet" href="styles.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="scripts.js"></script>
+	</head>
+	<body class="sp-algebra-2">
+
+		<div id="sp">
+			
+			<!-- PAGE HEADER -->
+			<header id="sp-page-header">
+				
+				<!-- PAGE NAV -->
+				<div id="sp-page-nav">
+					<div class="container">
+						
+						<div class="row">
+							<!-- LOGO + MENU FOR XS SCREENS -->
+							<div class="col-xs-12 col-sm-4">
+								<div class="row">
+									<div class="col-xs-8 col-sm-12">
+										<a href="index.html"><img id="sp-header-logo" src="https://dcvp84mxptlac.cloudfront.net/img/logo-white.png" alt="StudyPug Logo"></a>
+									</div>
+									<div class="col-xs-4 hidden visible-xs text-right">
+										<button id="sp-page-nav-menu-btn"><h5>Menu</h5></button>
+									</div>
+								</div>
+							</div>
+							<!-- NAV ITEMS FOR SM+ SCREENS -->
+							<div class="nav hidden-xs col-sm-8 text-right">
+								<ul id="sp-page-nav-items">
+									<li>
+										<form class="navbar-form navbar-left" role="search">
+											<div class="form-group">
+												<div class="input-group">
+													<input type="text" class="form-control" placeholder="Search for...">
+													<span class="input-group-btn">
+														<button type="submit" class="btn btn-default">
+															<span class="glyphicon glyphicon-search"></span>
+														</button>
+													</span>
+											</div>
+										</form>
+									</li>
+									<li><a href="#"><h6>How It Works</h6></a></li>
+									<li><a href="#"><h6>Log In</h6></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</header>
+
+			<div class="contents">
+				
+				<!-- SECONDARY NAV -->
+				<div id="sp-secondary-nav">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-12">
+								<ol id="sp-breadcrumbs" class="">
+									<li><a href="#">Home</a></li>
+									<li>
+										<span class="dropdown">
+											<a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Math 8<span class="caret"></span>
+											</a>
+											<ul class="dropdown-menu" aria-labelledby="dLabel">
+												<li><a href="#" onclick="switchCourse('sp-math-8')">Math 8</a></li>
+												<li><a href="#" onclick="switchCourse('sp-pre-algebra')">Pre-Algebra</a></li>
+												<li><a href="#" onclick="switchCourse('sp-algebra-1')">Algebra 1</a></li>
+												<li><a href="#" onclick="switchCourse('sp-geometry')">Geometry</a></li>
+											</ul>
+										</span>
+									</li>
+									<li class="active">Chapter 1.1 – Understanding the number systems</li>
+								</ol>
+								<!-- REMOVE ME -->
+								<script>
+									function switchCourse(subject) {
+										document.body.className = subject;
+									}
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- INTRO SELL -->
+				<div id="sp-course-intro">
+
+					<!-- MINI HOW IT WORKS WIDGET -->
+					<div id="sp-how-it-works">
+						<div class="container sp-pad-md sp-pad-top-lg" style="position:relative; border-bottom:1px dashed;">
+							<div class="row sp-header sp-pad-bottom-lg">
+								<div class="col-xs-12">
+									<h1>How to get faster and better math help</h1>
+								</div>
+							</div>
+							<div class="row text-center sp-pad-bottom-sm">
+								<div class="col-xs-12 col-sm-4 sp-stacked-pad-bottom-md">
+									<div><img class="img-responsive" src="https://dcvp84mxptlac.cloudfront.net/img/illustration-pug-night.png" alt="Have a math problem?"></div>
+									<h3 class="lite">Have a math problem?</h3>
+									<p>Find your help topic here, whether it's a homework question, or studying for a major exam.</p>
+								</div>
+								<div class="col-xs-12 col-sm-4 sp-stacked-pad-bottom-md">
+									<div><img class="img-responsive" src="https://dcvp84mxptlac.cloudfront.net/img/illustration-pug-math.png" alt="Find and watch a quick lesson"></div>
+									<h3 class="lite">Watch a quick lesson</h3>
+									<p>Learn the topic by watching an experienced teacher walk you through concise, step-by-step video examples.</p>
+								</div>
+								<div class="col-xs-12 col-sm-4">
+									<div><img class="img-responsive" src="https://dcvp84mxptlac.cloudfront.net/img/landing/sp-how-it-works-graphic-3.png" alt="And understand, finally!"></div>
+									<h3 class="lite">Comprehend</h3>
+									<p>Be more confident in math, and do better in math class by understanding and mastering the topics.</p>
+								</div>
+							</div>
+							<div class="row text-center">
+								<p><a href="#" style="color:#FFF;">Learn more</a> about how StudyPug can help.</p>
+							</div>
+							<button class="sp-close-button" onclick="closeWidget()"><span class="glyphicon glyphicon-remove"></span></button>
+						</div>
+					</div>
+					
+					<div class="container sp-pad-lg">
+						<div class="row">
+							<div id="sp-course-intro-text" class="col-xs-12 col-md-8 col-lg-6">
+								<h1>Math 8 made completely easy!</h1>
+								<p>We got your covered — learn <b>83 different topics</b>, practice <b>300 real world examples</b>, get all the <b>best tips and tricks</b>.</p>
+								<p><button class="sp-text-button" onclick="openWidget()">See how it works</button></p>
+								<div id="sp-course-intro-cover-art" class="hidden visible-md visible-lg sp-cover-art"></div>
+							</div>
+						</div>
+					</div>
+
+					<script>
+						function openWidget() {
+
+							var parentNode = document.getElementById("sp-course-intro"),
+								widgetNode = document.getElementById("sp-how-it-works");
+
+							// Set the max height of the widget node
+							widgetNode.style.maxHeight = widgetNode.firstElementChild.offsetHeight + "px";
+
+							// Scroll into position
+							//parentNode.scrollIntoView();
+						}
+
+						function closeWidget() {
+							var node = document.getElementById("sp-how-it-works");
+							node.style.maxHeight = "";
+						}
+					</script>
+				</div>
+
+				<!-- VIDEO SELL -->
+				<div id="sp-course-video-sell" class="sp-banded sp-banded-bottom">
+					<div class="container sp-pad-lg">
+						<div class="row">
+							<!-- video block -->
+							<div class="col-xs-12 col-md-6">
+								<div class="embed-responsive embed-responsive-16by9">
+									<div style="position:absolute; width:100%; height:100%; background:#333;"></div>
+								</div>
+							</div>
+							<!-- text block -->
+							<div class="col-xs-12 col-md-6">
+								<h2>Meet Andy, your Math 8 tutor</h2>
+								<ul class="sp-play-items">
+									<li>
+										<button>
+											<span class="glyphicon glyphicon-play-circle"></span>
+											See how you walk you through a lesson
+										</button>
+									</li>
+									<li>
+										<button>
+											<span class="glyphicon glyphicon-play-circle"></span>
+											Learn how to find or search for a topic
+										</button>
+									</li>
+								</ul>
+								<button class="btn btn-lg btn-primary">Yes, I want to do better in math!</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TOPICS LIST -->
+				<div id="sp-course-topics">
+					<div class="container sp-pad-lg">
+						<!-- Heading -->
+						<div class="row">
+							<div class="col-xs-12 sp-header sp-pad-bottom-md">
+								<h1>Math 8 Topics</h1>
+								<h5>There are plenty of <span style="color:#E03667;">free demo lessons</span> for you to try.</h5>
+							</div>
+						</div>
+						<!-- Topics -->
+						<div id="sp-course-topics-list" class="row"></div>
+						<script>
+							courseList("sp-course-topics-list");
+							addFakeCourses("sp-course-topics-list", 20, 6);
+						</script>
+						
+						<div id="sp-inline-course-search" class="row sp-ruled-top sp-pad-md">
+							<div class="col-xs-12 sp-header sp-pad-bottom-md">
+								<h2>Don't see what you need above?</h2>
+								<h6>Don't fret, try our search or give us a shout.</h6>
+							</div>
+							<div class="col-xs-10 col-xs-push-1 col-md-8 col-md-push-2 sp-boxed sp-boxed-rounded">
+								<div class="row sp-row-flex">
+									
+									<div class="col-xs-12 col-sm-6 sp-stacked-pad-bottom-sm">
+										<form class="input-group" action="/us/en/search.html"><input id="sp-results-search-input" name="search_term" type="text" class="form-control" placeholder="Search Topics" value=""><span class="input-group-btn"><button class="btn btn-default search" type="button"><span class="glyphicon glyphicon-search"></span></button></span></form>
+									</div>
+									
+									<div class="col-xs-12 col-sm-6">
+										<p class="sp-no-margin">Ask us via <em>live chat</em> or send us a <em>message</em></p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- TESTIMONIALS -->
+				<div id="sp-testimonials" class="sp-banded">
+					<div class="container sp-pad-lg">
+						<div class="row sp-pad-bottom-lg">
+							<div class="col-xs-12 sp-header">
+								<h1>Students and parents love us</h1>
+								<h5>But you don't have to take our word for it...</h5>
+							</div>
+						</div>
+						<div class="row sp-pad-bottom-lg">
+							<div class="col-xs-12 col-sm-4 sp-stacked-pad-bottom-md">
+								<div class="sp-customer-testimonial">
+									<q>StudyPug is your own personal math tutor, here to help you the math problems that are making your life difficult.</q>
+									<div class="sp-customer-photo">
+										<div><img src="../g9/sprite.gif" alt="customer photo" style="background-image: url(https://dcvp84mxptlac.cloudfront.net/diagrams/ca_10_s1_3.png);"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4 sp-stacked-pad-bottom-md">
+								<div class="sp-customer-testimonial">
+									<q>StudyPug is your own personal math tutor, here to help you the math problems that are making your life difficult.</q>
+									<div class="sp-customer-photo">
+										<div><img src="../g9/sprite.gif" alt="customer photo" style="background-image: url(https://dcvp84mxptlac.cloudfront.net/diagrams/ca_10_p1_2.png);"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-12 col-sm-4">
+								<div class="sp-customer-testimonial">
+									<q>StudyPug is your own personal math tutor, here to help you the math problems that are making your life difficult.</q>
+									<div class="sp-customer-photo">
+										<div><img src="../g9/sprite.gif" alt="customer photo" style="background-image: url(https://dcvp84mxptlac.cloudfront.net/diagrams2/ca_10_t.png);"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- See more + FB Likes -->
+						<div class="row">
+							<div class="col-xs-6">
+								<p style="margin-top: 0;">See all our <a href="#">testimonials</a></p>
+							</div>
+							<div class="col-xs-6 text-right">
+								<div class="fb-like" data-href="https://www.facebook.com/StudyPug/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- SIGN UP -->
+				<div id="sp-end-signup">
+					<div class="container sp-pad-lg">
+						<div class="row sp-pad-bottom-md">
+							<div class="col-xs-12 sp-header">
+								<h1>Ready to make Math 8 easy?</h1>
+								<h5>Don't procrastinate any longer, it could be too late!</h5>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-12 text-center">
+								<button class="btn btn-lg btn-primary">Start my free trial</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>	
+		</div>
+
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
+	</body>
+</html>
+

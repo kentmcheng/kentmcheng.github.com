@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- PAGE TITLE -->
+		<title>Letter Lab</title>
+		
+		<!-- META INFO -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		
+		<!-- LINKS -->
+		<link rel="apple-touch-icon-precomposed" href="img/icon.png"/>
+		<link rel="apple-touch-startup-image" href="img/splash.png" />
+		<link rel="stylesheet" href="css/llab.css">
+		
+		<!-- SCRIPTS -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="js/iscroll.js"></script>
+		<script src="js/llab.js"></script>
+		<script>
+			$(document).ready(function(){
+				initPage();
+			});		
+		</script>
+	</head>
+	<body ontouchmove='event.preventDefault(), hideURLbar()' onorientationchange="resetScreen()" >
+		<section id='nosupport'>
+			<div class='contents'>
+				<h1>Unsupported Screen Resolution</h1>
+				<p>Please rotate your device or expand your browser window to a taller size.</p>
+			</div>
+		</section>
+		<section id='llab'>
+			<div class='contents'>
+				<div class='components'>
+					<section id='panel_top'>
+						<div class='components'>
+							<section id='panel_top_contents' class='loader'>
+								<div class='element'><h1>Ld</h1><h2>01</h2></div>
+								<p>Loading</p>
+								<img src="img/game_load.gif" alt="loading animation" />
+							</section>
+							<div class='wave'></div>
+						</div>
+					</section>
+					<section id='panel_bot'>
+						<div class='components'>
+							<section id='panel_bot_contents'></section>
+						</div>
+					</section>
+					<section id="panel_earl"></section>
+					<section id='panel_modal'></section>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

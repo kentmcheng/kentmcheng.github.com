@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'EmojiSymbols';
+    src: url('../fonts/emojisymbols-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.es {
+    display: inline-block;
+    font: normal normal normal 16px/1 EmojiSymbols;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.es-dot::before {
+    content: '\01F535';
+}
+
+.es-no::before { 
+    content: '\01F645';
+}
+
+.es-pray::before {
+    content: '\01F64F';
+}
+
+.es-sad::before {
+    content: '\01F64D';
+}

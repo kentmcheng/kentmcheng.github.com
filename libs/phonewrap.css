@@ -1,0 +1,378 @@
+/* 
+ * Phone Wrapper
+ * Ver 1.0.20130824
+ */
+
+/* Base iPhone styles */
+
+.iphone {
+	display: inline-block;
+}
+
+.iphone * {
+	box-sizing: content-box;
+	
+	margin: 0;	
+	padding: 0;	
+
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.iphone-components {
+	position: relative;
+
+	border: 0 solid #d6d6d6;
+	background: #1a1a1a;
+}
+	.five .iphone-components {
+		border-color: #3a3a3a;
+	}
+	.white .iphone-components {
+		border-color: #ccc;
+		background: #f4f5f5;
+	}
+
+.iphone-frame {
+	display: none;
+}
+
+.iphone-frame-button {
+	position: absolute;
+
+	border-radius: 2px;
+	background: #d6d6d6;
+}
+	.five .iphone-frame-button {
+		background: #3a3a3a;
+	}
+	.white .iphone-frame-button {
+		background: #ccc;
+	}
+
+.iphone-screen {
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: start;
+}
+	.portrait .iphone-screen {
+		-webkit-box-orient: vertical;
+	}
+
+.iphone-bezel {
+	display: none;
+}
+
+.iphone-camera {
+	border: 0 solid #333;
+	border-radius: 50%;
+	background: #1a1a42;
+}
+	.white .iphone-camera {
+		border-color: #dedede;
+		background: #4d9494;
+	}
+
+.iphone-speaker {
+	border-radius: 4px;
+	background: #333;
+}
+	.white .iphone-speaker {
+		border-color: #f4f5f5;
+		background: #dedede;
+	}
+
+.iphone-button-home {
+	border-radius: 50%;
+	background: #333;
+}
+	.white .iphone-button-home {
+		background: #dedede;
+	}
+
+.iphone-home-icon {
+	border: 2px solid #666;
+	border-radius: 4px;
+}
+	.white .iphone-home-icon {
+		border-color: #f4f5f5;
+	}
+
+.iphone-display {
+	border: 0 solid #000;
+	overflow: hidden;
+}
+	.white .iphone-display {
+		border-color: #ccc;
+	}
+
+.iphone-viewport {
+	width: 100%;
+	height: 100%;
+}
+
+.iphone-glare {
+	display: none;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+
+	background-image: -webkit-linear-gradient(20deg, transparent 0%, transparent 68%, rgba(255, 255, 255, 0.1) 68%, rgba(255, 255, 255, 0.1) 100%);
+	-webkit-animation: fadeIn 0.5s ease alternate forwards;
+}
+
+	.interactive .iphone-glare {
+		display: none !important;
+	}
+
+/* iPhone portrait styles */
+
+@media (min-width: 400px) {
+
+	.portrait .iphone-components {
+		padding: 0 15px;
+		border-radius: 34px;
+		border-width: 2px; 
+	}
+
+	.portrait .iphone-frame {
+		display: block;
+	}
+
+	.portrait .iphone-frame-button.power {
+		bottom: 100%;
+		right: 45px;
+
+		width: 42px;
+		height: 5px;
+	}
+
+	.portrait .iphone-frame-button.mute {
+		top: 45px; 
+		right: 100%;
+		
+		width: 5px; 
+		height: 28px;
+	}
+		.five.portrait .iphone-frame-button.mute {
+			top: 82px;
+		}
+
+	.portrait .iphone-frame-button.volume {
+		right: 100%;
+
+		width: 5px;
+		height: 20px;
+	}
+
+	.portrait .iphone-frame-button.up {
+		top: 100px;
+	}
+		.five.portrait .iphone-frame-button.up {
+			top: 135px;
+		}
+
+	.portrait .iphone-frame-button.down {
+		top: 145px;
+	}
+		.five.portrait .iphone-frame-button.down {
+			top: 180px;
+		}
+
+	.portrait .iphone-bezel {
+		display: -webkit-box;
+		-webkit-box-orient: horizontal;
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+	}
+		.five.portrait .iphone-bezel {
+			-webkit-box-orient: vertical;
+		}
+
+	.portrait .iphone-bezel.top {
+		padding: 38px 12px 38px 0;
+	}
+		.five.portrait .iphone-bezel.top {
+			padding: 20px 0;
+		}
+
+	.portrait .iphone-camera {
+		width: 4px;
+		height: 4px;
+		border-width: 4px;
+	}
+
+	.portrait .iphone-speaker {
+		width: 60px;
+		height: 8px;
+		margin: 0 15px;
+	}
+		.five.portrait .iphone-speaker {
+			margin: 12px 0 8px;
+		}
+
+	.portrait .iphone-bezel.bottom {
+		padding: 16px 0;
+	}
+		.five.portrait .iphone-bezel.bottom {
+			padding: 12px 0;
+		}
+
+	.portrait .iphone-button-home {
+		padding: 18px;
+	}
+
+	.portrait .iphone-home-icon {
+		width: 16px;
+		height: 16px;
+	}
+
+	.portrait .iphone-display {
+		width: 320px;
+		height: 480px;
+		border-radius: 4px;
+		border-width: 2px;
+	}
+		.five.portrait .iphone-display {
+			height: 568px;
+		}
+
+	.no-touch .portrait .iphone-glare {
+		display: block;
+	}
+}
+
+/* iPhone landscape styles */
+
+@media (min-width: 900px) {
+	
+	.landscape .iphone-components {
+		padding: 15px 0;
+		border-radius: 34px; 
+		border-width: 2px;
+	}
+
+	.landscape .iphone-frame {
+		display: block;
+	}
+
+	.landscape .iphone-frame-button.power {
+		left: 100%;
+		bottom: 45px;
+
+		width: 5px;
+		height: 42px;
+	}
+
+	.landscape .iphone-frame-button.mute {
+		right: 45px;
+		top: -5px;
+
+		width: 28px;
+		height: 5px;
+	}
+		.five.landscape .iphone-frame-button.mute {
+			right: 80px;
+		}
+
+	.landscape .iphone-frame-button.volume {
+		top: -5px;
+
+		width: 20px;
+		height: 5px;
+	}
+
+	.landscape .iphone-frame-button.up {
+		right: 100px;
+	}
+		.five.landscape .iphone-frame-button.up {
+			right: 135px;
+		}
+
+	.landscape .iphone-frame-button.down {
+		right: 145px;
+	}
+		.five.landscape .iphone-frame-button.down {
+			right: 180px;
+		}
+
+	.landscape .iphone-screen {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+	}
+
+	.landscape .iphone-bezel {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-box-align: center;
+		-webkit-box-pack: center;
+		-webkit-box-direction: normal;
+	}
+		.five.landscape .iphone-bezel {
+			-webkit-box-orient: horizontal;
+			-webkit-box-direction: reverse;
+		}
+
+	.landscape .iphone-bezel.top {
+		padding: 12px 38px;
+		padding-top: 0;
+	}
+		.five.landscape .iphone-bezel.top {
+			padding: 0 20px;
+		}
+
+	.landscape .iphone-camera {
+		width: 4px;
+		height: 4px;
+		border-width: 4px;
+	}
+
+	.landscape .iphone-speaker {
+		width: 8px;
+		height: 60px;
+		margin: 15px 0;
+	}
+		.five.landscape .iphone-speaker {
+			margin: 0 12px 0 8px;
+		}
+
+	.landscape .iphone-bezel.bottom {
+		padding: 0 16px;
+	}
+		.five.landscape .iphone-bezel.bottom {
+			padding: 0 12px;
+		}
+
+	.landscape .iphone-button-home {
+		padding: 18px;
+	}
+
+	.landscape .iphone-home-icon {
+		width: 16px;
+		height: 16px;
+	}
+
+	.landscape .iphone-display {
+		width: 480px;
+		height: 320px; 
+	}
+		.five.landscape .iphone-display {
+			width: 568px;
+		}
+
+	.no-touch .landscape .iphone-glare {
+		display: block;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+  from  { opacity: 0; }
+  to { opacity: 1; }
+}

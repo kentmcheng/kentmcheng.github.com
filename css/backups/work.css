@@ -1,0 +1,284 @@
+@import url(core.css);
+
+/* 
+	-----------------------
+	CONTENT SHOWCASE STYLES
+	=======================
+*/
+
+.showcase {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: center;
+	-webkit-box-pack: start;
+
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: flex-start;
+
+	text-align: center;
+}
+
+.showcase-display {
+	width: 100%;
+}
+
+.showcase-desc {
+	width: 100%;
+	margin: 2rem 0;
+	padding: 0 1rem;
+}	
+	
+	.showcase-desc h2 {
+		font-size: 2.4rem;
+		font-weight: 700;
+	}
+
+	.showcase-desc h6 {
+		margin: 0 0.1rem;
+
+		color: #878787;
+		font-size: 1.8rem;
+		font-weight: 400;
+	}
+
+	.no-touch .showcase-desc h6 a:hover { 
+		color: #3a3a3a; 
+	}
+
+	.showcase-desc p {
+		margin: 1.6rem 0 0;
+		text-align: justify;
+	}
+
+	.showcase-desc p:nth-child(2) {
+		margin-top: 2.4rem;
+	}
+
+	.showcase-desc p.note {
+		color: #545454;
+		font-size: 1.4rem;
+		font-style: italic;
+	}
+
+	.showcase-desc p.note:before {
+		margin-right: 0.2rem;
+		content: "Note:";
+		font-weight: 700;
+	}
+
+	.showcase-desc li {
+		display: inline-block;
+	}
+
+	.showcase-desc li:after {
+		content: ",";
+	}
+
+	.showcase-desc li:last-of-type:after {
+		content: none;
+	}
+
+/*
+	------------------
+	CONTROL BAR STYLES
+	==================
+*/
+
+.work-controls {
+	
+	display: -webkit-box;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 1rem 1rem 0.5rem;
+	font-size: 2rem;
+}
+	
+	.work-controls a { 
+		color: #545454; 
+	}
+
+		.no-touch .work-controls a:hover { 
+			color: #111; 
+		}
+
+	.work-controls .all {	
+		-webkit-box-flex: 1;
+		flex: 1;
+	}
+
+	.work-controls .jump {
+		text-align: right;
+	}
+
+	.work-controls .jump a {
+		margin: 0 0.4rem;
+	}
+
+/* 
+	---------------------
+	ITEM THUMBNAIL STYLES
+	=====================
+*/
+
+.work-thumbnails { 
+	padding: 0.5rem; 
+	padding-bottom: 0.5rem !important;
+}
+
+	.work-thumbnails a { 
+		display: block; 
+	}
+
+	.work-thumbnails li { 
+		padding: 0.5rem; 
+	}
+
+	.work-thumbnails img {
+		display: block;
+
+		width: 100%;
+		border-radius: 2px;
+		background: url(../graphics/textures/graphy.png) center center repeat;
+	}
+
+	.no-touch .work-thumbnails img {
+		-webkit-backface-visibility: hidden;
+		-webkit-filter: grayscale(0.85);
+		-webkit-transition: all 0.25s ease-in-out;
+	}
+
+	.no-touch .work-thumbnails img:hover {
+		-webkit-filter: grayscale(0);
+	}
+	.no-touch .work-thumbnails img:active {
+		-webkit-filter: grayscale(0.5);
+	}
+
+/* 
+	----------------------
+	RESPONSIVE ADJUSTMENTS
+	----------------------
+*/
+
+@media (min-width: 400px) {
+	
+	.showcase.row {
+		padding: 3.6rem 0 0;
+	}
+}
+
+@media (max-width: 479px) {
+
+	.work-thumbnails.limit li:nth-of-type(n+4) { 
+		display: none; 
+	}
+}
+
+@media (min-width: 480px) {
+
+	.showcase-desc h2 {
+		font-size: 3.2rem;
+	}
+
+	.showcase-desc h6 {
+		font-size: 2rem;
+	}
+
+	.work-thumbnails li {
+		display: inline-block;
+		width: 50%;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 799px) {
+	
+	.work-thumbnails.limit li:nth-of-type(n+5) { 
+		display: none; 
+	}
+}
+
+@media (min-width: 640px) {
+
+	.showcase.row {
+		padding: 4.8rem 0 0;
+	}
+
+	.showcase-desc {
+		max-width: 640px;
+		padding: 0 2rem;
+	}
+
+	.work-thumbnails {
+		padding: 1.5rem;
+	}
+
+	.work-controls {
+		padding: 2rem 2rem 0;
+	}
+}
+
+@media (min-width: 800px) {
+
+	.showcase {
+		padding: 4rem 0 0;
+	}
+
+	.showcase-desc {
+		padding: 0;
+	}
+
+	.work-thumbnails {
+		padding: 1.5rem 0;
+		margin: 0 -0.5rem;
+	}
+
+	.work-thumbnails li {
+		width: 33.33333333%;
+	}
+
+	.work-controls {
+		padding: 2rem 0 0;
+	}
+}
+
+@media (min-width: 1000px) {
+
+	.showcase.row {
+		-webkit-box-orient: horizontal;
+		-webkit-box-align: start;
+
+		flex-flow: row;
+		align-items: flex-start;
+	}
+
+	.showcase.row .showcase-display {
+		width: auto;
+	}
+
+	.showcase.row .showcase-desc {
+		-webkit-box-flex: 1;
+		flex: 1;
+		
+		margin-top: 4rem;
+		padding-left: 3.5rem;
+
+		text-align: left;
+	}
+}
+
+@media (-webkit-device-pixel-ratio: 2), (min-resolution: 1.5dppx) {
+
+	.work-thumbnails img {
+		background-image: url(../graphics/textures/graphy-2x.png);
+		background-size: 80px auto;
+	}
+}
+
+

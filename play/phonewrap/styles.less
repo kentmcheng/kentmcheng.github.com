@@ -1,0 +1,78 @@
+//@import url(../../css/core.css);
+
+#phone-wrapper {
+
+	.flexbox(center, center);
+	
+	height: 560px;
+
+	@media (min-width: @screen-width-xnarrow) { 
+		
+		height: 740px; 
+	}
+}
+
+#screenshots img {
+		
+	display: none;
+	width: 100%;
+}
+
+.four.black.portrait #beat-sneak,
+.four.white.portrait #beat-sneak,
+.four.black.landscape #fragger,
+.four.white.landscape #fragger,
+.five.black.portrait #threes,
+.five.white.portrait #threes,
+.five.black.landscape #frontiers,
+.five.white.landscape #frontiers {
+	display: block;
+}
+
+#phone-options {
+
+	.flexbox(flex-start, center);
+
+	margin-left: 3em;
+	padding: 1em 0 0;
+
+	ul {
+
+		.flexbox(column, flex-start, flex-start);
+
+		margin-right: 1em;
+	}
+
+	li { margin: 0.5em 0; }
+
+	button {
+
+		@active-color: #3a3a3a;
+		
+		color: #999;
+		cursor: pointer;
+
+		&:hover { color: #666; }
+		&:active { color: @active-color; }
+		&.active { color: @active-color; }
+	}
+}
+
+#button-option-landscape {
+	
+	visibility: hidden;
+
+	@media (max-width: @screen-width-wide) {
+
+		&.active {
+
+			color: #fa2323 !important;
+			visibility: visible !important;
+		}
+	}
+
+	@media (min-width: (@screen-width-wide + 1)) {
+		
+		visibility: visible;
+	}
+}
