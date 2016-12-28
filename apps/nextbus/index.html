@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- META INFO -->
+		<meta charset="utf-8">
+		
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-title" content="Next Bus">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="application-name" content="Next Bus">
+
+		<meta name="viewport" content="initial-scale=1, user-scalable=0">
+
+		<!-- PAGE TITLE -->
+		<title>Next Bus</title>
+
+		<!-- PAGE ICONS -->
+		<link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/touch-icon-180.png">
+		
+		<link rel="icon" sizes="128x128" href="images/touch-icon-128.png">
+		<link rel="icon" sizes="192x192" href="images/touch-icon-192.png">
+		
+		<!-- PAGE STYLES -->
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<body ontouchmove="">
+
+		<div id="bad-orientation">
+			<div class="es es-no"></div>
+			<p>Landscape not supported</p>
+			<p><small>(Please switch to portrait)</small></p>
+		</div>
+
+		<div id="nextbus">
+			<div id="nb-stops" class="panel"></div>
+			<div id="nb-info" class="panel"></div>
+			<div id="nb-search" class="panel"></div>
+			<div id="nb-buses" class="panel"></div>
+			<div id="nb-splash" class="panel">
+				<div class="bus-icon"></div>
+				<h1>Next Bus</h1>
+				<h2>An open API Experiment</h2>
+				<div class="fa fa-spinner fa-pulse"></div>
+				<div class="es es-dot"></div>
+			</div>
+		</div>
+
+		<div id="components" style="display: none;">
+			<div id="info">
+				<h1>Favorites</h1>
+				<p><em>Coming soon! Save your favorite stops to see your next upcoming buses even faster.</em></p>
+				
+				<h1>Next Bus Info</h1>
+				<p id="info-version">Version and Date</p>
+				<p>This service is powered by the TransLink Open API. The data used in this product and service is provided by permission of TransLink. TransLink assumes no responsibility for the accuracy or currency of the data used in this product and service.</p>
+				<p>If you need more complete transit info, you can visit the <a href="http://www.translink.ca">TransLink website</a> for their complete suite of info, links and services.</p>
+				<p>For bugs and feedback you can contact me <a href="mailto:kentmcheng@gmail.com">here</a>.</p>
+				
+				<h1>Special Thanks</h1>
+				<p>A special thanks to <a href="http://fontawesome.io">Font Awesome</a> by Dave Gandy and <a href="http://emojisymbols.com/">EmojiSymbols Font</a> by Kenichi Kaneko. The interface was designed using these awesome icon font packs.</p>
+			</div>
+			<div id="search">
+				<div id="search-display">
+					<input id="search-input-field" type="text" placeholder="Stop Number" maxlength="5" disabled>
+				</div>
+				<ul id="search-keypad">
+					<li>
+						<button data-keypad-value="1"><img src="images/sprite.png"><span>1</span></button>
+						<button data-keypad-value="2"><img src="images/sprite.png"><span>2</span></button>
+						<button data-keypad-value="3"><img src="images/sprite.png"><span>3</span></button>
+					</li>
+					<li>
+						<button data-keypad-value="4"><img src="images/sprite.png"><span>4</span></button>
+						<button data-keypad-value="5"><img src="images/sprite.png"><span>5</span></button>
+						<button data-keypad-value="6"><img src="images/sprite.png"><span>6</span></button>
+					</li>
+					<li>
+						<button data-keypad-value="7"><img src="images/sprite.png"><span>7</span></button>
+						<button data-keypad-value="8"><img src="images/sprite.png"><span>8</span></button>
+						<button data-keypad-value="9"><img src="images/sprite.png"><span>9</span></button>
+					</li>
+					<li>
+						<button data-keypad-value="-2"><img src="images/sprite.png"><span>empty</span></button>
+						<button data-keypad-value="0"><img src="images/sprite.png"><span>0</span></button>
+						<button data-keypad-value="-1"><img src="images/sprite.png"><span>delete</span></button>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- PAGE SCRIPTS -->
+		<script src="../../js/jquery.js"></script>
+		<script src="scripts.js"></script>
+		<script>nextbus.init();</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
