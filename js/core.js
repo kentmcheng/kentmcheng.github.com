@@ -139,7 +139,7 @@
 
 			// Set up the page footer
 			// pageFooter.classList.add(wrap);
-			pageFooter.innerHTML = "<p class='wrap'>Copyright &copy; 2015 Kent Cheng</p>";	
+			pageFooter.innerHTML = "<p class='wrap'>&copy; 2017 Kent Cheng</p>";	
 		}
 	};
 
