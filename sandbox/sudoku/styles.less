@@ -1,0 +1,123 @@
+// GLOBAL FUNCTIONS //
+
+	.flexbox() {
+		display: -webkit-flex; 
+		display: flex;
+	}
+
+	.flexbox(@alignment, @justification) {
+		.flexbox();
+		.flexbox-align(@alignment);
+		.flexbox-justify(@justification);
+	}
+
+	.flexbox(@direction, @alignment, @justification) {
+		.flexbox();
+		.flexbox-direction(@direction);
+		.flexbox-align(@alignment);
+		.flexbox-justify(@justification);
+	}
+
+	.flexbox-direction(@direction) {
+		-webkit-flex-direction: @direction;
+		flex-direction: @direction;	
+	}
+
+	.flexbox-align(@alignment) {
+		-webkit-align-items: @alignment;
+		align-items: @alignment;
+	}
+
+	.flexbox-justify(@justification) {
+		-webkit-justify-content: @justification;
+		justify-content: @justification;
+	}
+
+	.flexbox-flex(@value) {
+		-webkit-flex: @value;
+		flex: @value;
+	}
+
+@import url("../../css/reset.css");
+@import url("../../libs/font-awesome.css");
+@import url("http://fonts.googleapis.com/css?family=PT+Mono");
+
+body {
+
+	.flexbox(center, center);
+
+	min-width: 100vw;
+	min-height: 100vh;
+
+	font-family: "PT Mono", sans-serif;
+}
+
+#app {
+	
+	width: 480px;
+	padding: 20px;
+	border: 1px solid #CCC;
+	box-sizing: border-box;
+	background: url(../../graphics/textures/debut_light.png) center top repeat;
+	//cursor: url(touch.png) 17 17, auto !important;
+	cursor: crosshair;
+	text-align: center;
+}
+
+#gameboard {
+	
+	display: inline-block;
+	position: relative;
+
+	canvas {
+	
+		position: absolute;
+		top: 0; 
+		left: 0;
+	}
+}
+
+#controls {
+	
+	padding: 10px 0 0;
+
+	&.pen { 
+
+		color: #09f; 
+
+		button.fa-pencil { color: #f90; }
+	}
+
+	&.pencil { 
+
+		color: #f90;
+
+		button.fa-paint-brush { color: #09f; }
+	}
+
+	ul { 
+		
+		.flexbox(center, center);
+
+		li { margin: 8px; }
+	}
+
+	button {
+
+		@button-size: 48px; // should actually be sized to the available space
+
+		width: @button-size;
+		height: @button-size;
+		font-size: @button-size;
+
+		&:hover { 
+			text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); 
+		}
+
+		&:disabled {
+			
+			color: rgba(0, 0, 0, 0.1);
+			text-shadow: none !important;
+		}
+	}	
+}

@@ -1,0 +1,70 @@
+@import url("../../css/reset.css");
+@import url("../../libs/font-awesome.css");
+@import url("http://fonts.googleapis.com/css?family=PT+Mono");
+body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  font-family: "PT Mono", sans-serif;
+}
+#app {
+  width: 480px;
+  padding: 20px;
+  border: 1px solid #CCC;
+  box-sizing: border-box;
+  background: url(../../graphics/textures/debut_light.png) center top repeat;
+  cursor: crosshair;
+  text-align: center;
+}
+#gameboard {
+  display: inline-block;
+  position: relative;
+}
+#gameboard canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#controls {
+  padding: 10px 0 0;
+}
+#controls.pen {
+  color: #09f;
+}
+#controls.pen button.fa-pencil {
+  color: #f90;
+}
+#controls.pencil {
+  color: #f90;
+}
+#controls.pencil button.fa-paint-brush {
+  color: #09f;
+}
+#controls ul {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+#controls ul li {
+  margin: 8px;
+}
+#controls button {
+  width: 48px;
+  height: 48px;
+  font-size: 48px;
+}
+#controls button:hover {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+#controls button:disabled {
+  color: rgba(0, 0, 0, 0.1);
+  text-shadow: none !important;
+}
