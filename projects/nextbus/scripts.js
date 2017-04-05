@@ -883,15 +883,17 @@
 				
 				var content = getElement( panel.id + contentAffix );
 
-				//console.log("Scroll check for panel: " + panel.id);
-				//console.log(content);
+				// console.log("Scroll check for panel: " + panel.id);
+				// console.log(content);
 
 				if (content.childNodes.length === 0) return; // stop if content has no children
 
-				if (content.firstChild.offsetHeight > content.offsetHeight)
-					content.classList.add('scrollable');
-				else 
-					content.classList.remove('scrollable');
+				content.classList.add('scrollable');
+
+				// if (content.firstChild.offsetHeight > content.offsetHeight)
+				// 	content.classList.add('scrollable');
+				// else 
+				// 	content.classList.remove('scrollable');
 			}
 		};
 
