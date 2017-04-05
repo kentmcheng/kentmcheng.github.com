@@ -164,9 +164,9 @@
 			-webkit-box-align: center;
 			-webkit-box-pack: center;
 
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			/* display: flex; */
+			/* align-items: center; */
+			/* justify-content: center; */
 			
 			width: 100%;
 			height: 5.2rem;
